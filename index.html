@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Rahmat | Mechanical Engineer Intern Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Professional portfolio of Md Rahmat - Mechanical Engineering student & Intern specializing in 3D CAD modeling, mechanism design, and rapid prototyping.">
+  <meta name="keywords" content="Md Rahmat, Mechanical Engineer, CAD, SOLIDWORKS, DSEU GB Pant, Okhla Campus, Tibia Bone Model, Iris Mechanism, IOCL">
+  <meta name="author" content="Md Rahmat">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0b0f17',
+            panel: '#111827',
+            blueprint: 'rgba(59, 130, 246, 0.06)',
+            accent: '#3b82f6',
+            cyanAccent: '#06b6d4',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="blueprint-bg text-slate-200 min-h-screen">
+
+  <!-- Floating Coordinates HUD Overlay -->
+  <div class="fixed bottom-4 left-4 z-50 pointer-events-none font-mono text-[10px] text-cyanAccent opacity-70 bg-slate-950/80 px-3 py-1.5 rounded border border-cyanAccent/20 hidden md:block">
+    <div id="coord-hud">CURSOR: [X: 000.0px | Y: 000.0px]</div>
+    <div id="dim-hud" class="mt-0.5">DRAFTING GRID: ACTIVE // SCALE 1:1</div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="sticky top-0 z-40 w-full glass-panel border-b border-blue-500/10 bg-slate-950/80">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 border border-blue-500/30 flex items-center justify-center relative bg-blue-950/20 rounded">
+          <i data-lucide="settings" class="w-6 h-6 text-blue-400 rotating-gear"></i>
+          <div class="absolute inset-0 border border-cyanAccent/25 scale-75 group-hover:scale-95 transition-transform duration-300"></div>
+        </div>
+        <div>
+          <span class="text-lg font-bold tracking-wider text-slate-100 block font-technical">MD RAHMAT</span>
+          <span class="text-[9px] font-mono text-cyanAccent tracking-widest block uppercase">Mechanical Engineer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 font-technical text-sm font-medium">
+        <a href="#about" class="text-slate-300 hover:text-cyanAccent transition-colors">ABOUT</a>
+        <a href="#projects" class="text-slate-300 hover:text-cyanAccent transition-colors">PROJECTS</a>
+        <a href="#skills" class="text-slate-300 hover:text-cyanAccent transition-colors">SKILLS</a>
+        <a href="#experience" class="text-slate-300 hover:text-cyanAccent transition-colors">EXPERIENCE</a>
+        <a href="#contact" class="px-3 py-1.5 border border-blue-500/30 hover:border-cyanAccent rounded text-cyanAccent hover:bg-cyanAccent/10 transition-all font-mono text-xs tracking-wider">CONTACT</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-slate-100">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-blue-500/10 px-6 py-4 absolute top-full left-0 w-full flex flex-col gap-4 font-technical text-sm bg-slate-950">
+      <a href="#about" class="text-slate-300 py-2 border-b border-slate-800">ABOUT</a>
+      <a href="#projects" class="text-slate-300 py-2 border-b border-slate-800">PROJECTS</a>
+      <a href="#skills" class="text-slate-300 py-2 border-b border-slate-800">SKILLS</a>
+      <a href="#experience" class="text-slate-300 py-2 border-b border-slate-800">EXPERIENCE</a>
+      <a href="#contact" class="text-cyanAccent py-2">CONTACT</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 px-6">
+    <canvas id="hero-canvas"></canvas>
+    
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      
+      <!-- Text Layout (Left) -->
+      <div class="lg:col-span-7 flex flex-col gap-6 text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-950/40 border border-blue-500/30 rounded-full w-fit">
+          <span class="w-2 h-2 rounded-full bg-cyanAccent pulsing-dot"></span>
+          <span class="text-[10px] font-mono tracking-widest text-cyanAccent uppercase">Mechanical Engineer Intern</span>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-100 uppercase leading-none">
+            CREATING PRACTICAL <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyanAccent">MECHANICAL DESIGNS</span>.
+          </h1>
+        </div>
+
+        <!-- Rotating Headline -->
+        <div class="h-12 overflow-hidden relative border-l-2 border-cyanAccent pl-3">
+          <div id="headline-scroller" class="flex flex-col gap-0 transition-transform duration-500 text-slate-300 font-mono text-base md:text-lg font-semibold">
+            <div class="h-12 flex items-center">3D CAD Modeling & Drafting Specialist</div>
+            <div class="h-12 flex items-center">Mechanism Design & Assembly Enthusiast</div>
+            <div class="h-12 flex items-center">Prototyping & Fabrication Intern</div>
+            <div class="h-12 flex items-center">SOLIDWORKS & Fusion 360 Designer</div>
+          </div>
+        </div>
+
+        <p class="text-slate-400 text-sm md:text-base max-w-xl leading-relaxed">
+          Mechanical design enthusiast specializing in assembly modeling, mechanism kinematics, and physical testing. Focuses on drafting clean parts layouts and building high-fidelity tools for rapid physical prototyping.
+        </p>
+      </div>
+
+      <!-- Rotating Gear HUD (Right) -->
+      <div class="lg:col-span-5 flex justify-center relative mt-8 lg:mt-0">
+        <div class="relative w-72 h-72 md:w-96 md:h-96 bento-card rounded-full flex items-center justify-center p-6 border-cyanAccent/10">
+          <svg class="absolute inset-0 w-full h-full rotate-45 select-none" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(59, 130, 246, 0.08)" stroke-width="0.5" />
+            <circle cx="50" cy="50" r="43" fill="none" stroke="rgba(6, 182, 212, 0.12)" stroke-width="0.5" stroke-dasharray="5 15" class="rotating-gear-reverse" />
+            <circle cx="50" cy="50" r="39" fill="none" stroke="rgba(59, 130, 246, 0.15)" stroke-width="0.5" stroke-dasharray="40 10" class="rotating-gear" />
+          </svg>
+          
+          <svg class="w-48 h-48 md:w-64 md:h-64 text-blue-500/80 drop-shadow-[0_0_15px_rgba(59,130,246,0.15)]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="50" cy="50" r="10" stroke-dasharray="2 2" />
+            <circle cx="50" cy="50" r="4" fill="currentColor" />
+            <circle cx="50" cy="50" r="23" />
+            <path d="M50 5 L53 14 L58 14 L62 7 L68 11 L67 19 L71 21 L77 17 L81 22 L77 29 L80 32 L88 31 L89 37 L82 41 L83 45 L91 47 L90 53 L83 55 L82 59 L89 63 L88 69 L80 68 L77 71 L81 78 L77 83 L70 79 L67 81 L68 89 L62 93 L58 86 L53 86 L50 95 L44 86 L39 86 L35 93 L29 89 L30 81 L27 79 L20 83 L16 78 L20 71 L17 68 L9 69 L8 63 L15 59 L14 55 L6 53 L7 47 L14 45 L15 41 L8 37 L9 31 L17 32 L20 29 L16 22 L20 17 L27 21 L30 19 L29 11 L35 7 L39 14 L44 14 Z" stroke-linejoin="round" class="rotating-gear" />
+            <line x1="50" y1="2" x2="50" y2="98" stroke="rgba(6, 182, 212, 0.25)" stroke-width="0.5" stroke-dasharray="4 4" />
+            <line x1="2" y1="50" x2="98" y2="50" stroke="rgba(6, 182, 212, 0.25)" stroke-width="0.5" stroke-dasharray="4 4" />
+            <rect x="15" y="15" width="70" height="70" stroke="rgba(255, 255, 255, 0.03)" stroke-width="0.5" />
+          </svg>
+
+          <div class="absolute top-8 right-8 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded">ROT_AXIS: Z</div>
+          <div class="absolute bottom-8 left-8 font-mono text-[9px] text-blue-400 bg-slate-950/80 px-2 py-0.5 border border-blue-500/20 rounded">MOD: 2.5</div>
+          <div class="absolute bottom-24 right-12 font-mono text-[9px] text-slate-500">TEETH: 24</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About / Bento Dashboard Section -->
+  <section id="about" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-900/60">
+    <div class="flex flex-col gap-10">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-100 font-technical uppercase">ABOUT ME & ACADEMICS</h2>
+      </div>
+
+      <!-- Bento Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        
+        <!-- Bio Card (Double width on desktop) -->
+        <div class="bento-card p-6 md:col-span-2 rounded flex flex-col gap-4">
+          <div class="flex items-center gap-2 text-cyanAccent font-mono text-xs">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span>CAREER SUMMARY</span>
+          </div>
+          <h3 class="font-technical text-xl font-bold text-slate-200">MECHANICAL DESIGN PROFILE</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            I am a passionate Mechanical Engineering enthusiast with a focus on 3D assembly structures, mechanism kinematics, and physical prototyping. I enjoy translating conceptual sketches into precise parametric CAD models and testing them in real-world applications.
+          </p>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            With hands-on experience in industrial testing at IOCL and automobile styling workflows, my goal is to build functional mechanical systems and drive continuous process improvements in manufacturing and product development.
+          </p>
+        </div>
+
+        <!-- Academic Information Card -->
+        <div class="bento-card p-6 rounded flex flex-col justify-between">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-2 text-blue-400 font-mono text-xs">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+              <span>EDUCATION</span>
+            </div>
+            <div>
+              <h4 class="font-technical font-bold text-slate-200 text-sm">DSEU GB PANT</h4>
+              <p class="text-[10px] text-cyanAccent font-mono uppercase">Okhla Campus 1</p>
+              <p class="text-slate-400 text-xs mt-2">B.Tech - Mechanical Engineering</p>
+              <p class="text-slate-500 text-[10px] font-mono mt-1">Session: 2023 - 2027</p>
+            </div>
+          </div>
+          <div class="border-t border-slate-800 pt-3 mt-4 text-[10px] font-mono text-slate-500">
+            LOCATED: OKHLA, NEW DELHI
+          </div>
+        </div>
+
+        <!-- Metric Dials Grid (Bento columns) -->
+        <div class="bento-card p-5 rounded flex flex-col justify-between gap-4">
+          <div class="font-mono text-[9px] text-slate-500">CAD DRAFTING HOURS</div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+              <span class="font-mono text-2xl font-bold text-cyanAccent">300+</span>
+              <span class="text-[9px] text-slate-400 tracking-wider font-technical">SOLIDWORKS HOURS</span>
+            </div>
+            <i data-lucide="gauge" class="w-8 h-8 text-cyanAccent/40"></i>
+          </div>
+        </div>
+
+        <div class="bento-card p-5 rounded flex flex-col justify-between gap-4">
+          <div class="font-mono text-[9px] text-slate-500">FRACTURE ANALYSIS</div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+              <span class="font-mono text-2xl font-bold text-blue-500">8+</span>
+              <span class="text-[9px] text-slate-400 tracking-wider font-technical">BONE CUT CASES</span>
+            </div>
+            <i data-lucide="activity" class="w-8 h-8 text-blue-500/40"></i>
+          </div>
+        </div>
+
+        <div class="bento-card p-5 rounded flex flex-col justify-between gap-4">
+          <div class="font-mono text-[9px] text-slate-500">PROTOTYPING ACCURACY</div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+              <span class="font-mono text-2xl font-bold text-cyanAccent">100%</span>
+              <span class="text-[9px] text-slate-400 tracking-wider font-technical">FABRICATED FIT</span>
+            </div>
+            <i data-lucide="layers" class="w-8 h-8 text-cyanAccent/40"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="flex flex-col gap-10">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-100 font-technical uppercase">ENGINEERING SKILL CALIBRATIONS</h2>
+      </div>
+
+      <!-- Bento-style Grid of Skills -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Skill 1 -->
+        <div class="bento-card p-5 rounded flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="font-technical font-bold text-sm text-slate-200">3D CAD MODELING & DRAFTING</span>
+            <span class="font-mono text-xs text-cyanAccent">[90%]</span>
+          </div>
+          <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-blue-500/15">
+            <div class="bg-gradient-to-r from-blue-600 to-cyanAccent h-full rounded-full w-[90%]"></div>
+          </div>
+          <p class="text-[10px] text-slate-400 font-mono">SOLIDWORKS / AUTOCAD / FUSION 360</p>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="bento-card p-5 rounded flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="font-technical font-bold text-sm text-slate-200">MECHANISM DESIGN & MOTION</span>
+            <span class="font-mono text-xs text-cyanAccent">[85%]</span>
+          </div>
+          <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-blue-500/15">
+            <div class="bg-gradient-to-r from-blue-600 to-cyanAccent h-full rounded-full w-[85%]"></div>
+          </div>
+          <p class="text-[10px] text-slate-400 font-mono">IRIS SHUTTERS / LINKAGES KINEMATICS</p>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="bento-card p-5 rounded flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="font-technical font-bold text-sm text-slate-200">PART, ASSEMBLY & DRAWINGS</span>
+            <span class="font-mono text-xs text-cyanAccent">[90%]</span>
+          </div>
+          <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-blue-500/15">
+            <div class="bg-gradient-to-r from-blue-600 to-cyanAccent h-full rounded-full w-[90%]"></div>
+          </div>
+          <p class="text-[10px] text-slate-400 font-mono">TOLERANCE STACK-UP / DXF LASER CUTTING</p>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="bento-card p-5 rounded flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="font-technical font-bold text-sm text-slate-200">DESIGN FOR MANUFACTURING (DFM)</span>
+            <span class="font-mono text-xs text-cyanAccent">[80%]</span>
+          </div>
+          <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-blue-500/15">
+            <div class="bg-gradient-to-r from-blue-600 to-cyanAccent h-full rounded-full w-[80%]"></div>
+          </div>
+          <p class="text-[10px] text-slate-400 font-mono">RAPID PROTOTYPING / 3D PRINT CLEARENCE</p>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="bento-card p-5 rounded flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="font-technical font-bold text-sm text-slate-200">NUMERICAL DATA & ANALYTICS</span>
+            <span class="font-mono text-xs text-cyanAccent">[70%]</span>
+          </div>
+          <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-blue-500/15">
+            <div class="bg-gradient-to-r from-blue-600 to-cyanAccent h-full rounded-full w-[70%]"></div>
+          </div>
+          <p class="text-[10px] text-slate-400 font-mono">MATLAB / MS EXCEL DATA LOGGING</p>
+        </div>
+
+        <!-- Skill 6 -->
+        <div class="bento-card p-5 rounded flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="font-technical font-bold text-sm text-slate-200">TEAM & PROCESS COLLABORATION</span>
+            <span class="font-mono text-xs text-cyanAccent">[85%]</span>
+          </div>
+          <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-blue-500/15">
+            <div class="bg-gradient-to-r from-blue-600 to-cyanAccent h-full rounded-full w-[85%]"></div>
+          </div>
+          <p class="text-[10px] text-slate-400 font-mono">SAFETY QUALITY CONTROL / DOCUMENTATION</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Timeline Section -->
+  <section id="experience" class="py-24 px-6 bg-slate-950/40 border-y border-slate-900/60">
+    <div class="max-w-7xl mx-auto flex flex-col gap-12">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-100 font-technical uppercase">PRACTICAL EXPERIENCE</h2>
+      </div>
+
+      <!-- Experience Timeline Cards (Bento style) -->
+      <div class="border-l border-blue-500/20 pl-6 flex flex-col gap-8 relative">
+        
+        <!-- Experience 1 -->
+        <div class="timeline-item timeline-item-active relative flex flex-col gap-3 bento-card p-6 rounded">
+          <div class="flex flex-wrap justify-between items-start gap-2">
+            <div>
+              <h3 class="font-technical text-lg font-bold text-slate-200">Indian Oil Corporation Limited (IOCL)</h3>
+              <p class="text-xs text-cyanAccent font-mono mt-0.5">Industrial Intern - Loni LPG Bottling Plant</p>
+            </div>
+            <span class="text-[10px] font-mono text-slate-500 border border-slate-800 px-2 py-0.5 rounded">2025 (JUNE - AUGUST)</span>
+          </div>
+
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Completed professional exposure training in the **Statutory Testing & Painting Department** of LPG Cylinders.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] font-mono text-slate-300 border-t border-slate-900 pt-3">
+            <div>
+              <span class="text-slate-500 block uppercase">Key Activities:</span>
+              <ul class="list-disc list-inside space-y-1 mt-1 text-slate-400 text-[10px]">
+                <li>Assisted in high-pressure hydrostatic inspections.</li>
+                <li>Monitored cylinder reject criteria and visual wear checks.</li>
+                <li>Learned surface chemical prep and cylinder paint sequences.</li>
+              </ul>
+            </div>
+            <div>
+              <span class="text-slate-500 block uppercase">Core Takeaways:</span>
+              <ul class="list-disc list-inside space-y-1 mt-1 text-slate-400 text-[10px]">
+                <li>Understood large-scale industrial safety codes.</li>
+                <li>Learned QA control sheets logging for batch tracking.</li>
+                <li>Observed workflow logistics in active bottling zones.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item relative flex flex-col gap-3 bento-card p-6 rounded">
+          <div class="flex flex-wrap justify-between items-start gap-2">
+            <div>
+              <h3 class="font-technical text-lg font-bold text-slate-200">Design Engineering Intern</h3>
+              <p class="text-xs text-blue-400 font-mono mt-0.5">Automobile CAD Design Studio</p>
+            </div>
+            <span class="text-[10px] font-mono text-slate-500 border border-slate-800 px-2 py-0.5 rounded">2025 (FEB - AUG)</span>
+          </div>
+
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Worked on automotive layout geometries and component design tasks under structural leads.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] font-mono text-slate-300 border-t border-slate-900 pt-3">
+            <div>
+              <span class="text-slate-500 block uppercase">Key Activities:</span>
+              <ul class="list-disc list-inside space-y-1 mt-1 text-slate-400 text-[10px]">
+                <li>Developed manual layout sketches for body concepts.</li>
+                <li>Created 3D parametric CAD models of body components.</li>
+                <li>Learned basic layout sizing rules for passenger cabins.</li>
+              </ul>
+            </div>
+            <div>
+              <span class="text-slate-500 block uppercase">Core Takeaways:</span>
+              <ul class="list-disc list-inside space-y-1 mt-1 text-slate-400 text-[10px]">
+                <li>Improved consistency and geometric accuracy in SOLIDWORKS.</li>
+                <li>Understood design version revisions and drawing sheets documentation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Bento Grid layout) -->
+  <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="flex flex-col gap-10">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-100 font-technical uppercase">ACADEMIC & CAD PROJECTS</h2>
+      </div>
+
+      <!-- Projects Grid (Uniform Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Project 1: Automatic Lid Opener -->
+        <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
+          <div class="flex flex-col gap-4">
+            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center relative overflow-hidden select-none">
+              <img src="iris_open.png" alt="Iris Shutter" class="max-h-full max-w-full object-contain p-2 hover:scale-105 transition-transform duration-500">
+            </div>
+            <div>
+              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Mechanism Design // 2026</span>
+              <h3 class="font-technical text-lg font-bold text-slate-100">Automatic Trash Can Lid</h3>
+              <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+                Circular multi-blade iris cover system designed for hygienic, automatic opening.
+              </p>
+            </div>
+          </div>
+          <button onclick="openProjectModal('iris')" class="w-full py-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-xs font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group">
+            EXPLORE CASE STUDY
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </button>
+        </div>
+
+        <!-- Project 2: Tibia Bone model -->
+        <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
+          <div class="flex flex-col gap-4">
+            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center p-4 relative overflow-hidden select-none">
+              <i data-lucide="activity" class="w-12 h-12 text-blue-500/20 absolute"></i>
+              <svg class="w-16 h-20 text-cyanAccent/70" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M48 10 C42 12, 38 22, 46 28 L46 72 C38 78, 42 88, 50 88 C58 88, 62 78, 54 72 L54 28 C62 22, 58 12, 50 10 Z" />
+                <path d="M43 45 L55 49" stroke="#ef4444" stroke-width="2" />
+                <path d="M44 50 L56 54" stroke="#ef4444" stroke-dasharray="2 2" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Medical Education // 2026</span>
+              <h3 class="font-technical text-lg font-bold text-slate-100">Tibia Bone Fracture Model</h3>
+              <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+                Mesh cutting bone geometry digitally to print fracture learning prototypes.
+              </p>
+            </div>
+          </div>
+          <button onclick="openProjectModal('tibia')" class="w-full py-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-xs font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group">
+            EXPLORE CASE STUDY
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </button>
+        </div>
+
+        <!-- Project 3: Electric Scooter Commuter Prototype -->
+        <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
+          <div class="flex flex-col gap-4">
+            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center relative overflow-hidden select-none">
+              <img src="scooter_iso_front.png" alt="Scooter" class="max-h-full max-w-full object-contain p-2 hover:scale-105 transition-transform duration-500">
+            </div>
+            <div>
+              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Internship Project // 2025</span>
+              <h3 class="font-technical text-lg font-bold text-slate-100">Electric Scooter Prototype</h3>
+              <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+                Parametric assembly model focusing on packaging, swingarm, styling, and suspension.
+              </p>
+            </div>
+          </div>
+          <button onclick="openProjectModal('scooter')" class="w-full py-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-xs font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group">
+            EXPLORE CASE STUDY
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Form Section -->
+  <section id="contact" class="py-24 px-6 bg-slate-950/40 border-t border-slate-900/60">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Info Column (Left) -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">GET IN TOUCH</h2>
+            <p class="text-slate-400 text-sm mt-2">Interested in my academic works, interns training, or custom drafting projects? Transmit a request direct to my mail console.</p>
+          </div>
+
+          <div class="flex flex-col gap-3 font-mono text-xs text-slate-300 mt-4">
+            <a href="mailto:rahmat888666@gmail.com" class="flex items-center gap-3 p-3 bento-card rounded text-cyanAccent hover:text-slate-100 transition-colors">
+              <i data-lucide="mail" class="w-5 h-5 text-cyanAccent"></i>
+              <span>rahmat888666@gmail.com</span>
+            </a>
+            
+            <a href="tel:8750467241" class="flex items-center gap-3 p-3 bento-card rounded hover:border-cyanAccent transition-colors">
+              <i data-lucide="phone" class="w-5 h-5 text-blue-400"></i>
+              <span>+91 8750467241</span>
+            </a>
+
+            <div class="flex items-center gap-3 p-3 bento-card rounded select-none">
+              <i data-lucide="map-pin" class="w-5 h-5 text-slate-500"></i>
+              <span>Noida Sec 56, UP, India</span>
+            </div>
+
+            <a href="https://www.linkedin.com/in/md-rahmat-78a6a6220" target="_blank" class="flex items-center gap-3 p-3 bento-card rounded hover:border-cyanAccent transition-colors">
+              <i data-lucide="linkedin" class="w-5 h-5 text-cyanAccent"></i>
+              <span>linkedin.com/in/md-rahmat-78a6a6220</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form Column (Right) -->
+        <div class="lg:col-span-7">
+          <div class="bento-card p-6 rounded relative">
+            <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
+            <div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+            
+            <form id="contact-form" class="flex flex-col gap-4 text-xs font-mono" onsubmit="event.preventDefault(); alert('Message successfully sent! Thank you.');">
+              <div class="border-b border-blue-500/20 pb-3 flex items-center justify-between">
+                <span class="text-cyanAccent uppercase font-bold tracking-wider">CONTACT FORM</span>
+                <span class="text-slate-500">DWG NO. CON-01</span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-2">
+                  <label for="form-name" class="text-slate-400">SENDER NAME / ORG</label>
+                  <input type="text" id="form-name" required placeholder="e.g. Hiring Manager" class="bg-slate-900 border border-slate-800 focus:border-cyanAccent focus:outline-none p-3 rounded text-slate-100 font-sans text-sm">
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="form-email" class="text-slate-400">RETURN EMAIL ADDR</label>
+                  <input type="email" id="form-email" required placeholder="e.g. contact@domain.com" class="bg-slate-900 border border-slate-800 focus:border-cyanAccent focus:outline-none p-3 rounded text-slate-100 font-sans text-sm">
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                <label for="form-subject" class="text-slate-400">SUBJECT LINE</label>
+                <input type="text" id="form-subject" placeholder="e.g. Design Trainee Interview Opportunity" class="bg-slate-900 border border-slate-800 focus:border-cyanAccent focus:outline-none p-3 rounded text-slate-100 font-sans text-sm">
+              </div>
+
+              <div class="flex flex-col gap-2">
+                <label for="form-message" class="text-slate-400">SPECIFICATION / INQUIRY DETAILS</label>
+                <textarea id="form-message" required rows="5" placeholder="Specify your requirements or job details here..." class="bg-slate-900 border border-slate-800 focus:border-cyanAccent focus:outline-none p-3 rounded text-slate-100 font-sans text-sm"></textarea>
+              </div>
+
+              <button type="submit" class="w-full mt-2 py-3 bg-blue-600 hover:bg-blue-700 text-slate-100 rounded font-technical font-medium tracking-wider text-sm transition-all duration-300 flex items-center justify-center gap-2">
+                TRANSMIT MESSAGE
+                <i data-lucide="send" class="w-4 h-4"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Engineering Title Block Style) -->
+  <footer class="py-12 px-6 border-t border-slate-900/60 bg-slate-950/60 font-mono text-[10px] text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col gap-8">
+      
+      <!-- Engineering Blueprint Title Block -->
+      <div class="border border-slate-800 rounded overflow-hidden grid grid-cols-1 md:grid-cols-4 items-stretch divide-y md:divide-y-0 md:divide-x divide-slate-800">
+        
+        <div class="p-3 flex flex-col gap-1.5 justify-between">
+          <div>
+            <span class="text-slate-600 block uppercase">TITLE:</span>
+            <span class="text-slate-300 uppercase font-bold text-xs">MD RAHMAT PORTFOLIO</span>
+          </div>
+          <div>
+            <span class="text-slate-600 block">DWG NO:</span>
+            <span class="text-cyanAccent font-bold">MR-2026-PORTFOLIO-R1</span>
+          </div>
+        </div>
+
+        <div class="p-3 flex flex-col gap-1.5 justify-between">
+          <div>
+            <span class="text-slate-600 block">SCALE:</span>
+            <span class="text-slate-300">1:1</span>
+          </div>
+          <div>
+            <span class="text-slate-600 block">SHEET:</span>
+            <span class="text-slate-300">1 OF 1</span>
+          </div>
+        </div>
+
+        <div class="p-3 flex flex-col gap-1.5 justify-between">
+          <div>
+            <span class="text-slate-600 block">DRAWN BY:</span>
+            <span class="text-slate-300">MD RAHMAT</span>
+          </div>
+          <div>
+            <span class="text-slate-600 block">CHECKED BY:</span>
+            <span class="text-slate-300">ANTIGRAVITY.AI</span>
+          </div>
+        </div>
+
+        <div class="p-3 flex flex-col gap-1.5 justify-between">
+          <div>
+            <span class="text-slate-600 block">STATUS:</span>
+            <span class="text-green-500 font-bold uppercase">APPROVED FOR RELEASE</span>
+          </div>
+          <div>
+            <span class="text-slate-600 block">DATE:</span>
+            <span class="text-slate-300">12-JUL-2026</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+          <span>© 2026 MD RAHMAT. ALL RIGHTS RESERVED.</span>
+        </div>
+        <div class="flex items-center gap-4 text-xs">
+          <a href="#hero" class="hover:text-cyanAccent transition-colors">BACK TO TOP</a>
+          <span class="text-slate-800">|</span>
+          <a href="#projects" class="hover:text-cyanAccent transition-colors">PROJECTS</a>
+          <span class="text-slate-800">|</span>
+          <a href="https://www.linkedin.com/in/md-rahmat-78a6a6220" target="_blank" class="hover:text-cyanAccent transition-colors flex items-center gap-1">LINKEDIN <i data-lucide="external-link" class="w-3 h-3"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Modal Overlay Wrapper for Case Studies -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md overflow-y-auto p-4 md:p-8 flex items-center justify-center">
+    
+    <!-- Modal Inner Frame -->
+    <div class="relative w-full max-w-6xl bento-card rounded-lg bg-slate-900/95 border border-blue-500/20 shadow-2xl p-6 md:p-8 flex flex-col gap-6 max-h-[90vh] overflow-y-auto">
+      
+      <!-- Close button (X) -->
+      <button onclick="closeProjectModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-100 bg-slate-950/80 hover:bg-slate-800 border border-slate-800 hover:border-slate-600 rounded transition-all z-50">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Body (Pre-coded specific project views) -->
+      
+      <!-- 1. IRIS MECHANISM DETAIL -->
+      <div id="modal-project-iris" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Interactive CAD Widget / Video Player -->
+        <div class="lg:w-1/2 flex flex-col gap-4">
+          <!-- View Option Toggles -->
+          <div class="flex border-b border-slate-800 font-mono text-[10px]">
+            <button id="btn-iris-view-cad" onclick="switchIrisModalView('cad')" class="py-2 px-4 border-b-2 border-cyanAccent text-slate-100 font-bold uppercase transition-all iris-view-tab-btn">Interactive CAD</button>
+            <button id="btn-iris-view-video" onclick="switchIrisModalView('video')" class="py-2 px-4 border-b border-transparent text-slate-400 hover:text-slate-200 uppercase transition-all iris-view-tab-btn">Motion Study Video</button>
+          </div>
+
+          <!-- Content 1: Interactive CAD Toggle -->
+          <div id="iris-modal-content-cad" class="flex flex-col gap-4">
+            <div class="cad-workbench-bg rounded h-[320px] md:h-[400px] flex items-center justify-center relative overflow-hidden bg-slate-950/60 border border-slate-800">
+              <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
+              <div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+              <div class="absolute top-3 left-4 font-mono text-[9px] text-cyanAccent select-none">MODEL: AUTOMATIC_IRIS_LID.SLDASM</div>
+              <div class="absolute top-3 right-4 font-mono text-[9px] text-slate-500 select-none">STATE: <span id="modal-iris-state-label" class="text-cyanAccent font-bold">OPEN</span></div>
+              
+              <img id="modal-iris-main" src="iris_open.png" alt="Iris Mechanism SOLIDWORKS" class="max-h-full max-w-full object-contain p-4 transition-all duration-300">
+            </div>
+            
+            <div class="bento-card p-4 rounded font-mono text-xs flex flex-col gap-3 bg-slate-950/40 border border-slate-900">
+              <div class="flex justify-between items-center">
+                <span class="text-cyanAccent font-bold">INTERACTIVE SHUTTER SLIDER</span>
+                <span id="modal-iris-slider-value" class="text-slate-400">STATE: OPEN (100%)</span>
+              </div>
+              <input type="range" id="modal-iris-slider" min="0" max="100" value="100" class="w-full accent-cyanAccent cursor-pointer">
+              <div class="grid grid-cols-2 gap-2 text-center text-[10px] font-mono mt-1">
+                <button onclick="setModalIrisState(100)" class="py-1 bg-slate-900 border border-cyanAccent/30 hover:border-cyanAccent rounded text-slate-300 hover:text-slate-100 transition-all font-semibold uppercase">OPEN STATE</button>
+                <button onclick="setModalIrisState(0)" class="py-1 bg-slate-900 border border-slate-800 hover:border-cyanAccent rounded text-slate-400 hover:text-slate-100 transition-all font-semibold uppercase">CLOSED STATE</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content 2: Video Player -->
+          <div id="iris-modal-content-video" class="hidden flex flex-col gap-4">
+            <div class="rounded overflow-hidden h-[320px] md:h-[400px] bg-slate-950 border border-slate-800 relative flex items-center justify-center">
+              <div class="absolute top-3 left-4 font-mono text-[9px] text-cyanAccent select-none z-10">VIDEO: SOLIDWORKS_MOTION_STUDY.MP4</div>
+              <video id="iris-modal-video" src="iris_video.mp4" controls loop class="max-w-full max-h-full object-contain w-full h-full bg-black"></video>
+            </div>
+            <div class="bento-card p-4 rounded font-mono text-xs bg-slate-950/40 border border-slate-900 text-slate-400 leading-relaxed text-left">
+              🎥 <strong>Motion Study:</strong> Visualizes the rotational gear actuator mesh meshing with the outer ring slot guide pins, driving the 8 shutter leaves in a synchronized open/close sequence.
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">Case Study // Mechanism Design</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Automatic Trash Can Lid Shutter</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans">
+              <p>
+                <strong>Problem Statement:</strong> Traditional touch bins or pedal bins present hygiene concerns on shop floors and public spaces. Standard motor hinges wear out fast due to large moment arms.
+              </p>
+              <p>
+                <strong>Engineering Action:</strong> Modeled a multi-blade circular iris aperture system in SOLIDWORKS. The design distributes mechanical stress along concentric linkage slots, reducing load on the servomotor.
+              </p>
+              <p>
+                <strong>Prototyping & DFM:</strong> Optimized design clearances (0.3mm stacking tolerance) suitable for FDM 3D printing. Configured blade hinges to prevent interlocking friction during high-speed openings.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Software:</span>
+                <span class="text-slate-300">SOLIDWORKS 2026</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Aperture Range:</span>
+                <span class="text-slate-300">Ø 20mm - Ø 84mm</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Assembly Parts:</span>
+                <span class="text-slate-300">12 Sub-assemblies</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Fit Clearance:</span>
+                <span class="text-slate-300">0.30mm optimized</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>DRAFT NO. MR-IRIS-01</span>
+            <span>STATUS: DESIGN VERIFIED</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. TIBIA BONE DETAIL -->
+      <div id="modal-project-tibia" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Interactive CAD Widget -->
+        <div class="lg:w-1/2 flex flex-col gap-4">
+          <div class="cad-workbench-bg rounded h-[320px] md:h-[400px] flex items-center justify-center relative">
+            <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
+            <div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+            <div class="absolute top-3 left-4 font-mono text-[9px] text-cyanAccent select-none">MODEL: ORTHO_TIBIA_BONE_MODEL.STL</div>
+            
+            <svg id="modal-svg-bone" class="w-64 h-64 md:w-80 md:h-80 text-blue-400 transition-all duration-300" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+              <path d="M46 10 C38 12, 34 22, 44 28 L46 72 C35 78, 38 88, 50 88 C62 88, 65 78, 54 72 L54 28 C64 22, 60 12, 46 10 Z" fill="rgba(255,255,255,0.02)" />
+              <path id="modal-frac-plane-1" d="M43 45 L55 49" stroke="rgba(239, 68, 68, 0.7)" stroke-width="1.2" class="modal-bone-slice" />
+              <path id="modal-frac-plane-2" d="M44 48 L56 52" stroke="rgba(239, 68, 68, 0.7)" stroke-width="1.2" class="modal-bone-slice" />
+              <path id="modal-frac-plane-3" d="M45 51 L55 55" stroke="rgba(239, 68, 68, 0.7)" stroke-width="1.2" class="modal-bone-slice" />
+              <text x="50" y="62" fill="rgba(239, 68, 68, 0.8)" font-size="2.5" font-family="monospace" text-anchor="middle" id="modal-slice-angle-label">[TRANSVERSE CUT: 0.0°]</text>
+              <g id="modal-bone-dimensions">
+                <line x1="28" y1="10" x2="28" y2="88" stroke="#06b6d4" stroke-width="0.5" />
+                <text x="24" y="50" fill="#06b6d4" font-size="3" font-family="monospace" text-anchor="middle" transform="rotate(-90 24 50)">STUDY HEIGHT: 345.00mm</text>
+              </g>
+            </svg>
+          </div>
+          
+          <div class="bento-card p-4 rounded font-mono text-xs flex flex-col gap-2 bg-slate-950/40">
+            <span class="text-cyanAccent font-bold">FRACTURE DEPTH SLICE</span>
+            <input type="range" id="modal-section-slider" min="0" max="100" value="0" class="w-full accent-cyanAccent cursor-pointer">
+            <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+              <span>0% (CLEAN)</span>
+              <span>100% (SECTIONED)</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">Case Study // Biomedical Tools</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Orthopaedic Tibia Bone Model</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans">
+              <p>
+                <strong>Objective:</strong> Help orthopaedic medical students study complex bone fracture concepts with physical, hand-held models.
+              </p>
+              <p>
+                <strong>Mesh Editing Action:</strong> Gathered reference bone mesh geometries. Designed custom cutting plane parameters inside CAD software to digitally section the tibia bone along specific fracture lines (Transverse, Oblique, Spiral).
+              </p>
+              <p>
+                <strong>3D Printing Outcome:</strong> Converted sliced mesh structures into G-code for 3D printed physical modules. The physical models snap together, allowing students to feel how bone joints align and lock post-fracture.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Engine:</span>
+                <span class="text-slate-300">Fusion 360 Mesh Editing</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Study Length:</span>
+                <span class="text-slate-300">345.00 mm</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Cut Coordinates:</span>
+                <span class="text-slate-300">X-Y Transverse // X-Z Oblique</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Study Purpose:</span>
+                <span class="text-slate-300">Medical Spatial Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>DRAFT NO. MR-BONE-02</span>
+            <span>STATUS: PRINT READY</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. ELECTRIC SCOOTER DETAIL -->
+      <div id="modal-project-scooter" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Gallery Viewer -->
+        <div class="lg:w-1/2 flex flex-col gap-4">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-scooter-main" src="scooter_iso_front.png" alt="Scooter" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-scooter-view-label">ISO FRONT</span>
+            </div>
+          </div>
+          <!-- Thumbnails -->
+          <div class="grid grid-cols-5 gap-2">
+            <button onclick="switchModalScooterView('scooter_iso_front.png', 'ISO FRONT', this)" class="border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-scooter-thumb-btn">
+              <img src="scooter_iso_front.png" class="max-h-full max-w-full object-contain">
+            </button>
+            <button onclick="switchModalScooterView('scooter_iso_back.png', 'ISO REAR', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-scooter-thumb-btn">
+              <img src="scooter_iso_back.png" class="max-h-full max-w-full object-contain">
+            </button>
+            <button onclick="switchModalScooterView('scooter_top.png', 'TOP DOWN', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-scooter-thumb-btn">
+              <img src="scooter_top.png" class="max-h-full max-w-full object-contain">
+            </button>
+            <button onclick="switchModalScooterView('scooter_chassis.png', 'CHASSIS DETAIL', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-scooter-thumb-btn">
+              <img src="scooter_chassis.png" class="max-h-full max-w-full object-contain">
+            </button>
+            <button onclick="switchModalScooterView('scooter_profile.png', 'SIDE PROFILE', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-scooter-thumb-btn">
+              <img src="scooter_profile.png" class="max-h-full max-w-full object-contain">
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">Case Study // Automobile Layouts</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Electric Scooter Prototype</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                Designed this model under TCG Design Studio during the automobile CAD internship, focusing on passenger vehicle layout geometries and modular package constraints.
+              </p>
+              <p>
+                Engineered the structural tubular frame to house a large under-floorboard lithium battery casing, maintaining a low center of gravity (CoG), and aligned the steering knuckle rake angle for stable commuting geometry.
+              </p>
+              <p>
+                Configured the rear swingarm assembly to house a high-power hub motor. The integrated dual-shock spring coil clears rear mudguard travel dimensions.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">Software Package:</span>
+                <span class="text-slate-300">SOLIDWORKS Assembly</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Structure Type:</span>
+                <span class="text-slate-300">Tubular Frame & Outer Shell</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Rear Alignment:</span>
+                <span class="text-slate-300">Swingarm Knuckle Pivot</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Tire Profile:</span>
+                <span class="text-slate-300">10-inch Hub Assembly</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>DRAFT NO. MR-SCOOT-2025</span>
+            <span>STATUS: PACKAGING STYLING OK</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Webpage Core Script -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Navbar Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when navigation item clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Rotating Scroller Animation (GSAP)
+    gsap.to("#headline-scroller", {
+      yPercent: -75, // Scrolls through 4 states
+      ease: "none",
+      duration: 10,
+      repeat: -1,
+      yoyo: false,
+      modifiers: {
+        yPercent: gsap.utils.unitize(y => {
+          const time = gsap.ticker.time * 0.4;
+          const step = Math.floor(time) % 4;
+          return step * -25;
+        })
+      }
+    });
+
+    // Custom Interactive Coordinate HUD Tracking
+    const coordHud = document.getElementById('coord-hud');
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX.toFixed(1);
+      const y = e.clientY.toFixed(1);
+      coordHud.innerText = `CURSOR: [X: ${x}px | Y: ${y}px]`;
+    });
+
+    // Bento Card Hover Spotlight Effect (Behance Premium look)
+    document.querySelectorAll('.bento-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+
+    // Modal Overlay Control Logic
+    const projectModal = document.getElementById('project-modal');
+    
+    function openProjectModal(projectId) {
+      // Hide all case study elements first
+      document.getElementById('modal-project-iris').classList.add('hidden');
+      document.getElementById('modal-project-tibia').classList.add('hidden');
+      document.getElementById('modal-project-scooter').classList.add('hidden');
+      
+      // Unhide the specific case study
+      const activeContainer = document.getElementById(`modal-project-${projectId}`);
+      if (activeContainer) {
+        activeContainer.classList.remove('hidden');
+      }
+      
+      // Unhide the overlay wrapper & trigger GSAP animation
+      projectModal.classList.remove('hidden');
+      gsap.fromTo(projectModal, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" });
+      gsap.fromTo(projectModal.querySelector('.relative'), { scale: 0.95, y: 15 }, { scale: 1, y: 0, duration: 0.4, ease: "power2.out" });
+      
+      // Disable body background scroll
+      document.body.style.overflow = 'hidden';
+      
+      // Trigger resize for layout update inside modal
+      setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
+    }
+
+    function closeProjectModal() {
+      // Pause any video that might be playing inside modals
+      const irisVid = document.getElementById('iris-modal-video');
+      if (irisVid) irisVid.pause();
+
+      gsap.to(projectModal, { 
+        opacity: 0, 
+        duration: 0.3, 
+        ease: "power2.in", 
+        onComplete: () => {
+          projectModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+    // Switch between Interactive CAD and Video player inside Iris modal
+    function switchIrisModalView(viewType) {
+      const cadContent = document.getElementById('iris-modal-content-cad');
+      const videoContent = document.getElementById('iris-modal-content-video');
+      const tabCad = document.getElementById('btn-iris-view-cad');
+      const tabVideo = document.getElementById('btn-iris-view-video');
+      const videoEl = document.getElementById('iris-modal-video');
+
+      if (viewType === 'cad') {
+        cadContent.classList.remove('hidden');
+        videoContent.classList.add('hidden');
+        if (videoEl) videoEl.pause();
+        
+        tabCad.className = "py-2 px-4 border-b-2 border-cyanAccent text-slate-100 font-bold uppercase transition-all iris-view-tab-btn";
+        tabVideo.className = "py-2 px-4 border-b border-transparent text-slate-400 hover:text-slate-200 uppercase transition-all iris-view-tab-btn";
+      } else {
+        cadContent.classList.add('hidden');
+        videoContent.classList.remove('hidden');
+        if (videoEl) videoEl.play();
+
+        tabCad.className = "py-2 px-4 border-b border-transparent text-slate-400 hover:text-slate-200 uppercase transition-all iris-view-tab-btn";
+        tabVideo.className = "py-2 px-4 border-b-2 border-cyanAccent text-slate-100 font-bold uppercase transition-all iris-view-tab-btn";
+      }
+    }
+
+    // Close modal on click outside content frame
+    projectModal.addEventListener('click', (e) => {
+      if (e.target === projectModal) {
+        closeProjectModal();
+      }
+    });
+
+    // 1. Iris Shutter Lid controller logic inside Modal
+    const modalIrisSlider = document.getElementById('modal-iris-slider');
+    const modalIrisMain = document.getElementById('modal-iris-main');
+    const modalIrisStateLabel = document.getElementById('modal-iris-state-label');
+    const modalIrisSliderValue = document.getElementById('modal-iris-slider-value');
+
+    function updateIrisView(val) {
+      if (val < 50) {
+        modalIrisMain.src = "iris_closed.png";
+        modalIrisStateLabel.innerText = "CLOSED";
+        modalIrisStateLabel.className = "text-red-500 font-bold";
+        modalIrisSliderValue.innerText = `STATE: CLOSED (${val}%)`;
+      } else {
+        modalIrisMain.src = "iris_open.png";
+        modalIrisStateLabel.innerText = "OPEN";
+        modalIrisStateLabel.className = "text-cyanAccent font-bold";
+        modalIrisSliderValue.innerText = `STATE: OPEN (${val}%)`;
+      }
+    }
+
+    modalIrisSlider.addEventListener('input', (e) => {
+      updateIrisView(e.target.value);
+    });
+
+    function setModalIrisState(val) {
+      modalIrisSlider.value = val;
+      updateIrisView(val);
+    }
+
+    // 2. Tibia Bone Slice controller logic inside Modal
+    const modalSectionSlider = document.getElementById('modal-section-slider');
+    const modalSliceAngleLabel = document.getElementById('modal-slice-angle-label');
+    const modalBoneSlices = document.querySelectorAll('.modal-bone-slice');
+
+    modalSectionSlider.addEventListener('input', (e) => {
+      const val = e.target.value;
+      modalSliceAngleLabel.innerText = `[SLICE DEPTH: ${val}% // ${((val/100) * 90).toFixed(1)}°]`;
+      
+      modalBoneSlices.forEach((slice, idx) => {
+        const offset = Math.abs(val - (idx * 33));
+        if (offset < 15) {
+          slice.setAttribute('stroke', 'rgba(239, 68, 68, 1)');
+          slice.setAttribute('stroke-width', '1.8');
+        } else {
+          slice.setAttribute('stroke', 'rgba(239, 68, 68, 0.5)');
+          slice.setAttribute('stroke-width', '1.2');
+        }
+      });
+    });
+
+    // 3. Scooter Gallery Swapper inside Modal
+    function switchModalScooterView(src, label, btn) {
+      document.getElementById('modal-scooter-main').src = src;
+      document.getElementById('modal-scooter-view-label').innerText = label;
+      
+      // Update active thumbnail border styling
+      document.querySelectorAll('.modal-scooter-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-scooter-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-scooter-thumb-btn";
+    }
+
+    // Floating Particles Canvas
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    function resizeCanvas() {
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = canvas.parentElement.clientHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    const particles = [];
+    for (let i = 0; i < 20; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        size: Math.random() * 2 + 1,
+        type: Math.random() > 0.4 ? 'cross' : 'point',
+        opacity: Math.random() * 0.25 + 0.08
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+        ctx.strokeStyle = `rgba(6, 182, 212, ${p.opacity})`;
+        ctx.fillStyle = `rgba(59, 130, 246, ${p.opacity})`;
+
+        if (p.type === 'cross') {
+          ctx.beginPath();
+          ctx.moveTo(p.x - 3, p.y);
+          ctx.lineTo(p.x + 3, p.y);
+          ctx.moveTo(p.x, p.y - 3);
+          ctx.lineTo(p.x, p.y + 3);
+          ctx.stroke();
+        } else {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // GSAP ScrollTrigger Scroll Reveal
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('section').forEach(section => {
+      if (section.id === 'hero') return;
+      
+      gsap.from(section, {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>

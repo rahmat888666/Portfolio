@@ -1,0 +1,263 @@
+/* Custom styles for Md Rahmat's Mechanical Engineering Portfolio */
+
+/* Importing Technical/Modern Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root {
+  --color-bg: #0b0f17;
+  --color-panel: #111827;
+  --color-panel-border: rgba(59, 130, 246, 0.15);
+  --color-blueprint: rgba(59, 130, 246, 0.04);
+  --color-blueprint-major: rgba(59, 130, 246, 0.08);
+  --color-accent: #3b82f6;
+  --color-accent-cyan: #06b6d4;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-cad-grid: rgba(6, 182, 212, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Blueprint Grid Background */
+.blueprint-bg {
+  background-color: var(--color-bg);
+  background-image: 
+    linear-gradient(to right, var(--color-blueprint-major) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-blueprint-major) 1px, transparent 1px),
+    linear-gradient(to right, var(--color-blueprint) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-blueprint) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: center center;
+}
+
+/* Bento Grid Card Styling */
+.bento-card {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-panel-border);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(59, 130, 246, 0.08), transparent 40%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+.bento-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 12px 30px 0 rgba(59, 130, 246, 0.12);
+}
+
+/* Space Grotesk for Technical Headings */
+h1, h2, h3, h4, .font-technical {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Monospace for dimensions */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Interactive CAD Workbench Grid */
+.cad-workbench-bg {
+  background-color: #0d111b;
+  background-image: 
+    linear-gradient(to right, var(--color-cad-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-cad-grid) 1px, transparent 1px);
+  background-size: 20px 20px;
+  position: relative;
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  overflow: hidden;
+}
+
+/* Technical HUD overlay ticks */
+.hud-corner-tl {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-top: 1.5px solid var(--color-accent-cyan);
+  border-left: 1.5px solid var(--color-accent-cyan);
+  width: 8px;
+  height: 8px;
+}
+.hud-corner-tr {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-top: 1.5px solid var(--color-accent-cyan);
+  border-right: 1.5px solid var(--color-accent-cyan);
+  width: 8px;
+  height: 8px;
+}
+.hud-corner-bl {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  border-bottom: 1.5px solid var(--color-accent-cyan);
+  border-left: 1.5px solid var(--color-accent-cyan);
+  width: 8px;
+  height: 8px;
+}
+.hud-corner-br {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  border-bottom: 1.5px solid var(--color-accent-cyan);
+  border-right: 1.5px solid var(--color-accent-cyan);
+  width: 8px;
+  height: 8px;
+}
+
+/* Pulsing dot for testing/R&D nodes */
+.pulsing-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.6);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(6, 182, 212, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
+  }
+}
+
+/* Timeline specific layouts */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -6px;
+  background: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  top: 6px;
+  z-index: 1;
+}
+
+.timeline-item-active::after {
+  border-color: var(--color-accent-cyan);
+  background: var(--color-accent-cyan);
+}
+
+/* Custom button border trace */
+.btn-trace {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+.btn-trace::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent-cyan);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+.btn-trace:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Coordinate crosshair tracker background */
+#hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Rotating gear elements (subtle vector decorations) */
+.rotating-gear {
+  animation: rotateGear 30s linear infinite;
+  transform-origin: center;
+}
+.rotating-gear-reverse {
+  animation: rotateGearRev 35s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes rotateGear {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes rotateGearRev {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.calibration-line {
+  background: rgba(255, 255, 255, 0.08);
+}
+.calibration-line.active {
+  background: var(--color-accent-cyan);
+}
