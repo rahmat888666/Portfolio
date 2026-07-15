@@ -513,9 +513,15 @@
               </p>
             </div>
           </div>
-          <div class="border-t border-slate-900 pt-3 flex items-center justify-between text-[9px] font-mono text-slate-500">
-            <span>TOOL: SOLIDWORKS</span>
-            <span>LEN: 300mm</span>
+          <div class="border-t border-slate-900 pt-3 flex flex-col gap-3">
+            <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
+              <span>TOOL: SOLIDWORKS</span>
+              <span>LEN: 300mm</span>
+            </div>
+            <button onclick="openProjectModal('shaft')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
+              EXPLORE DRAWING DETAILS
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
@@ -949,6 +955,74 @@
         </div>
       </div>
 
+      <!-- 4. CONCENTRIC STEPPED SHAFT DETAIL (Sandbox) -->
+      <div id="modal-project-shaft" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Gallery Swapper -->
+        <div class="lg:w-1/2 flex flex-col gap-4">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-shaft-main" src="practice_shaft_model.png" alt="Concentric Stepped Shaft" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-shaft-view-label">3D CAD MODEL</span>
+            </div>
+          </div>
+          <!-- Thumbnails -->
+          <div class="grid grid-cols-2 gap-2">
+            <button onclick="switchModalShaftView('practice_shaft_model.png', '3D CAD MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-300 modal-shaft-thumb-btn">
+              3D CAD MODEL
+            </button>
+            <button onclick="switchModalShaftView('practice_shaft_dim.png', 'BLUEPRINT DRAWING', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-400 modal-shaft-thumb-btn">
+              BLUEPRINT DRAWING
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">Practice Exercise // Machine Drafting</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Concentric Stepped Shaft</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Exercise Objective:</strong> Modeled a concentric power-transmission shaft assembly with multiple diameter shoulders to master manual blueprint decoding and axial constraint alignment in SOLIDWORKS.
+              </p>
+              <p>
+                <strong>Drafting Analysis:</strong> Interpreted 2D orthographic projection blueprints, verifying absolute shaft span (300mm), shoulder segments (80mm, 40mm), and shoulder diameters (20mm, 60mm, 100mm).
+              </p>
+              <p>
+                <strong>Machining Relevance:</strong> Stepped shafts require precise shoulder fillets and transition tolerances to reduce stress concentrations and provide solid seating faces for bearing and gear attachments.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Engine:</span>
+                <span class="text-slate-300">SOLIDWORKS 3D</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Shaft Length:</span>
+                <span class="text-slate-300">300.00 mm</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Features Used:</span>
+                <span class="text-slate-300">Revolved Boss / Chamfer</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Grade:</span>
+                <span class="text-slate-300">AISI 1020 Carbon Steel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>DRAFT NO. MR-SHAFT-01-1</span>
+            <span>STATUS: COMPLETED MODEL</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -1042,7 +1116,21 @@
       document.getElementById('modal-project-iris').classList.add('hidden');
       document.getElementById('modal-project-tibia').classList.add('hidden');
       document.getElementById('modal-project-scooter').classList.add('hidden');
+      document.getElementById('modal-project-shaft').classList.add('hidden');
       
+      // Reset shaft modal preview default state
+      if (projectId === 'shaft') {
+        document.getElementById('modal-shaft-main').src = 'practice_shaft_model.png';
+        document.getElementById('modal-shaft-view-label').innerText = '3D CAD MODEL';
+        document.querySelectorAll('.modal-shaft-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-300 modal-shaft-thumb-btn";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-400 modal-shaft-thumb-btn";
+          }
+        });
+      }
+
       // Unhide the specific case study
       const activeContainer = document.getElementById(`modal-project-${projectId}`);
       if (activeContainer) {
@@ -1100,6 +1188,17 @@
         tabCad.className = "py-2 px-4 border-b border-transparent text-slate-400 hover:text-slate-200 uppercase transition-all iris-view-tab-btn";
         tabVideo.className = "py-2 px-4 border-b-2 border-cyanAccent text-slate-100 font-bold uppercase transition-all iris-view-tab-btn";
       }
+    }
+
+    // Switch between Interactive CAD and Blueprint sheet inside Concentric Shaft modal
+    function switchModalShaftView(imgSrc, label, btn) {
+      document.getElementById('modal-shaft-main').src = imgSrc;
+      document.getElementById('modal-shaft-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-shaft-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-400 modal-shaft-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-300 modal-shaft-thumb-btn";
     }
 
     // Close modal on click outside content frame
