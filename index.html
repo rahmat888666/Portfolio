@@ -40,11 +40,7 @@
 </head>
 <body class="blueprint-bg text-slate-200 min-h-screen">
 
-  <!-- Floating Coordinates HUD Overlay -->
-  <div class="fixed bottom-4 left-4 z-50 pointer-events-none font-mono text-[10px] text-cyanAccent opacity-70 bg-slate-950/80 px-3 py-1.5 rounded border border-cyanAccent/20 hidden md:block">
-    <div id="coord-hud">CURSOR: [X: 000.0px | Y: 000.0px]</div>
-    <div id="dim-hud" class="mt-0.5">DRAFTING GRID: ACTIVE // SCALE 1:1</div>
-  </div>
+
 
   <!-- Header Section -->
   <header class="sticky top-0 z-40 w-full glass-panel border-b border-blue-500/10 bg-slate-950/80">
@@ -875,13 +871,7 @@
       }
     });
 
-    // Custom Interactive Coordinate HUD Tracking
-    const coordHud = document.getElementById('coord-hud');
-    document.addEventListener('mousemove', (e) => {
-      const x = e.clientX.toFixed(1);
-      const y = e.clientY.toFixed(1);
-      coordHud.innerText = `CURSOR: [X: ${x}px | Y: ${y}px]`;
-    });
+
 
     // Bento Card Hover Spotlight Effect (Behance Premium look)
     document.querySelectorAll('.bento-card').forEach(card => {
