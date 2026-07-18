@@ -596,7 +596,38 @@
             <span>TOOL: SOLIDWORKS</span>
             <span>BLADES: 6 CURVED</span>
           </div>
+        <!-- Card 5: PDF Exercise -->
+        <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="pdf">
+          <div class="flex flex-col gap-3">
+            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none group/img">
+              <!-- Base: 3D Model -->
+              <img src="practice_shaft_internal_model.png" alt="Internal Stepped Sleeve Model" class="absolute inset-0 w-full h-full object-contain p-2 transition-opacity duration-300 group-hover/img:opacity-0">
+              <!-- Hover: Dimension Blueprint -->
+              <img src="practice_shaft_internal_dim.png" alt="Internal Stepped Sleeve Blueprint" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity duration-300 group-hover/img:opacity-100 bg-slate-950">
+              
+              <div class="absolute top-2 left-2 font-mono text-[8px] text-cyanAccent bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded shadow z-10 font-bold">HOVER TO VIEW BLUEPRINT</div>
+            </div>
+            <div>
+              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Standard Exercise 1-2</span>
+              <h4 class="font-technical font-bold text-slate-200 text-sm">Hollow Stepped Cylinder</h4>
+              <p class="text-slate-400 text-[11px] mt-1 leading-relaxed font-sans">
+                Modeled a hollow collar bushing featuring a two-stage internal stepped bore, practicing cross-sectional dimensioning.
+              </p>
+            </div>
+          </div>
+          <div class="border-t border-slate-900 pt-3 flex flex-col gap-3">
+            <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
+              <span>TOOL: SOLIDWORKS</span>
+              <span>LEN: 140mm</span>
+            </div>
+            <button onclick="openProjectModal('collar')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
+              EXPLORE DRAWING DETAILS
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </button>
+          </div>
         </div>
+
+      </div>
 
       </div>
     </div>
@@ -1101,6 +1132,74 @@
         </div>
       </div>
 
+      <!-- 6. HOLLOW STEPPED CYLINDER DETAIL (Sandbox) -->
+      <div id="modal-project-collar" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Gallery Swapper -->
+        <div class="lg:w-1/2 flex flex-col gap-4">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-collar-main" src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-collar-view-label">3D CAD MODEL</span>
+            </div>
+          </div>
+          <!-- Thumbnails -->
+          <div class="grid grid-cols-2 gap-2">
+            <button onclick="switchModalCollarView('practice_shaft_internal_model.png', '3D CAD MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-300 modal-collar-thumb-btn">
+              3D CAD MODEL
+            </button>
+            <button onclick="switchModalCollarView('practice_shaft_internal_dim.png', 'BLUEPRINT DRAWING', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-400 modal-collar-thumb-btn">
+              BLUEPRINT DRAWING
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">Practice Exercise // Machine Drafting</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Hollow Stepped Cylinder</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Exercise Objective:</strong> Modeled a sleeve bushing with a two-stage internal stepped cavity in SOLIDWORKS to practice interpreting sectional blueprints.
+              </p>
+              <p>
+                <strong>How It Was Done:</strong> Designed the outer cylinder body with a diameter of 100mm and length of 140mm. Then cut the inside stepped hole: the larger section is 60mm wide by 40mm deep, and the smaller inner tunnel is 20mm wide running all the way through.
+              </p>
+              <p>
+                <strong>Why It Matters:</strong> Cut-away views (cross-sections) are very common in engineering drawings to show hidden internal shapes. Proving you can read and model internal details is key for real shop floors.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Engine:</span>
+                <span class="text-slate-300">SOLIDWORKS 3D</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Outer Diameter:</span>
+                <span class="text-slate-300">100.00 mm</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Features Used:</span>
+                <span class="text-slate-300">Extruded Cut / Revolve Cut</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Grade:</span>
+                <span class="text-slate-300">AISI 1020 Carbon Steel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>DRAFT NO. MR-BUSHING-01-2</span>
+            <span>STATUS: COMPLETED MODEL</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -1196,6 +1295,7 @@
       document.getElementById('modal-project-scooter').classList.add('hidden');
       document.getElementById('modal-project-shaft').classList.add('hidden');
       document.getElementById('modal-project-sleeve').classList.add('hidden');
+      document.getElementById('modal-project-collar').classList.add('hidden');
       
       // Reset shaft modal preview default state
       if (projectId === 'shaft') {
@@ -1219,6 +1319,19 @@
             btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-300 modal-sleeve-thumb-btn";
           } else {
             btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-400 modal-sleeve-thumb-btn";
+          }
+        });
+      }
+
+      // Reset collar modal preview default state
+      if (projectId === 'collar') {
+        document.getElementById('modal-collar-main').src = 'practice_shaft_internal_model.png';
+        document.getElementById('modal-collar-view-label').innerText = '3D CAD MODEL';
+        document.querySelectorAll('.modal-collar-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-300 modal-collar-thumb-btn";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-400 modal-collar-thumb-btn";
           }
         });
       }
@@ -1302,6 +1415,17 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-400 modal-sleeve-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-300 modal-sleeve-thumb-btn";
+    }
+
+    // Switch between Interactive CAD and Blueprint sheet inside Hollow Stepped Cylinder modal
+    function switchModalCollarView(imgSrc, label, btn) {
+      document.getElementById('modal-collar-main').src = imgSrc;
+      document.getElementById('modal-collar-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-collar-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-400 modal-collar-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center hover:border-cyanAccent transition-all font-mono text-[9px] text-slate-300 modal-collar-thumb-btn";
     }
 
     // Close modal on click outside content frame
