@@ -606,6 +606,23 @@
         </div>
       </div>
 
+      <!-- Master CAD Archive Directory Launcher Button -->
+      <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl border border-slate-800 bg-slate-950/80">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
+            <i data-lucide="database" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-technical text-sm font-bold text-slate-200 uppercase">FULL CAD & ENGINEERING MODEL DIRECTORY</h4>
+            <p class="text-slate-400 text-xs font-sans">Explore the complete catalog of practice models, design exercises & academic CAD files sorted by difficulty.</p>
+          </div>
+        </div>
+        <button onclick="openProjectModal('cad-archive')" class="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-cyanAccent hover:from-blue-500 hover:to-cyan-400 text-white font-technical text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg hover:shadow-cyanAccent/20 transition-all duration-300 flex items-center gap-2 whitespace-nowrap group">
+          <i data-lucide="folder-search" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+          EXPLORE MASTER CAD ARCHIVE
+        </button>
+      </div>
+
     </div>
   </section>
 
@@ -1597,6 +1614,206 @@
         </div>
       </div>
 
+      <!-- 12. MASTER CAD ARCHIVE DIRECTORY MODAL -->
+      <div id="modal-project-cad-archive" class="hidden flex flex-col gap-6 text-left max-w-5xl mx-auto w-full">
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
+              <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">MASTER REPOSITORY // SORTED BY COMPLEXITY (HIGHEST → LOWEST)</span>
+            </div>
+            <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase">Full CAD Model Directory</h2>
+            <p class="text-slate-400 text-xs mt-1">Complete catalog of design projects, assembly exercises, and CAD practice models.</p>
+          </div>
+
+          <!-- Real-Time Search Input -->
+          <div class="flex items-center gap-2">
+            <div class="relative">
+              <i data-lucide="search" class="w-3.5 h-3.5 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2"></i>
+              <input type="text" id="cad-archive-search" oninput="filterCadArchiveList()" placeholder="Search models by name or tool..." class="bg-slate-950 border border-slate-800 focus:border-cyanAccent rounded pl-9 pr-3 py-1.5 font-mono text-xs text-slate-200 placeholder-slate-600 focus:outline-none w-56">
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL MODELS [9]</button>
+          <button onclick="filterCadArchiveCategory('project')" id="archive-tab-project" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PROJECTS [4]</button>
+          <button onclick="filterCadArchiveCategory('youtube')" id="archive-tab-youtube" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">YOUTUBE TUTORIALS [3]</button>
+          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [2]</button>
+        </div>
+
+        <!-- Single-Line Directory List Container (Ranked Hardest to Easiest) -->
+        <div id="cad-archive-list" class="flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-1 scrollbar-thin">
+          
+          <!-- Row 1: 3-Wheeled Kids Kick Scooter -->
+          <div onclick="openProjectModal('kick-scooter')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="project" data-search="3 wheeled kids kick scooter fusion 360 consumer product T bar steering">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 01</span>
+              <span class="font-mono text-[8px] text-red-400 bg-red-950/50 border border-red-500/30 px-1.5 py-0.5 rounded font-bold uppercase">ADVANCED</span>
+              <img src="kick_scooter_render.png" alt="3-Wheeled Kick Scooter" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">3-Wheeled Kids Kick Scooter</h4>
+                <span class="font-sans text-[10px] text-slate-400">Parametric consumer scooter with dual front wheels, rear brake & motion video</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-orange-400 bg-slate-900 px-2 py-0.5 rounded border border-orange-500/30">FUSION 360</span>
+              <span class="text-blue-400 bg-slate-900 px-2 py-0.5 rounded border border-blue-500/30">PERSONAL PROJECT</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 2: 4-Cylinder Inline Engine & Crankshaft -->
+          <div onclick="openProjectModal('engine')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="youtube" data-search="4 cylinder inline engine crankshaft assembly motion study solidworks pistons">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 02</span>
+              <span class="font-mono text-[8px] text-red-400 bg-red-950/50 border border-red-500/30 px-1.5 py-0.5 rounded font-bold uppercase">ADVANCED</span>
+              <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">4-Cylinder Inline Engine & Crankshaft</h4>
+                <span class="font-sans text-[10px] text-slate-400">Multi-part internal combustion assembly with pistons & motion study recording</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
+              <span class="text-blue-400 bg-slate-900 px-2 py-0.5 rounded border border-blue-500/30">YOUTUBE TUTORIAL</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 3: Electric Scooter Commuter Prototype -->
+          <div onclick="openProjectModal('scooter')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="project" data-search="electric scooter commuter prototype chassis swingarm solidworks TCG design studio">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 03</span>
+              <span class="font-mono text-[8px] text-red-400 bg-red-950/50 border border-red-500/30 px-1.5 py-0.5 rounded font-bold uppercase">ADVANCED</span>
+              <img src="scooter_iso_front.png" alt="Electric Scooter" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Electric Scooter Commuter Prototype</h4>
+                <span class="font-sans text-[10px] text-slate-400">Parametric chassis packaging, swingarm, styling & suspension geometry</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
+              <span class="text-blue-400 bg-slate-900 px-2 py-0.5 rounded border border-blue-500/30">INTERNSHIP PROJECT</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 4: Mars Rover Rocker-Bogie Mechanism -->
+          <div onclick="openProjectModal('rover')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="youtube" data-search="mars rover rocker bogie mechanism space suspension obstacle track solidworks">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 04</span>
+              <span class="font-mono text-[8px] text-amber-400 bg-amber-950/50 border border-amber-500/30 px-1.5 py-0.5 rounded font-bold uppercase">INTERMEDIATE</span>
+              <img src="practice_rover_model.png" alt="Mars Rover" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Mars Rover Rocker-Bogie Mechanism</h4>
+                <span class="font-sans text-[10px] text-slate-400">Space linkage suspension system with 6-wheel terrain track testing view</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
+              <span class="text-blue-400 bg-slate-900 px-2 py-0.5 rounded border border-blue-500/30">YOUTUBE TUTORIAL</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 5: Automatic Trash Can Lid -->
+          <div onclick="openProjectModal('iris')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="project" data-search="automatic trash can lid iris shutter mechanism multi blade circular solidworks">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 05</span>
+              <span class="font-mono text-[8px] text-amber-400 bg-amber-950/50 border border-amber-500/30 px-1.5 py-0.5 rounded font-bold uppercase">INTERMEDIATE</span>
+              <img src="iris_open.png" alt="Iris Shutter" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Automatic Trash Can Lid (Iris Shutter)</h4>
+                <span class="font-sans text-[10px] text-slate-400">Circular multi-blade iris cover system with kinematic motion video</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
+              <span class="text-blue-400 bg-slate-900 px-2 py-0.5 rounded border border-blue-500/30">MECHANISM DESIGN</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 6: F450 Quadcopter Drone Frame -->
+          <div onclick="openProjectModal('drone')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="youtube" data-search="f450 quadcopter drone frame assembly solidworks multi part">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 06</span>
+              <span class="font-mono text-[8px] text-amber-400 bg-amber-950/50 border border-amber-500/30 px-1.5 py-0.5 rounded font-bold uppercase">INTERMEDIATE</span>
+              <img src="practice_drone_assembly.png" alt="F450 Quadcopter" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">F450 Quadcopter Drone Frame</h4>
+                <span class="font-sans text-[10px] text-slate-400">Multi-part drone chassis assembly with top/bottom plate mate alignment</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
+              <span class="text-blue-400 bg-slate-900 px-2 py-0.5 rounded border border-blue-500/30">YOUTUBE TUTORIAL</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 7: Tibia Bone Fracture Model -->
+          <div onclick="openProjectModal('tibia')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="project" data-search="tibia bone fracture model medical education digital mesh cutting 3d print">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 07</span>
+              <span class="font-mono text-[8px] text-emerald-400 bg-emerald-950/50 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold uppercase">STANDARD</span>
+              <div class="w-10 h-10 rounded bg-slate-900 border border-slate-800 flex items-center justify-center p-0.5">
+                <i data-lucide="activity" class="w-5 h-5 text-cyanAccent"></i>
+              </div>
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Tibia Bone Fracture Model</h4>
+                <span class="font-sans text-[10px] text-slate-400">Digital mesh cutting bone geometry for medical 3D printing prototypes</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">DIGITAL MESH</span>
+              <span class="text-blue-400 bg-slate-900 px-2 py-0.5 rounded border border-blue-500/30">MEDICAL PROJECT</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 8: Multi-Step Tapered Sleeve -->
+          <div onclick="openProjectModal('sleeve')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="multi step tapered sleeve pdf blueprint dimension sheet solidworks drawing">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 08</span>
+              <span class="font-mono text-[8px] text-emerald-400 bg-emerald-950/50 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold uppercase">STANDARD</span>
+              <img src="practice_shaft_taper_model.png" alt="Tapered Sleeve" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Multi-Step Tapered Sleeve</h4>
+                <span class="font-sans text-[10px] text-slate-400">2D PDF blueprint drafting sheet to 3D solid model translation</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">PDF BLUEPRINT</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 9: Hollow Stepped Cylinder -->
+          <div onclick="openProjectModal('collar')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="hollow stepped cylinder internal bore pdf blueprint dimension sheet solidworks">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 09</span>
+              <span class="font-mono text-[8px] text-emerald-400 bg-emerald-950/50 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold uppercase">STANDARD</span>
+              <img src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Hollow Stepped Cylinder</h4>
+                <span class="font-sans text-[10px] text-slate-400">Internal stepped bore & dimension cutout sheet conversion</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">PDF BLUEPRINT</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -1997,6 +2214,37 @@
       if (container) {
         container.scrollBy({ left: direction, behavior: 'smooth' });
       }
+    }
+
+    let activeArchiveCategory = 'all';
+
+    function filterCadArchiveCategory(category) {
+      activeArchiveCategory = category;
+      document.querySelectorAll('.archive-tab-btn').forEach(btn => {
+        btn.className = "px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn";
+      });
+      const activeBtn = document.getElementById(`archive-tab-${category}`);
+      if (activeBtn) {
+        activeBtn.className = "px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn";
+      }
+      filterCadArchiveList();
+    }
+
+    function filterCadArchiveList() {
+      const searchInput = document.getElementById('cad-archive-search');
+      const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : '';
+      const rows = document.querySelectorAll('.cad-archive-row');
+
+      rows.forEach(row => {
+        const categoryMatch = activeArchiveCategory === 'all' || row.getAttribute('data-category') === activeArchiveCategory;
+        const searchMatch = !searchVal || (row.getAttribute('data-search') && row.getAttribute('data-search').toLowerCase().includes(searchVal));
+
+        if (categoryMatch && searchMatch) {
+          row.classList.remove('hidden');
+        } else {
+          row.classList.add('hidden');
+        }
+      });
     }
 
     function switchModalKickScooterView(type, btn) {
