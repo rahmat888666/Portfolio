@@ -548,7 +548,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">11 EXERCISES COMPLETED</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">12 EXERCISES COMPLETED</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice Repository</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -560,8 +560,9 @@
         <div class="flex items-center gap-3 self-start md:self-auto">
           <!-- Filter Tabs -->
           <div class="flex flex-wrap gap-1 bg-slate-950/80 border border-slate-800 p-1 rounded font-mono text-[10px]">
-            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [11]</button>
+            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [12]</button>
             <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [4]</button>
+            <button onclick="filterSandbox('solidworks')" id="tab-sandbox-solidworks" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">SOLIDWORKS [1]</button>
             <button onclick="filterSandbox('fusion')" id="tab-sandbox-fusion" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">Fusion 360 [3]</button>
             <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [4]</button>
           </div>
@@ -657,7 +658,19 @@
             </div>
           </div>
 
-          <!-- Tile 7: Multi-Step Tapered Sleeve (PDF) -->
+          <!-- Tile 7: Ergonomic Whiteboard Duster (SOLIDWORKS - NEW!) -->
+          <div onclick="openProjectModal('duster')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_duster_model.png" alt="Ergonomic Whiteboard Duster" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Whiteboard Duster</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Ergonomic</span>
+            </div>
+          </div>
+
+          <!-- Tile 8: Multi-Step Tapered Sleeve (PDF) -->
           <div onclick="openProjectModal('sleeve')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_shaft_taper_model.png" alt="Tapered Sleeve" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -669,7 +682,7 @@
             </div>
           </div>
 
-          <!-- Tile 8: Hollow Stepped Cylinder (PDF) -->
+          <!-- Tile 9: Hollow Stepped Cylinder (PDF) -->
           <div onclick="openProjectModal('collar')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -681,7 +694,7 @@
             </div>
           </div>
 
-          <!-- Tile 9: Parametric Metallic Paper Clip (Fusion 360) -->
+          <!-- Tile 10: Parametric Metallic Paper Clip (Fusion 360) -->
           <div onclick="openProjectModal('paperclip')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_paper_clip.png" alt="Parametric Paper Clip" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -1751,14 +1764,31 @@
 
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL ARCHIVED [1]</button>
-          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [1]</button>
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL ARCHIVED [2]</button>
+          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [2]</button>
         </div>
 
         <!-- Single-Line Directory List Container -->
         <div id="cad-archive-list" class="flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-1 scrollbar-thin">
           
-          <!-- Archived Model Row: Exercise 2-7 Spherical Base Stepped Plunger -->
+          <!-- Archived Model Row 1: Exercise 1-4 Chamfered Stepped Roller Shaft -->
+          <div onclick="closeProjectModal(); setTimeout(() => openProjectModal('roller'), 150);" class="cad-archive-item flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-title="exercise 1-4 chamfered stepped roller shaft pdf blueprint">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                <img src="practice_roller_model.png" alt="Roller Shaft" class="max-h-full max-w-full object-contain">
+              </div>
+              <div class="flex flex-col gap-0.5">
+                <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
+                <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • Journal Extensions & 5x45° Bevel Chamfers</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Archived Model Row 2: Exercise 2-7 Spherical Base Stepped Plunger -->
           <div onclick="closeProjectModal(); setTimeout(() => openProjectModal('spherical'), 150);" class="cad-archive-item flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-title="exercise 2-7 spherical base plunger pdf blueprint">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
@@ -2304,6 +2334,62 @@
 
           <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
             <span>MODEL: AUTOMOTIVE ALLOY WHEEL RIM</span>
+            <span>TOOL: SOLIDWORKS 3D CAD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 21. ERGONOMIC WHITEBOARD DUSTER PRACTICE DETAIL MODAL -->
+      <div id="modal-project-duster" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img src="practice_duster_model.png" alt="Ergonomic Whiteboard Duster" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: DUAL DUSTER HANDLE & FELT PAD ISO VIEW
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // ERGONOMIC PRODUCT DESIGN PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Ergonomic Whiteboard Duster</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled a multi-part ergonomic whiteboard duster assembly in SOLIDWORKS, featuring a contoured plastic housing handle with integrated marker holder slots and a bottom felt/foam wiping pad.
+              </p>
+              <p>
+                <strong>Consumer Product Features:</strong> Designed side finger grip indents, draft angles for plastic injection molding, marker snap-fit retention ribs, and felt pad socket alignment.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Software:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Housing Material:</span>
+                <span class="text-cyanAccent font-bold">Molded Polypropylene</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Wiping Pad:</span>
+                <span class="text-slate-300">High-Density Felt</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Design Focus:</span>
+                <span class="text-slate-300">Ergonomics & Injection Mold</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: ERGONOMIC WHITEBOARD DUSTER</span>
             <span>TOOL: SOLIDWORKS 3D CAD</span>
           </div>
         </div>
