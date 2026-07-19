@@ -436,35 +436,11 @@
         </div>
       </div>
 
-      <!-- Horizontal Carousel Slider Track (Sorted by Difficulty: Highest → Lowest) -->
+      <!-- Horizontal Carousel Slider Track -->
       <div class="relative">
         <div id="projects-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
           
-          <!-- Tile 1: Automatic Trash Can Lid Shutter (RANK 1 - MOST DIFFICULT) -->
-          <div onclick="openProjectModal('iris')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="iris_open.png" alt="Iris Shutter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">MECHANISM</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Automatic Trash Can Lid</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">Iris Shutter Mechanism</span>
-            </div>
-          </div>
-
-          <!-- Tile 2: Tubular Spaceframe Bike Chassis (RANK 2) -->
-          <div onclick="openProjectModal('motoframe')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="personal">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="moto_frame_shaded.png" alt="Motorcycle Chassis Frame" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Tubular Bike Chassis</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">Personal CAD Project</span>
-            </div>
-          </div>
-
-          <!-- Tile 3: Electric Scooter Commuter Prototype (RANK 3) -->
+          <!-- Tile 1: Electric Scooter Commuter Prototype (FIRST) -->
           <div onclick="openProjectModal('scooter')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="scooter_iso_front.png" alt="Electric Scooter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -476,7 +452,7 @@
             </div>
           </div>
 
-          <!-- Tile 4: 3-Wheeled Kids Kick Scooter (RANK 4) -->
+          <!-- Tile 2: 3-Wheeled Kids Kick Scooter (SECOND) -->
           <div onclick="openProjectModal('kick-scooter')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="personal">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="kick_scooter_render.png" alt="3-Wheeled Kids Kick Scooter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -491,7 +467,31 @@
             </div>
           </div>
 
-          <!-- Tile 5: Tibia Bone Fracture Model (RANK 5) -->
+          <!-- Tile 3: Automatic Trash Can Lid Shutter (THIRD) -->
+          <div onclick="openProjectModal('iris')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="iris_open.png" alt="Iris Shutter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">MECHANISM</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Automatic Trash Can Lid</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Iris Shutter Mechanism</span>
+            </div>
+          </div>
+
+          <!-- Tile 4: Tubular Spaceframe Bike Chassis -->
+          <div onclick="openProjectModal('motoframe')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="personal">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="moto_frame_shaded.png" alt="Motorcycle Chassis Frame" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Tubular Bike Chassis</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Personal CAD Project</span>
+            </div>
+          </div>
+
+          <!-- Tile 5: Tibia Bone Fracture Model -->
           <div onclick="openProjectModal('tibia')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <i data-lucide="activity" class="w-10 h-10 text-blue-500/20 absolute"></i>
