@@ -550,6 +550,37 @@
               EXPLORE MOTION STUDY
               <i data-lucide="play-circle" class="w-3.5 h-3.5 group-hover:scale-110 transition-transform text-cyanAccent"></i>
             </button>
+        </div>
+
+        <!-- Card 3: Mars Rover Rocker-Bogie Mechanism (YouTube Tutorial) -->
+        <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="youtube">
+          <div class="flex flex-col gap-3">
+            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none group/img">
+              <!-- Base: Close-up Assembly -->
+              <img src="practice_rover_model.png" alt="Mars Rover Rocker-Bogie Assembly" class="absolute inset-0 w-full h-full object-contain p-2 transition-opacity duration-300 group-hover/img:opacity-0">
+              <!-- Hover: Obstacle Test Track -->
+              <img src="practice_rover_track.png" alt="Mars Rover Test Track" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity duration-300 group-hover/img:opacity-100 bg-slate-950">
+              
+              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1.5 py-0.5 rounded shadow z-10 font-bold">YOUTUBE TUTORIAL</div>
+              <div class="absolute bottom-2 right-2 font-mono text-[8px] text-cyanAccent bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded z-10 font-bold">HOVER TO VIEW TRACK</div>
+            </div>
+            <div>
+              <span class="text-[9px] font-mono text-blue-400 uppercase tracking-widest block mb-1">Modeled from YouTube Tutorial</span>
+              <h4 class="font-technical font-bold text-slate-200 text-sm">Mars Rover Rocker-Bogie</h4>
+              <p class="text-slate-400 text-[11px] mt-1 leading-relaxed font-sans">
+                Modeled 6-wheel Rocker-Bogie passive suspension chassis, differential linkages, and obstacle testing track by following SOLIDWORKS YouTube tutorials.
+              </p>
+            </div>
+          </div>
+          <div class="border-t border-slate-900 pt-3 flex flex-col gap-3">
+            <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
+              <span>TOOL: SOLIDWORKS</span>
+              <span>WHEELS: 6 INDEPENDENT</span>
+            </div>
+            <button onclick="openProjectModal('rover')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
+              EXPLORE ROVER DETAILS
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
@@ -1485,6 +1516,77 @@
         </div>
       </div>
 
+      <!-- 10. MARS ROVER ROCKER-BOGIE MECHANISM DETAIL MODAL -->
+      <div id="modal-project-rover" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer & View Switcher -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-rover-main" src="practice_rover_model.png" alt="Mars Rover Rocker-Bogie Assembly" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase z-10">
+              VIEW: <span id="modal-rover-view-label">ROCKER-BOGIE 6-WHEEL ASSEMBLY</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalRoverView('practice_rover_model.png', 'ROCKER-BOGIE 6-WHEEL ASSEMBLY', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-rover-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              ROVER ASSEMBLY
+            </button>
+            <button onclick="switchModalRoverView('practice_rover_track.png', 'OBSTACLE TESTING TRACK VIEW', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-rover-thumb-btn">
+              <i data-lucide="map" class="w-3.5 h-3.5 text-blue-400"></i>
+              OBSTACLE TEST TRACK
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">MODELED FROM YOUTUBE TUTORIAL // ROCKER-BOGIE KINEMATICS</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Mars Rover Rocker-Bogie Mechanism</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Mechanism Overview:</strong> Modeled a NASA-style 6-wheel Rocker-Bogie passive suspension mechanism featuring differential pivot arm linkages, wheel hub motor mounts, and chassis top plate.
+              </p>
+              <p>
+                <strong>Terrain Simulation:</strong> Designed a dedicated obstacle testing track with stepped ramps to evaluate wheel articulation, ground clearance, and vehicle stability during obstacle climbing.
+              </p>
+              <p>
+                <strong>Engineering Application:</strong> Practiced multi-part sub-assemblies, spherical link mates, clearance verification, and springless passive suspension kinematics in SOLIDWORKS.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">Suspension System:</span>
+                <span class="text-cyanAccent font-bold">6-Wheel Rocker-Bogie</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Equalization Linkage:</span>
+                <span class="text-cyanAccent font-bold">Differential Bar Mechanism</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Environment:</span>
+                <span class="text-slate-300">SOLIDWORKS Assembly</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Source Guide:</span>
+                <span class="text-slate-300">YouTube Tutorial Series</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>FILE: MARS-ROVER-ROCKER-BOGIE.SLDASM</span>
+            <span>STATUS: COMPLETED MODEL</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -1875,6 +1977,16 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-engine-thumb-btn font-bold";
+    }
+
+    function switchModalRoverView(imgSrc, viewLabel, btn) {
+      document.getElementById('modal-rover-main').src = imgSrc;
+      document.getElementById('modal-rover-view-label').innerText = viewLabel;
+      
+      document.querySelectorAll('.modal-rover-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-rover-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-rover-thumb-btn font-bold";
     }
 
     function closeProjectModal() {
