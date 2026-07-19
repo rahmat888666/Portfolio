@@ -492,19 +492,19 @@
         <div class="flex bg-slate-950/60 border border-slate-800 p-1 rounded font-mono text-[10px]">
           <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1.5 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All Exercises</button>
           <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints</button>
-          <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials</button>
+          <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">Motion & Assemblies</button>
         </div>
       </div>
 
       <!-- Sandbox Grid -->
       <div id="sandbox-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Card 1: YouTube Tutorial -->
+        <!-- Card 1: 3D Assembly (Quadcopter Drone) -->
         <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="youtube">
           <div class="flex flex-col gap-3">
             <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none">
               <img src="practice_drone_assembly.png" alt="Quadcopter Drone Assembly" class="max-h-full max-w-full object-contain p-1.5 hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded shadow z-10 font-bold">YOUTUBE GUIDE</div>
+              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded shadow z-10 font-bold">3D ASSEMBLY</div>
             </div>
             <div>
               <span class="text-[9px] font-mono text-blue-400 uppercase tracking-widest block mb-1">Multi-Part Assembly</span>
@@ -557,12 +557,12 @@
           </div>
         </div>
 
-        <!-- Card 2: YouTube Tutorial -->
+        <!-- Card 3: CAD Tutorial (Centrifugal Impeller) -->
         <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="youtube">
           <div class="flex flex-col gap-3">
             <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 flex items-center justify-center relative overflow-hidden select-none">
               <i data-lucide="video" class="w-10 h-10 text-blue-400/20"></i>
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-900 border border-slate-800 px-1 rounded">YOUTUBE GUIDE</div>
+              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-900 border border-slate-800 px-1 rounded">CAD TUTORIAL</div>
             </div>
             <div>
               <span class="text-[9px] font-mono text-blue-400 uppercase tracking-widest block mb-1">Fluid System Component</span>
@@ -578,12 +578,12 @@
           </div>
         </div>
 
-        <!-- Card 3: YouTube Tutorial (Engine Assembly) -->
+        <!-- Card 4: Motion Study (Engine Assembly) -->
         <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="youtube">
           <div class="flex flex-col gap-3">
             <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none">
               <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Inline Engine & Crankshaft Assembly" class="max-h-full max-w-full object-contain p-1.5 hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded shadow z-10 font-bold">YOUTUBE GUIDE</div>
+              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded shadow z-10 font-bold">MOTION STUDY</div>
             </div>
             <div>
               <span class="text-[9px] font-mono text-blue-400 uppercase tracking-widest block mb-1">Multi-Part Engine Kinematics</span>
@@ -599,7 +599,7 @@
               <span>PARTS: 4 PISTONS + CRANK</span>
             </div>
             <button onclick="openProjectModal('engine')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
-              WATCH TUTORIAL & EXPLORE
+              EXPLORE MOTION STUDY
               <i data-lucide="play-circle" class="w-3.5 h-3.5 group-hover:scale-110 transition-transform text-cyanAccent"></i>
             </button>
           </div>
@@ -1428,7 +1428,7 @@
 
       <!-- 9. 4-CYLINDER ENGINE ASSEMBLY & KINEMATICS DETAIL MODAL -->
       <div id="modal-project-engine" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
-        <!-- Left: YouTube Video & 3D Render Viewer -->
+        <!-- Left: Motion Study Video & 3D Render Viewer -->
         <div class="lg:w-1/2 flex flex-col justify-between gap-3">
           <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
             <!-- 3D Render Image View -->
@@ -1438,27 +1438,21 @@
               <source src="engine_motion_study.mp4" type="video/mp4">
               Your browser does not support HTML5 video.
             </video>
-            <!-- YouTube Embedded Video View -->
-            <iframe id="modal-engine-youtube" src="https://www.youtube.com/embed/NZCMTK9VTSQ" title="4-Cylinder Engine SOLIDWORKS Assembly" class="hidden w-full h-full border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             
             <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase z-10">
               VIEW: <span id="modal-engine-view-label">SOLIDWORKS 3D MODEL RENDER</span>
             </div>
           </div>
 
-          <!-- Viewer View Switcher Buttons (3 Modes) -->
-          <div class="grid grid-cols-3 gap-1.5 font-mono text-[9px]">
-            <button onclick="switchModalEngineView('render', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-200 modal-engine-thumb-btn font-bold">
-              <i data-lucide="box" class="w-3 h-3 text-cyanAccent"></i>
-              3D MODEL
+          <!-- Viewer View Switcher Buttons (2 Clean Modes) -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalEngineView('render', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-engine-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              SOLIDWORKS 3D MODEL
             </button>
-            <button onclick="switchModalEngineView('video', this)" class="border border-slate-800 bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn">
-              <i data-lucide="video" class="w-3 h-3 text-blue-400"></i>
-              MOTION VIDEO
-            </button>
-            <button onclick="switchModalEngineView('youtube', this)" class="border border-slate-800 bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn">
-              <i data-lucide="youtube" class="w-3 h-3 text-red-500"></i>
-              YOUTUBE GUIDE
+            <button onclick="switchModalEngineView('video', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn">
+              <i data-lucide="video" class="w-3.5 h-3.5 text-blue-400"></i>
+              PLAY MOTION STUDY VIDEO
             </button>
           </div>
         </div>
@@ -1467,7 +1461,7 @@
         <div class="lg:w-1/2 flex flex-col justify-between gap-6">
           <div class="flex flex-col gap-4">
             <div>
-              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">YOUTUBE TUTORIAL // ENGINE KINEMATICS</span>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">KINEMATIC MOTION STUDY // SOLIDWORKS</span>
               <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">4-Cylinder Inline Engine & Crankshaft</h2>
             </div>
             
@@ -1497,15 +1491,15 @@
                 <span class="text-slate-300">SOLIDWORKS Assembly</span>
               </div>
               <div>
-                <span class="text-slate-500 block uppercase">Tutorial Guide:</span>
-                <a href="https://youtu.be/NZCMTK9VTSQ?si=bWXCbaQjllJlp7BG" target="_blank" class="text-cyanAccent underline hover:text-cyanAccent/80">YouTube Video #NZCMTK9VTSQ</a>
+                <span class="text-slate-500 block uppercase">Motion Simulation:</span>
+                <span class="text-slate-300">Crankshaft Rotation</span>
               </div>
             </div>
           </div>
 
           <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
             <span>FILE: ENGINE-INLINE-4CYL.SLDASM</span>
-            <span>VIDEO: YOUTUBE EMBED READY</span>
+            <span>SIMULATION: MOTION STUDY MP4</span>
           </div>
         </div>
       </div>
@@ -1882,33 +1876,24 @@
     function switchModalEngineView(type, btn) {
       const imgEl = document.getElementById('modal-engine-main');
       const vidEl = document.getElementById('modal-engine-video');
-      const ytEl = document.getElementById('modal-engine-youtube');
       const labelEl = document.getElementById('modal-engine-view-label');
 
       if (type === 'render') {
         imgEl.classList.remove('hidden');
         vidEl.classList.add('hidden');
         if (vidEl) vidEl.pause();
-        ytEl.classList.add('hidden');
         labelEl.innerText = 'SOLIDWORKS 3D MODEL RENDER';
-      } else if (type === 'video') {
-        imgEl.classList.add('hidden');
-        vidEl.classList.remove('hidden');
-        ytEl.classList.add('hidden');
-        labelEl.innerText = 'MOTION STUDY SCREEN RECORDING';
-        if (vidEl) vidEl.play();
       } else {
         imgEl.classList.add('hidden');
-        vidEl.classList.add('hidden');
-        if (vidEl) vidEl.pause();
-        ytEl.classList.remove('hidden');
-        labelEl.innerText = 'EMBEDDED YOUTUBE TUTORIAL PLAYER';
+        vidEl.classList.remove('hidden');
+        labelEl.innerText = 'MOTION STUDY SCREEN RECORDING';
+        if (vidEl) vidEl.play();
       }
 
       document.querySelectorAll('.modal-engine-thumb-btn').forEach(b => {
-        b.className = "border border-slate-800 bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn";
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn";
       });
-      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-200 modal-engine-thumb-btn font-bold";
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-engine-thumb-btn font-bold";
     }
 
     function closeProjectModal() {
@@ -1918,13 +1903,6 @@
 
       const engineVid = document.getElementById('modal-engine-video');
       if (engineVid) engineVid.pause();
-
-      const engineYt = document.getElementById('modal-engine-youtube');
-      if (engineYt) {
-        const src = engineYt.src;
-        engineYt.src = '';
-        engineYt.src = src;
-      }
 
       gsap.to(projectModal, { 
         opacity: 0, 
