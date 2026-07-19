@@ -60,7 +60,7 @@
       <nav class="hidden md:flex items-center gap-8 font-technical text-sm font-medium">
         <a href="#about" class="text-slate-300 hover:text-cyanAccent transition-colors">ABOUT</a>
         <a href="#projects" class="text-slate-300 hover:text-cyanAccent transition-colors">PROJECTS</a>
-        <a href="#sandbox" class="text-slate-300 hover:text-cyanAccent transition-colors">PRACTICE DRAWINGS</a>
+        <a href="#sandbox" class="text-slate-300 hover:text-cyanAccent transition-colors">CAD PRACTICE</a>
         <a href="#skills" class="text-slate-300 hover:text-cyanAccent transition-colors">SKILLS</a>
         <a href="#experience" class="text-slate-300 hover:text-cyanAccent transition-colors">EXPERIENCE</a>
         <a href="#contact" class="px-3 py-1.5 border border-blue-500/30 hover:border-cyanAccent rounded text-cyanAccent hover:bg-cyanAccent/10 transition-all font-mono text-xs tracking-wider">CONTACT</a>
@@ -76,7 +76,7 @@
     <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-blue-500/10 px-6 py-4 absolute top-full left-0 w-full flex flex-col gap-4 font-technical text-sm bg-slate-950">
       <a href="#about" class="text-slate-300 py-2 border-b border-slate-800">ABOUT</a>
       <a href="#projects" class="text-slate-300 py-2 border-b border-slate-800">PROJECTS</a>
-      <a href="#sandbox" class="text-slate-300 py-2 border-b border-slate-800">PRACTICE DRAWINGS</a>
+      <a href="#sandbox" class="text-slate-300 py-2 border-b border-slate-800">CAD PRACTICE</a>
       <a href="#skills" class="text-slate-300 py-2 border-b border-slate-800">SKILLS</a>
       <a href="#experience" class="text-slate-300 py-2 border-b border-slate-800">EXPERIENCE</a>
       <a href="#contact" class="text-cyanAccent py-2">CONTACT</a>
@@ -354,6 +354,11 @@
               </ul>
             </div>
           </div>
+
+          <button onclick="openProjectModal('iocl')" class="mt-2 w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 group">
+            <span>EXPLORE DETAILED REPORT & PROCESS STUDY</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </button>
         </div>
 
         <!-- Experience 2 -->
@@ -470,14 +475,14 @@
 
   </section>
 
-  <!-- CAD Practice Drawings Section -->
+  <!-- CAD Practice Section -->
   <section id="sandbox" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-900/60">
     <div class="flex flex-col gap-10">
       
       <!-- Section Headers -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice Drawings</h2>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice</h2>
           <p class="text-slate-400 text-sm mt-2 max-w-xl font-sans">
             A repository of 3D parts and drafting exercises modeled to master engineering clearances, tolerance fits, and complex geometries.
           </p>
@@ -1286,6 +1291,166 @@
         </div>
       </div>
 
+      <!-- 8. IOCL LONI INDUSTRIAL INTERNSHIP REPORT DETAIL MODAL -->
+      <div id="modal-project-iocl" class="hidden flex flex-col gap-6 text-left max-w-5xl mx-auto">
+        
+        <!-- Header & Title -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-4 gap-4">
+          <div>
+            <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest block mb-1">Industrial Internship // Plant Operations & Process Engineering</span>
+            <h2 class="text-2xl md:text-3xl font-bold font-technical text-slate-100 uppercase">Statutory Testing & Painting (STP) — IOCL Loni</h2>
+            <p class="text-slate-400 text-xs font-mono mt-1">Indian Oil Corporation Limited | Indane LPG Bottling Plant, Loni (02.06.2025 - 31.07.2025)</p>
+          </div>
+          <div class="flex flex-col items-start md:items-end">
+            <span class="bg-blue-600/20 text-blue-400 border border-blue-500/40 px-3 py-1 rounded font-mono text-xs font-bold">12% - 15% CYCLE TIME REDUCTION</span>
+            <span class="text-[10px] font-mono text-slate-500 mt-1">SUPERVISOR: DEEPAK KUMAR SINGH (ASST. MANAGER)</span>
+          </div>
+        </div>
+
+        <!-- Executive Summary Banner -->
+        <div class="bg-slate-900/60 border border-slate-800 p-5 rounded flex flex-col gap-3 font-sans text-xs text-slate-300 leading-relaxed">
+          <h3 class="font-technical font-bold text-sm text-cyanAccent uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="file-check" class="w-4 h-4 text-cyanAccent"></i>
+            Project Executive Summary & Statutory Purpose
+          </h3>
+          <p>
+            As mandated by the <strong>Petroleum & Explosives Safety Organisation (PESO)</strong> and <strong>Bureau of Indian Standards (BIS)</strong>, every LPG cylinder must undergo periodic testing every 5 or 10 years to verify structural integrity before reintroduction into consumer distribution.
+          </p>
+          <p>
+            During my month-long internship at the IOCL Loni LPG Bottling Plant, I analyzed the 13-stage Statutory Testing & Painting (STP) line workflow, monitored equipment downtime, mapped pneumatic air/water utilities, and proposed actionable fixes that reduced cylinder processing cycle times by <strong>12% to 15%</strong> while maintaining strict safety compliance.
+          </p>
+        </div>
+
+        <!-- Metric Badges Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
+          <div class="bg-slate-950/80 border border-slate-800 p-3 rounded text-center">
+            <span class="text-slate-500 block text-[10px] uppercase">Hydro Pressure</span>
+            <span class="text-cyanAccent font-bold text-sm">25 kg/cm²</span>
+            <span class="text-slate-500 block text-[9px]">Held 30s - 60s</span>
+          </div>
+          <div class="bg-slate-950/80 border border-slate-800 p-3 rounded text-center">
+            <span class="text-slate-500 block text-[10px] uppercase">Pneumatic Test</span>
+            <span class="text-cyanAccent font-bold text-sm">12 - 15 kg/cm²</span>
+            <span class="text-slate-500 block text-[9px]">1.2 - 1.5 MPa Air</span>
+          </div>
+          <div class="bg-slate-950/80 border border-slate-800 p-3 rounded text-center">
+            <span class="text-slate-500 block text-[10px] uppercase">Paint Coating (DFT)</span>
+            <span class="text-cyanAccent font-bold text-sm">60 Microns</span>
+            <span class="text-slate-500 block text-[9px]">30μm Primer + 30μm Enamel</span>
+          </div>
+          <div class="bg-slate-950/80 border border-slate-800 p-3 rounded text-center">
+            <span class="text-slate-500 block text-[10px] uppercase">Surface Prep</span>
+            <span class="text-cyanAccent font-bold text-sm">ISO 8501-1 SA 2.5</span>
+            <span class="text-slate-500 block text-[9px]">Shot Blasting Grade</span>
+          </div>
+        </div>
+
+        <!-- Technical Deep-Dive: 13-Stage Plant Workflow -->
+        <div class="flex flex-col gap-4 border-t border-slate-800 pt-5">
+          <h3 class="font-technical font-bold text-base text-slate-100 uppercase tracking-wider">
+            13-Stage STP Line Process Workflow Breakdown
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-sans">
+            <!-- Stage 1 & 2 -->
+            <div class="bg-slate-950/50 border border-slate-900 p-4 rounded flex flex-col gap-2">
+              <span class="font-mono text-[10px] text-cyanAccent uppercase font-bold">STAGES 01 - 03 // SEGREGATION & DEGASSING</span>
+              <h4 class="font-bold text-slate-200 text-sm font-technical">1. Visual Segregation, Depressurization & Degassing</h4>
+              <p class="text-slate-400 leading-relaxed text-[11px]">
+                • <strong>Segregation:</strong> Checked stay plate markings (e.g., A/24, B/24) in the Cold Repair Shed to identify due cylinders.<br>
+                • <strong>Depressurization & Degassing:</strong> Safely vented residual gas and submerged cylinders in water for 1 hour to displace LPG vapors.<br>
+                • <strong>Explosimeter Check:</strong> Verified gas-free status using an Explosimeter (ensuring LEL &lt; safety limit) before unscrewing valves.
+              </p>
+            </div>
+
+            <!-- Stage 3 & 4 -->
+            <div class="bg-slate-950/50 border border-slate-900 p-4 rounded flex flex-col gap-2">
+              <span class="font-mono text-[10px] text-cyanAccent uppercase font-bold">STAGES 04 - 06 // INSPECTIONS & GAUGING</span>
+              <h4 class="font-bold text-slate-200 text-sm font-technical">2. Borescope Inspection, Bung Thread & Wall Thickness</h4>
+              <p class="text-slate-400 leading-relaxed text-[11px]">
+                • <strong>Internal Borescope:</strong> Inspected inner shell for rust pits and moisture using endoscope light probes.<br>
+                • <strong>Bung Thread Check:</strong> Tested valve pad threads with a 3/4-14 NGT gauge to eliminate cross-threading risks.<br>
+                • <strong>Ultrasonic Thickness:</strong> Measured bottom plate thickness using Ultrasonic Thickness Gauges to confirm shell integrity.
+              </p>
+            </div>
+
+            <!-- Stage 5 & 6 -->
+            <div class="bg-slate-950/50 border border-slate-900 p-4 rounded flex flex-col gap-2">
+              <span class="font-mono text-[10px] text-cyanAccent uppercase font-bold">STAGES 07 - 09 // SHOT BLASTING & HYDROTESTING</span>
+              <h4 class="font-bold text-slate-200 text-sm font-technical">3. SA 2.5 Shot Blasting & 25 kg/cm² Hydrotesting</h4>
+              <p class="text-slate-400 leading-relaxed text-[11px]">
+                • <strong>SA 2.5 Shot Blasting:</strong> High-speed steel shot blasting removed old paint and rust, giving a metallic grey surface.<br>
+                • <strong>Hydrostatic Test:</strong> Filled completely with water and pressurized to <strong>25 kg/cm²</strong> for 30–60 seconds to test expansion.<br>
+                • <strong>Magnetic Rod Cleaning:</strong> Inserted magnetic rods through the bung hole to pull out loose iron filings and rust flakes.
+              </p>
+            </div>
+
+            <!-- Stage 7 & 8 -->
+            <div class="bg-slate-950/50 border border-slate-900 p-4 rounded flex flex-col gap-2">
+              <span class="font-mono text-[10px] text-cyanAccent uppercase font-bold">STAGES 10 - 13 // PAINTING, LEAK TEST & DISPATCH</span>
+              <h4 class="font-bold text-slate-200 text-sm font-technical">4. Dual-Coat Painting, Pneumatic Leak Test & Certification</h4>
+              <p class="text-slate-400 leading-relaxed text-[11px]">
+                • <strong>Dual Coating:</strong> Applied Red Oxide Zinc Chromate primer (IS 2074) and Signal Red Enamel (IS 2932), ensuring min 60μm DFT.<br>
+                • <strong>Pneumatic Test:</strong> Fitted ISI self-closing valves (IS 8737), pressurized with 12–15 kg/cm² air underwater to detect micro-bubbles.<br>
+                • <strong>Punching & ERP:</strong> Punched HT number and re-test date (e.g., 07-25), certified compliance, and logged into ERP for dispatch.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Engineering Solutions & Bottleneck Fixes (MD Rahmat's Report) -->
+        <div class="flex flex-col gap-4 border-t border-slate-800 pt-5">
+          <h3 class="font-technical font-bold text-base text-slate-100 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="wrench" class="w-4 h-4 text-cyanAccent"></i>
+            Key Inefficiencies Identified & Engineering Fixes Implemented
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-sans">
+            <div class="bg-slate-900/40 border border-slate-800 p-4 rounded flex flex-col gap-2">
+              <span class="text-cyanAccent font-mono text-[10px] font-bold uppercase">PROBLEM 1: CLAMPING DOWNTIME</span>
+              <h4 class="font-bold text-slate-200 text-xs font-technical">Pneumatic Clamping Pressure Losses</h4>
+              <p class="text-slate-400 leading-relaxed text-[11px]">
+                Frequent breakdowns in hydrotest clamping units were caused by misaligned Non-Return Valves (NRVs) causing pressure drops.
+              </p>
+              <div class="bg-slate-950 p-2.5 rounded border border-cyanAccent/20 mt-1">
+                <span class="text-cyanAccent font-mono text-[10px] font-bold block">MY FIX:</span>
+                <span class="text-slate-300 text-[10px]">Reconfigured pneumatic line fittings, properly installed NRVs with pressure regulators, and added shock absorbers.</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/40 border border-slate-800 p-4 rounded flex flex-col gap-2">
+              <span class="text-cyanAccent font-mono text-[10px] font-bold uppercase">PROBLEM 2: PAINT & DRYING DELAYS</span>
+              <h4 class="font-bold text-slate-200 text-xs font-technical">Spray Booth Calibration & Sun Drying</h4>
+              <p class="text-slate-400 leading-relaxed text-[11px]">
+                Uncalibrated spray booth nozzles caused uneven baseplate coverage and required up to 1 hour of manual sun-drying.
+              </p>
+              <div class="bg-slate-950 p-2.5 rounded border border-cyanAccent/20 mt-1">
+                <span class="text-cyanAccent font-mono text-[10px] font-bold block">MY FIX:</span>
+                <span class="text-slate-300 text-[10px]">Adjusted spray booth air pressure and nozzle angles, introduced refrigerated air dryers for faster drying, ensuring 60μm coating.</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/40 border border-slate-800 p-4 rounded flex flex-col gap-2">
+              <span class="text-cyanAccent font-mono text-[10px] font-bold uppercase">PROBLEM 3: MATERIAL HANDLING</span>
+              <h4 class="font-bold text-slate-200 text-xs font-technical">Cylinder Batching & Sorting Delays</h4>
+              <p class="text-slate-400 leading-relaxed text-[11px]">
+                Cylinders accumulated in bulk at the Cold Repair Shed and were moved via truck, causing out-of-sequence delays at inspection.
+              </p>
+              <div class="bg-slate-950 p-2.5 rounded border border-cyanAccent/20 mt-1">
+                <span class="text-cyanAccent font-mono text-[10px] font-bold block">MY FIX:</span>
+                <span class="text-slate-300 text-[10px]">Proposed a continuous trolley/conveyor transfer system ensuring First-In-First-Out (FIFO) sequence and list tracking.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Meta -->
+        <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+          <span>REPORT FILE: IOCL-LONI-STP-2025</span>
+          <span>STATUS: APPROVED & CERTIFIED</span>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -1383,6 +1548,7 @@
       document.getElementById('modal-project-sleeve').classList.add('hidden');
       document.getElementById('modal-project-collar').classList.add('hidden');
       document.getElementById('modal-project-drone').classList.add('hidden');
+      document.getElementById('modal-project-iocl').classList.add('hidden');
       
       // Reset shaft modal preview default state
       if (projectId === 'shaft') {
