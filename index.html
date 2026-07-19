@@ -1722,6 +1722,92 @@
             </div>
           </div>
 
+          <!-- Row 5: Exercise 1-4 Chamfered Stepped Roller Shaft -->
+          <div onclick="openProjectModal('roller')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="exercise 1 4 chamfered stepped roller shaft pdf blueprint 100 150 182 20 chamfers solidworks">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 05</span>
+              <span class="font-mono text-[8px] text-emerald-400 bg-emerald-950/50 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold uppercase">STANDARD</span>
+              <img src="practice_roller_model.png" alt="Exercise 1-4 Roller Shaft" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
+                <span class="font-sans text-[10px] text-slate-400">Ø100mm x 150mm main body, Ø20mm journal extensions & 5x45° bevel chamfers</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">PDF BLUEPRINT</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 13. EXERCISE 1-4 ROLLER SHAFT DETAIL MODAL -->
+      <div id="modal-project-roller" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer & Blueprint Swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-roller-main" src="practice_roller_model.png" alt="Exercise 1-4 Roller Shaft" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-roller-view-label">3D CAD MODEL</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalRollerView('practice_roller_model.png', '3D CAD MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-roller-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              3D CAD MODEL
+            </button>
+            <button onclick="switchModalRollerView('practice_roller_dim.png', 'PDF BLUEPRINT SHEET', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-roller-thumb-btn">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              PDF BLUEPRINT
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">PDF BLUEPRINT EXERCISE // DRAFTING TO 3D</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Exercise 1-4: Chamfered Stepped Roller Shaft</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Exercise Overview:</strong> Modeled Exercise 1-4 from 2D engineering drafting blueprints in SOLIDWORKS, featuring a main Ø100mm cylindrical roller body, dual Ø20mm journal shaft extensions, and 5x45° bevel chamfers on both cylinder shoulders.
+              </p>
+              <p>
+                <strong>Geometric Accuracy & Fit:</strong> Applied revolved boss features, precise axial chamfer cuts, and concentric journal step dimensions to match exact PDF tolerance specifications.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">Main Body Dia:</span>
+                <span class="text-cyanAccent font-bold">Ø100 mm</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Main Body Length:</span>
+                <span class="text-cyanAccent font-bold">150 mm</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Overall Length:</span>
+                <span class="text-slate-300">182 mm (Ø20mm journals)</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Edge Bevel:</span>
+                <span class="text-slate-300">5 x 45° Chamfer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>EXERCISE: 1-4 STEPPED ROLLER</span>
+            <span>STATUS: 100% MATCHED TO PDF</span>
+          </div>
         </div>
       </div>
 
@@ -2118,6 +2204,16 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-rover-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-rover-thumb-btn font-bold";
+    }
+
+    function switchModalRollerView(src, label, btn) {
+      document.getElementById('modal-roller-main').src = src;
+      document.getElementById('modal-roller-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-roller-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-roller-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-roller-thumb-btn font-bold";
     }
 
     function scrollSandbox(direction) {
