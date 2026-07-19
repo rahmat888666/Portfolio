@@ -1296,21 +1296,24 @@
         <!-- Left: Image Viewer & Gallery -->
         <div class="lg:w-1/2 flex flex-col gap-4">
           <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
-            <img id="modal-iocl-main" src="plant_shot_blasting_machine.png" alt="SA 2.5 Shot Blasting Machine" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <img id="modal-iocl-main" src="plant_hydrotest_station_rig.png" alt="10-Station Hydrotesting Rig" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
             <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
-              VIEW: <span id="modal-iocl-view-label">SA 2.5 SHOT BLASTING MACHINE</span>
+              VIEW: <span id="modal-iocl-view-label">HYDROTEST STATION RIG (25 kg/cm²)</span>
             </div>
           </div>
           <!-- Thumbnails -->
-          <div class="grid grid-cols-5 gap-2">
-            <button onclick="switchModalIoclView('plant_shot_blasting_machine.png', 'SA 2.5 SHOT BLASTING MACHINE', this)" class="border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+          <div class="grid grid-cols-6 gap-1.5">
+            <button onclick="switchModalIoclView('plant_hydrotest_station_rig.png', 'HYDROTEST STATION RIG (25 kg/cm²)', this)" class="border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+              <img src="plant_hydrotest_station_rig.png" class="max-h-full max-w-full object-cover rounded">
+            </button>
+            <button onclick="switchModalIoclView('plant_paint_booth_booths.png', 'PRIMER & SPRAY PAINT BOOTHS', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+              <img src="plant_paint_booth_booths.png" class="max-h-full max-w-full object-cover rounded">
+            </button>
+            <button onclick="switchModalIoclView('plant_shot_blasting_machine.png', 'SA 2.5 SHOT BLASTING MACHINE', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
               <img src="plant_shot_blasting_machine.png" class="max-h-full max-w-full object-cover rounded">
             </button>
-            <button onclick="switchModalIoclView('plant_bottling_shed.png', 'BOTTLING PLANT INSPECTION SHED', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_bottling_shed.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_inspection_shed.png', 'INSPECTION SHED SIGNBOARD', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_inspection_shed.png" class="max-h-full max-w-full object-cover rounded">
+            <button onclick="switchModalIoclView('plant_conveyor_carousel.png', 'CYLINDER CAROUSEL CONVEYOR', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+              <img src="plant_conveyor_carousel.png" class="max-h-full max-w-full object-cover rounded">
             </button>
             <button onclick="switchModalIoclView('plant_thread_gauge.png', 'BUNG THREAD GAUGES (3/4 NGT)', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
               <img src="plant_thread_gauge.png" class="max-h-full max-w-full object-cover rounded">
@@ -1508,8 +1511,8 @@
 
       // Reset iocl modal preview default state
       if (projectId === 'iocl') {
-        document.getElementById('modal-iocl-main').src = 'plant_shot_blasting_machine.png';
-        document.getElementById('modal-iocl-view-label').innerText = 'SA 2.5 SHOT BLASTING MACHINE';
+        document.getElementById('modal-iocl-main').src = 'plant_hydrotest_station_rig.png';
+        document.getElementById('modal-iocl-view-label').innerText = 'HYDROTEST STATION RIG (25 kg/cm²)';
         document.querySelectorAll('.modal-iocl-thumb-btn').forEach((btn, idx) => {
           if (idx === 0) {
             btn.className = "border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn";
