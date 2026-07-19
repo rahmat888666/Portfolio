@@ -1638,8 +1638,9 @@
 
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL ADDITIONAL [4]</button>
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL ADDITIONAL [5]</button>
           <button onclick="filterCadArchiveCategory('project')" id="archive-tab-project" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PERSONAL PROJECTS [1]</button>
+          <button onclick="filterCadArchiveCategory('molding')" id="archive-tab-molding" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">INJECTION MOLDING [1]</button>
           <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 PRACTICE [1]</button>
           <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [2]</button>
         </div>
@@ -1683,10 +1684,28 @@
             </div>
           </div>
 
-          <!-- Row 3: Exercise 1-4 Chamfered Stepped Roller Shaft -->
-          <div onclick="openProjectModal('roller')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="exercise 1 4 chamfered stepped roller shaft pdf blueprint 100 150 182 20 chamfers solidworks">
+          <!-- Row 3: Parametric 2x4 Interlocking LEGO Brick -->
+          <div onclick="openProjectModal('legobrick')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="molding" data-search="parametric 2x4 interlocking lego brick plastic injection molding studs alignment coupling tubes solidworks">
             <div class="flex items-center gap-3">
               <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 03</span>
+              <span class="font-mono text-[8px] text-amber-400 bg-amber-950/50 border border-amber-500/30 px-1.5 py-0.5 rounded font-bold uppercase">INTERMEDIATE</span>
+              <img src="practice_lego_top.png" alt="2x4 LEGO Brick" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Parametric 2x4 Interlocking LEGO Brick</h4>
+                <span class="font-sans text-[10px] text-slate-400">2x4 stud matrix array, 3 internal friction-fit alignment tubes & thin-wall plastic shell cavity</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
+              <span class="text-emerald-400 bg-slate-900 px-2 py-0.5 rounded border border-emerald-500/30">INJECTION MOLDING</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 4: Exercise 1-4 Chamfered Stepped Roller Shaft -->
+          <div onclick="openProjectModal('roller')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="exercise 1 4 chamfered stepped roller shaft pdf blueprint 100 150 182 20 chamfers solidworks">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 04</span>
               <span class="font-mono text-[8px] text-emerald-400 bg-emerald-950/50 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold uppercase">STANDARD</span>
               <img src="practice_roller_model.png" alt="Exercise 1-4 Roller Shaft" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
               <div class="flex flex-col">
@@ -1701,10 +1720,10 @@
             </div>
           </div>
 
-          <!-- Row 4: Exercise 2-7 Spherical Base Stepped Plunger -->
+          <!-- Row 5: Exercise 2-7 Spherical Base Stepped Plunger -->
           <div onclick="openProjectModal('spherical')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="exercise 2 7 spherical base stepped plunger SR15 30 12 10 pdf blueprint solidworks">
             <div class="flex items-center gap-3">
-              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 04</span>
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 05</span>
               <span class="font-mono text-[8px] text-emerald-400 bg-emerald-950/50 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold uppercase">STANDARD</span>
               <img src="practice_spherical_model.png" alt="Exercise 2-7 Spherical Plunger" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
               <div class="flex flex-col">
@@ -1982,6 +2001,74 @@
           <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
             <span>MODEL: GLASS BEVERAGE BOTTLE</span>
             <span>TOOL: AUTODESK FUSION 360</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 17. PARAMETRIC 2x4 LEGO BRICK DETAIL MODAL -->
+      <div id="modal-project-legobrick" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer & Swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-legobrick-main" src="practice_lego_top.png" alt="Parametric 2x4 LEGO Brick" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-legobrick-view-label">TOP STUD MATRIX (2x4)</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalLegobrickView('practice_lego_top.png', 'TOP STUD MATRIX (2x4)', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-legobrick-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              TOP STUD MATRIX
+            </button>
+            <button onclick="switchModalLegobrickView('practice_lego_bottom.png', 'BOTTOM INTERLOCKING TUBES', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-legobrick-thumb-btn">
+              <i data-lucide="layers" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              INTERLOCKING TUBES
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">PLASTIC INJECTION MOLDING // TOLERANCE & SNAP FIT</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Parametric 2x4 Interlocking LEGO Brick</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled an iconic 2x4 interlocking LEGO brick featuring a 8-stud top matrix array, uniform thin-wall plastic shell cavity, and 3 internal hollow alignment tubes engineered for friction-fit snap coupling.
+              </p>
+              <p>
+                <strong>Injection Molding Engineering:</strong> Designed with exact interference fit tolerances for ABS plastic injection molding, featuring draft angles, uniform wall thickness to eliminate sink marks, and 3-point contact cylinder coupling.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">Stud Layout:</span>
+                <span class="text-cyanAccent font-bold">2 x 4 Matrix (8 Studs)</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Coupling System:</span>
+                <span class="text-cyanAccent font-bold">3 Internal Tubes</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">ABS Injection Polymer</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-slate-300">SOLIDWORKS 3D</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: 2x4 LEGO BRICK</span>
+            <span>TYPE: INJECTION MOLD SNAP FIT</span>
           </div>
         </div>
       </div>
@@ -2409,6 +2496,16 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-motoframe-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-motoframe-thumb-btn font-bold";
+    }
+
+    function switchModalLegobrickView(src, label, btn) {
+      document.getElementById('modal-legobrick-main').src = src;
+      document.getElementById('modal-legobrick-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-legobrick-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-legobrick-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-legobrick-thumb-btn font-bold";
     }
 
     function scrollSandbox(direction) {
