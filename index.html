@@ -1433,6 +1433,11 @@
           <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
             <!-- 3D Render Image View -->
             <img id="modal-engine-main" src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine Assembly Render" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <!-- Local Motion Study Video View -->
+            <video id="modal-engine-video" controls class="hidden w-full h-full object-contain bg-slate-950">
+              <source src="engine_motion_study.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
             <!-- YouTube Embedded Video View -->
             <iframe id="modal-engine-youtube" src="https://www.youtube.com/embed/NZCMTK9VTSQ" title="4-Cylinder Engine SOLIDWORKS Assembly" class="hidden w-full h-full border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             
@@ -1441,15 +1446,19 @@
             </div>
           </div>
 
-          <!-- Viewer View Switcher Buttons -->
-          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
-            <button onclick="switchModalEngineView('render', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-engine-thumb-btn font-bold">
-              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
-              SOLIDWORKS 3D MODEL
+          <!-- Viewer View Switcher Buttons (3 Modes) -->
+          <div class="grid grid-cols-3 gap-1.5 font-mono text-[9px]">
+            <button onclick="switchModalEngineView('render', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-200 modal-engine-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3 h-3 text-cyanAccent"></i>
+              3D MODEL
             </button>
-            <button onclick="switchModalEngineView('youtube', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn">
-              <i data-lucide="youtube" class="w-3.5 h-3.5 text-red-500"></i>
-              WATCH YOUTUBE TUTORIAL
+            <button onclick="switchModalEngineView('video', this)" class="border border-slate-800 bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn">
+              <i data-lucide="video" class="w-3 h-3 text-blue-400"></i>
+              MOTION VIDEO
+            </button>
+            <button onclick="switchModalEngineView('youtube', this)" class="border border-slate-800 bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn">
+              <i data-lucide="youtube" class="w-3 h-3 text-red-500"></i>
+              YOUTUBE GUIDE
             </button>
           </div>
         </div>
@@ -1872,29 +1881,43 @@
 
     function switchModalEngineView(type, btn) {
       const imgEl = document.getElementById('modal-engine-main');
+      const vidEl = document.getElementById('modal-engine-video');
       const ytEl = document.getElementById('modal-engine-youtube');
       const labelEl = document.getElementById('modal-engine-view-label');
 
       if (type === 'render') {
         imgEl.classList.remove('hidden');
+        vidEl.classList.add('hidden');
+        if (vidEl) vidEl.pause();
         ytEl.classList.add('hidden');
         labelEl.innerText = 'SOLIDWORKS 3D MODEL RENDER';
+      } else if (type === 'video') {
+        imgEl.classList.add('hidden');
+        vidEl.classList.remove('hidden');
+        ytEl.classList.add('hidden');
+        labelEl.innerText = 'MOTION STUDY SCREEN RECORDING';
+        if (vidEl) vidEl.play();
       } else {
         imgEl.classList.add('hidden');
+        vidEl.classList.add('hidden');
+        if (vidEl) vidEl.pause();
         ytEl.classList.remove('hidden');
         labelEl.innerText = 'EMBEDDED YOUTUBE TUTORIAL PLAYER';
       }
 
       document.querySelectorAll('.modal-engine-thumb-btn').forEach(b => {
-        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn";
+        b.className = "border border-slate-800 bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-engine-thumb-btn";
       });
-      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-engine-thumb-btn font-bold";
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 px-1 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-200 modal-engine-thumb-btn font-bold";
     }
 
     function closeProjectModal() {
       // Pause any video that might be playing inside modals
       const irisVid = document.getElementById('iris-modal-video');
       if (irisVid) irisVid.pause();
+
+      const engineVid = document.getElementById('modal-engine-video');
+      if (engineVid) engineVid.pause();
 
       const engineYt = document.getElementById('modal-engine-youtube');
       if (engineYt) {
