@@ -1294,32 +1294,56 @@
       <!-- 8. IOCL LONI INDUSTRIAL INTERNSHIP REPORT DETAIL MODAL -->
       <div id="modal-project-iocl" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
         <!-- Left: Image Viewer & Gallery -->
-        <div class="lg:w-1/2 flex flex-col gap-4">
+        <div class="lg:w-1/2 flex flex-col gap-3">
           <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
             <img id="modal-iocl-main" src="plant_hydrotest_station_rig.png" alt="10-Station Hydrotesting Rig" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
             <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
-              VIEW: <span id="modal-iocl-view-label">HYDROTEST STATION RIG (25 kg/cm²)</span>
+              VIEW: <span id="modal-iocl-view-label">10-STATION HYDROTEST RIG (25 kg/cm²)</span>
             </div>
           </div>
-          <!-- Thumbnails -->
-          <div class="grid grid-cols-6 gap-1.5">
-            <button onclick="switchModalIoclView('plant_hydrotest_station_rig.png', 'HYDROTEST STATION RIG (25 kg/cm²)', this)" class="border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+          
+          <!-- Dynamic Photo Explanation Box -->
+          <div class="bg-slate-950/80 border border-slate-800 p-3.5 rounded flex flex-col gap-1.5 font-sans text-xs">
+            <div class="flex items-center justify-between border-b border-slate-900 pb-1.5">
+              <span class="font-technical font-bold text-cyanAccent uppercase text-[11px] flex items-center gap-1.5">
+                <i data-lucide="info" class="w-3.5 h-3.5 text-cyanAccent"></i>
+                <span id="modal-iocl-desc-title">10-Station Hydrostatic Testing Bench</span>
+              </span>
+              <span class="font-mono text-[8px] text-slate-500 uppercase">EQUIPMENT & PROCESS DETAILS</span>
+            </div>
+            <p id="modal-iocl-desc-body" class="text-slate-300 leading-relaxed text-[11px]">
+              Pressurizes LPG cylinders to <strong>25 kg/cm²</strong> using water for 30–60 seconds to verify structural expansion and weld seam integrity before painting, complying with PESO & BIS standards.
+            </p>
+          </div>
+
+          <!-- Thumbnails (9-grid) -->
+          <div class="grid grid-cols-5 sm:grid-cols-9 gap-1.5">
+            <button onclick="switchModalIoclView('plant_hydrotest_station_rig.png', '10-STATION HYDROTEST RIG (25 kg/cm²)', this)" class="border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
               <img src="plant_hydrotest_station_rig.png" class="max-h-full max-w-full object-cover rounded">
+            </button>
+            <button onclick="switchModalIoclView('plant_pneumatic_tank.png', 'PNEUMATIC LEAK TEST MACHINE NO. 1', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+              <img src="plant_pneumatic_tank.png" class="max-h-full max-w-full object-cover rounded">
+            </button>
+            <button onclick="switchModalIoclView('plant_shot_blasting_machine.png', 'SA 2.5 SHOT BLASTING MACHINE', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+              <img src="plant_shot_blasting_machine.png" class="max-h-full max-w-full object-cover rounded">
             </button>
             <button onclick="switchModalIoclView('plant_paint_booth_booths.png', 'PRIMER & SPRAY PAINT BOOTHS', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
               <img src="plant_paint_booth_booths.png" class="max-h-full max-w-full object-cover rounded">
             </button>
-            <button onclick="switchModalIoclView('plant_shot_blasting_machine.png', 'SA 2.5 SHOT BLASTING MACHINE', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_shot_blasting_machine.png" class="max-h-full max-w-full object-cover rounded">
+            <button onclick="switchModalIoclView('plant_punching_machine.png', 'PNEUMATIC VALVE & HT PUNCHING RIG', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+              <img src="plant_punching_machine.png" class="max-h-full max-w-full object-cover rounded">
+            </button>
+            <button onclick="switchModalIoclView('plant_stenciled_cylinders.png', 'TARE WEIGHT STENCILING & STACK', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+              <img src="plant_stenciled_cylinders.png" class="max-h-full max-w-full object-cover rounded">
+            </button>
+            <button onclick="switchModalIoclView('plant_overhead_conveyor.jpg', 'OVERHEAD MONORAIL CONVEYOR', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+              <img src="plant_overhead_conveyor.jpg" class="max-h-full max-w-full object-cover rounded">
             </button>
             <button onclick="switchModalIoclView('plant_conveyor_carousel.png', 'CYLINDER CAROUSEL CONVEYOR', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
               <img src="plant_conveyor_carousel.png" class="max-h-full max-w-full object-cover rounded">
             </button>
             <button onclick="switchModalIoclView('plant_thread_gauge.png', 'BUNG THREAD GAUGES (3/4 NGT)', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
               <img src="plant_thread_gauge.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_stay_plate_marking.png', 'STAY PLATE D-24 MARKING', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_stay_plate_marking.png" class="max-h-full max-w-full object-cover rounded">
             </button>
           </div>
         </div>
@@ -1540,9 +1564,55 @@
       setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
     }
 
+    const ioclPhotoDetails = {
+      'plant_hydrotest_station_rig.png': {
+        title: '10-Station Hydrostatic Testing Bench',
+        desc: 'Pressurizes LPG cylinders to <strong>25 kg/cm²</strong> using water for 30–60 seconds to verify structural expansion and weld seam integrity before painting, complying with PESO & BIS standards.'
+      },
+      'plant_pneumatic_tank.png': {
+        title: 'Pneumatic Leak Testing Machine No. 1',
+        desc: 'Submerges air-pressurized cylinders (<strong>12–15 kg/cm² air</strong>) inside a water tank for 60 seconds to detect microscopic air bubbles and valve leaks.'
+      },
+      'plant_shot_blasting_machine.png': {
+        title: 'SA 2.5 Shot Blasting Machine & Panel',
+        desc: 'Blasts steel shots at high speed against cylinder surfaces to remove old paint, rust, and scale, achieving an <strong>ISO 8501-1 SA 2.5</strong> metallic grey surface for primer adhesion.'
+      },
+      'plant_paint_booth_booths.png': {
+        title: 'Primer & Spray Paint Booths',
+        desc: 'Dual-stage spray booth applying Red Oxide Zinc Chromate primer (IS 2074) and Signal Red Enamel (IS 2932), ensuring a <strong>60-micron total DFT</strong> protective coating.'
+      },
+      'plant_punching_machine.png': {
+        title: 'Pneumatic Valve Fixing & HT Punching Rig',
+        desc: 'Stamps the unique Hydrostatic Test (HT) number, inspection code, and next re-test date (e.g. 07-25) onto the VP ring as per statutory PESO regulations.'
+      },
+      'plant_stenciled_cylinders.png': {
+        title: 'Tare Weight Stenciling & Dispatch Stack',
+        desc: 'Weighs cylinders on calibrated digital scales to verify tare weight tolerances and stencils new weight markings in black paint for accurate LPG filling.'
+      },
+      'plant_overhead_conveyor.jpg': {
+        title: 'Overhead Monorail Conveyor & Storage Yard',
+        desc: 'Automated overhead hook track system that continuously transports cylinders between shot blasting, spray booth, and drying stations.'
+      },
+      'plant_conveyor_carousel.png': {
+        title: 'Circular Carousel Conveyor Line',
+        desc: 'Rotary transfer line designed to maintain First-In-First-Out (FIFO) sequence during cylinder feeding, degassing, and inspection.'
+      },
+      'plant_thread_gauge.png': {
+        title: '3/4" - 14 NGT L9 Bung Thread Gauges',
+        desc: 'Precision plug gauges (Gauge A & B) used to inspect internal bung threads for pitch wear, rust, or cross-threading before valve installation.'
+      }
+    };
+
     function switchModalIoclView(imgSrc, viewLabel, btn) {
       document.getElementById('modal-iocl-main').src = imgSrc;
       document.getElementById('modal-iocl-view-label').innerText = viewLabel;
+      
+      const details = ioclPhotoDetails[imgSrc];
+      if (details) {
+        document.getElementById('modal-iocl-desc-title').innerText = details.title;
+        document.getElementById('modal-iocl-desc-body').innerHTML = details.desc;
+      }
+
       document.querySelectorAll('.modal-iocl-thumb-btn').forEach(b => {
         b.className = "border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn";
       });
