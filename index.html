@@ -548,7 +548,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">10 EXERCISES COMPLETED</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">11 EXERCISES COMPLETED</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice Repository</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -560,8 +560,8 @@
         <div class="flex items-center gap-3 self-start md:self-auto">
           <!-- Filter Tabs -->
           <div class="flex flex-wrap gap-1 bg-slate-950/80 border border-slate-800 p-1 rounded font-mono text-[10px]">
-            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [10]</button>
-            <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [3]</button>
+            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [11]</button>
+            <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [4]</button>
             <button onclick="filterSandbox('fusion')" id="tab-sandbox-fusion" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">Fusion 360 [3]</button>
             <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [4]</button>
           </div>
@@ -578,11 +578,11 @@
         </div>
       </div>
 
-      <!-- Horizontal Carousel Slider Track (Sorted by Difficulty: Highest → Lowest) -->
+      <!-- Horizontal Carousel Slider Track (Top 10 Most Complex) -->
       <div class="relative">
         <div id="sandbox-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
           
-          <!-- Tile 1: 4-Cylinder Engine & Crankshaft (RANK 1 - MOST DIFFICULT) -->
+          <!-- Tile 1: 4-Cylinder Engine & Crankshaft (YouTube + Motion Video) -->
           <div onclick="openProjectModal('engine')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -597,7 +597,19 @@
             </div>
           </div>
 
-          <!-- Tile 2: Mars Rover Rocker-Bogie Mechanism (RANK 2) -->
+          <!-- Tile 2: Automotive Alloy Wheel Rim (YouTube - NEW!) -->
+          <div onclick="openProjectModal('wheelrim')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_wheel_rim_model.png" alt="Automotive Alloy Wheel Rim" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Automotive Alloy Wheel</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Tutorial</span>
+            </div>
+          </div>
+
+          <!-- Tile 3: Mars Rover Rocker-Bogie Mechanism (YouTube) -->
           <div onclick="openProjectModal('rover')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_rover_model.png" alt="Mars Rover" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -609,7 +621,7 @@
             </div>
           </div>
 
-          <!-- Tile 3: F450 Quadcopter Frame (RANK 3) -->
+          <!-- Tile 4: F450 Quadcopter Frame (YouTube) -->
           <div onclick="openProjectModal('drone')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_drone_assembly.png" alt="F450 Quadcopter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -621,7 +633,7 @@
             </div>
           </div>
 
-          <!-- Tile 4: Parametric 2x4 LEGO Brick (RANK 4) -->
+          <!-- Tile 5: Parametric 2x4 LEGO Brick (Fusion 360) -->
           <div onclick="openProjectModal('legobrick')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_lego_top.png" alt="2x4 LEGO Brick" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -633,7 +645,7 @@
             </div>
           </div>
 
-          <!-- Tile 5: Parametric Glass Beverage Bottle (RANK 5) -->
+          <!-- Tile 6: Parametric Glass Beverage Bottle (Fusion 360) -->
           <div onclick="openProjectModal('glassbottle')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -645,7 +657,7 @@
             </div>
           </div>
 
-          <!-- Tile 6: Multi-Step Tapered Sleeve (RANK 6) -->
+          <!-- Tile 7: Multi-Step Tapered Sleeve (PDF) -->
           <div onclick="openProjectModal('sleeve')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_shaft_taper_model.png" alt="Tapered Sleeve" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -657,7 +669,7 @@
             </div>
           </div>
 
-          <!-- Tile 7: Hollow Stepped Cylinder (RANK 7) -->
+          <!-- Tile 8: Hollow Stepped Cylinder (PDF) -->
           <div onclick="openProjectModal('collar')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -669,7 +681,7 @@
             </div>
           </div>
 
-          <!-- Tile 8: Parametric Metallic Paper Clip (RANK 8) -->
+          <!-- Tile 9: Parametric Metallic Paper Clip (Fusion 360) -->
           <div onclick="openProjectModal('paperclip')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_paper_clip.png" alt="Parametric Paper Clip" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -681,7 +693,7 @@
             </div>
           </div>
 
-          <!-- Tile 9: Exercise 1-4 Stepped Roller Shaft (RANK 9) -->
+          <!-- Tile 10: Exercise 1-4 Stepped Roller Shaft (PDF) -->
           <div onclick="openProjectModal('roller')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_roller_model.png" alt="Exercise 1-4 Roller Shaft" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -689,18 +701,6 @@
             </div>
             <div class="flex flex-col gap-0.5">
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Exercise 1-4: Roller Shaft</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Dimension Sheet</span>
-            </div>
-          </div>
-
-          <!-- Tile 10: Exercise 2-7 Spherical Base Plunger (RANK 10) -->
-          <div onclick="openProjectModal('spherical')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_spherical_model.png" alt="Exercise 2-7 Spherical Plunger" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Exercise 2-7: Spherical Plunger</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">PDF Dimension Sheet</span>
             </div>
           </div>
@@ -1751,18 +1751,28 @@
 
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL ADDITIONAL [4]</button>
-          <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 PRACTICE [2]</button>
-          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [2]</button>
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL ARCHIVED [1]</button>
+          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [1]</button>
         </div>
 
-        <!-- Single-Line Directory List Container (Excludes items featured above) -->
+        <!-- Single-Line Directory List Container -->
         <div id="cad-archive-list" class="flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-1 scrollbar-thin">
           
-          <div class="p-8 text-center border border-dashed border-slate-800 rounded-lg bg-slate-950/40 flex flex-col items-center gap-2">
-            <i data-lucide="check-circle-2" class="w-8 h-8 text-cyanAccent mb-1"></i>
-            <h4 class="font-technical font-bold text-slate-200 text-sm">ALL 10 PRACTICE EXERCISES ACTIVE IN TOP TRACK</h4>
-            <p class="text-slate-400 font-mono text-xs max-w-md">All 10 practice models & PDF blueprints are currently featured in the top scroller track. As new models past #10 are uploaded, they will automatically overflow into this Master CAD Archive.</p>
+          <!-- Archived Model Row: Exercise 2-7 Spherical Base Stepped Plunger -->
+          <div onclick="closeProjectModal(); setTimeout(() => openProjectModal('spherical'), 150);" class="cad-archive-item flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-title="exercise 2-7 spherical base plunger pdf blueprint">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                <img src="practice_spherical_model.png" alt="Spherical Plunger" class="max-h-full max-w-full object-contain">
+              </div>
+              <div class="flex flex-col gap-0.5">
+                <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">Exercise 2-7: Spherical Base Stepped Plunger</h4>
+                <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SR15 Hemispherical Dome Base</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
           </div>
 
         </div>
@@ -2229,6 +2239,76 @@
         </div>
       </div>
 
+      <!-- 20. AUTOMOTIVE ALLOY WHEEL RIM PRACTICE DETAIL MODAL -->
+      <div id="modal-project-wheelrim" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer & Swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-wheelrim-main" src="practice_wheel_rim_model.png" alt="Automotive Alloy Wheel Rim" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-wheelrim-view-label">SHADED ISO RENDER VIEW</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalWheelrimView('practice_wheel_rim_model.png', 'SHADED ISO RENDER VIEW', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-wheelrim-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              SHADED ISO VIEW
+            </button>
+            <button onclick="switchModalWheelrimView('practice_wheel_rim_section.png', 'WIREFRAME & SECTION CUT VIEW', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-wheelrim-thumb-btn">
+              <i data-lucide="scissors" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              SECTION CUT VIEW
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // ADVANCED REVOLVE & SECTION CUT PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Automotive Alloy Wheel Rim</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled a high-performance 10-spoke automotive alloy wheel rim in SOLIDWORKS from a YouTube CAD tutorial.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Utilized Revolve Boss/Base for the rim barrel profile, 3D Spline Lofting for aerodynamic spoke contours, Circular Pattern feature for 10-spoke symmetry, and Section Cut analysis for hub mounting pad verification.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Software:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Primary Feature:</span>
+                <span class="text-cyanAccent font-bold">Revolve + Loft + Pattern</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Spoke Geometry:</span>
+                <span class="text-slate-300">10-Spoke Symmetric</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Tutorial Source:</span>
+                <a href="https://youtu.be/_C8gy-OI1GU?si=_TDnsj6-ElTN8XKs" target="_blank" class="text-cyanAccent hover:underline font-bold flex items-center gap-1">
+                  <i data-lucide="youtube" class="w-3 h-3 text-red-500"></i> YouTube Video
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: AUTOMOTIVE ALLOY WHEEL RIM</span>
+            <span>TOOL: SOLIDWORKS 3D CAD</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -2672,6 +2752,16 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-fsae-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-fsae-thumb-btn font-bold";
+    }
+
+    function switchModalWheelrimView(src, label, btn) {
+      document.getElementById('modal-wheelrim-main').src = src;
+      document.getElementById('modal-wheelrim-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-wheelrim-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-wheelrim-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-wheelrim-thumb-btn font-bold";
     }
 
     function scrollProjects(direction) {
