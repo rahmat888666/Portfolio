@@ -1638,8 +1638,9 @@
 
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL ADDITIONAL [3]</button>
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL ADDITIONAL [4]</button>
           <button onclick="filterCadArchiveCategory('project')" id="archive-tab-project" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PERSONAL PROJECTS [1]</button>
+          <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 PRACTICE [1]</button>
           <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [2]</button>
         </div>
 
@@ -1664,10 +1665,28 @@
             </div>
           </div>
 
-          <!-- Row 2: Exercise 1-4 Chamfered Stepped Roller Shaft -->
-          <div onclick="openProjectModal('roller')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="exercise 1 4 chamfered stepped roller shaft pdf blueprint 100 150 182 20 chamfers solidworks">
+          <!-- Row 2: Parametric Glass Beverage Bottle -->
+          <div onclick="openProjectModal('glassbottle')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="fusion" data-search="parametric glass beverage bottle container revolve neck spline shell wall fusion 360">
             <div class="flex items-center gap-3">
               <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 02</span>
+              <span class="font-mono text-[8px] text-amber-400 bg-amber-950/50 border border-amber-500/30 px-1.5 py-0.5 rounded font-bold uppercase">INTERMEDIATE</span>
+              <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
+              <div class="flex flex-col">
+                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Parametric Glass Beverage Bottle</h4>
+                <span class="font-sans text-[10px] text-slate-400">Glass bottle revolve modeling, spline neck curvature, crown cap finish ring & internal shell wall</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
+              <span class="text-orange-400 bg-slate-900 px-2 py-0.5 rounded border border-orange-500/30">FUSION 360</span>
+              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">CONTAINER PRACTICE</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+
+          <!-- Row 3: Exercise 1-4 Chamfered Stepped Roller Shaft -->
+          <div onclick="openProjectModal('roller')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="exercise 1 4 chamfered stepped roller shaft pdf blueprint 100 150 182 20 chamfers solidworks">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 03</span>
               <span class="font-mono text-[8px] text-emerald-400 bg-emerald-950/50 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold uppercase">STANDARD</span>
               <img src="practice_roller_model.png" alt="Exercise 1-4 Roller Shaft" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
               <div class="flex flex-col">
@@ -1682,10 +1701,10 @@
             </div>
           </div>
 
-          <!-- Row 3: Exercise 2-7 Spherical Base Stepped Plunger -->
+          <!-- Row 4: Exercise 2-7 Spherical Base Stepped Plunger -->
           <div onclick="openProjectModal('spherical')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="exercise 2 7 spherical base stepped plunger SR15 30 12 10 pdf blueprint solidworks">
             <div class="flex items-center gap-3">
-              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 03</span>
+              <span class="font-mono text-[10px] text-cyanAccent font-bold w-14 text-center bg-cyanAccent/10 py-1 rounded border border-cyanAccent/20">RANK 04</span>
               <span class="font-mono text-[8px] text-emerald-400 bg-emerald-950/50 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold uppercase">STANDARD</span>
               <img src="practice_spherical_model.png" alt="Exercise 2-7 Spherical Plunger" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
               <div class="flex flex-col">
@@ -1903,6 +1922,66 @@
           <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
             <span>PROJECT: MOTORCYCLE CHASSIS</span>
             <span>TYPE: PERSONAL VEHICLE DESIGN</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16. PARAMETRIC GLASS BOTTLE DETAIL MODAL -->
+      <div id="modal-project-glassbottle" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="max-h-full max-w-full object-contain p-2">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              RENDER: AUTODESK FUSION 360 GLASS
+            </div>
+          </div>
+
+          <div class="text-center font-mono text-[10px] text-slate-500 bg-slate-950/40 py-2 border border-slate-800 rounded">
+            FUSION 360 REVOLVE + SPLINE CURVATURE + SHELL WALL
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">AUTODESK FUSION 360 // SURFACE & CONTAINER PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Parametric Glass Beverage Bottle</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled an ergonomic glass beverage bottle container in Autodesk Fusion 360 using 2D profile revolved sketches, smooth spline curves for neck transition, crown cap sealing finish rings, and a uniform internal shell wall thickness.
+              </p>
+              <p>
+                <strong>Material Rendering:</strong> Rendered with physical transparent glass optics in Fusion 360, demonstrating internal wall refractions and realistic surface highlights.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Environment:</span>
+                <span class="text-orange-400 font-bold">Autodesk Fusion 360</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Spec:</span>
+                <span class="text-cyanAccent font-bold">Transparent Glass</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-slate-300">Revolve, Shell, Spline Loft</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Finish Type:</span>
+                <span class="text-slate-300">Crown Cap Ring Lip</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: GLASS BEVERAGE BOTTLE</span>
+            <span>TOOL: AUTODESK FUSION 360</span>
           </div>
         </div>
       </div>
