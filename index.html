@@ -405,10 +405,53 @@
         <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-100 font-technical uppercase">ACADEMIC & CAD PROJECTS</h2>
       </div>
 
-      <!-- Projects Grid (4 Uniform Cards) -->
+      <!-- Projects Grid (4 Uniform Cards - Complex & Eye-Catchy First) -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Project 1: Automatic Lid Opener -->
+        <!-- Card 1: 3-Wheeled Kids Kick Scooter Personal Project (Most Eye-Catchy & Motion Video) -->
+        <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
+          <div class="flex flex-col gap-4">
+            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center relative overflow-hidden select-none">
+              <img src="kick_scooter_render.png" alt="3-Wheeled Kids Kick Scooter" class="max-h-full max-w-full object-contain p-2 hover:scale-105 transition-transform duration-500">
+              <span class="absolute bottom-2 right-2 font-mono text-[8px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1.5 py-0.5 rounded font-bold flex items-center gap-1">
+                <i data-lucide="play-circle" class="w-3 h-3 text-cyanAccent"></i> MOTION VIDEO
+              </span>
+            </div>
+            <div>
+              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Personal CAD Project // 2026</span>
+              <h3 class="font-technical text-lg font-bold text-slate-100">3-Wheeled Kids Kick Scooter</h3>
+              <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+                Parametric 3-wheeled consumer scooter featuring dual front steering wheels, rear foot brake fender, height-adjustable T-bar, and motion study animation.
+              </p>
+            </div>
+          </div>
+          <button onclick="openProjectModal('kick-scooter')" class="w-full py-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-xs font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group">
+            EXPLORE CASE STUDY & VIDEO
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </button>
+        </div>
+
+        <!-- Card 2: Electric Scooter Commuter Prototype (Internship Project) -->
+        <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
+          <div class="flex flex-col gap-4">
+            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center relative overflow-hidden select-none">
+              <img src="scooter_iso_front.png" alt="Scooter" class="max-h-full max-w-full object-contain p-2 hover:scale-105 transition-transform duration-500">
+            </div>
+            <div>
+              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Internship Project // 2025</span>
+              <h3 class="font-technical text-lg font-bold text-slate-100">Electric Scooter Prototype</h3>
+              <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+                Parametric assembly model focusing on packaging, swingarm, styling, and suspension.
+              </p>
+            </div>
+          </div>
+          <button onclick="openProjectModal('scooter')" class="w-full py-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-xs font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group">
+            EXPLORE CASE STUDY
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </button>
+        </div>
+
+        <!-- Card 3: Automatic Lid Opener -->
         <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
           <div class="flex flex-col gap-4">
             <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center relative overflow-hidden select-none">
@@ -428,7 +471,7 @@
           </button>
         </div>
 
-        <!-- Project 2: Tibia Bone model -->
+        <!-- Card 4: Tibia Bone model -->
         <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
           <div class="flex flex-col gap-4">
             <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center p-4 relative overflow-hidden select-none">
@@ -449,49 +492,6 @@
           </div>
           <button onclick="openProjectModal('tibia')" class="w-full py-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-xs font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group">
             EXPLORE CASE STUDY
-            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-          </button>
-        </div>
-
-        <!-- Project 3: Electric Scooter Commuter Prototype -->
-        <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
-          <div class="flex flex-col gap-4">
-            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center relative overflow-hidden select-none">
-              <img src="scooter_iso_front.png" alt="Scooter" class="max-h-full max-w-full object-contain p-2 hover:scale-105 transition-transform duration-500">
-            </div>
-            <div>
-              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Internship Project // 2025</span>
-              <h3 class="font-technical text-lg font-bold text-slate-100">Electric Scooter Prototype</h3>
-              <p class="text-slate-400 text-xs mt-1 leading-relaxed">
-                Parametric assembly model focusing on packaging, swingarm, styling, and suspension.
-              </p>
-            </div>
-          </div>
-          <button onclick="openProjectModal('scooter')" class="w-full py-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-xs font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group">
-            EXPLORE CASE STUDY
-            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-          </button>
-        </div>
-
-        <!-- Project 4: 3-Wheeled Kids Kick Scooter Personal Project -->
-        <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
-          <div class="flex flex-col gap-4">
-            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center relative overflow-hidden select-none">
-              <img src="kick_scooter_render.png" alt="3-Wheeled Kids Kick Scooter" class="max-h-full max-w-full object-contain p-2 hover:scale-105 transition-transform duration-500">
-              <span class="absolute bottom-2 right-2 font-mono text-[8px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1.5 py-0.5 rounded font-bold flex items-center gap-1">
-                <i data-lucide="play-circle" class="w-3 h-3 text-cyanAccent"></i> MOTION VIDEO
-              </span>
-            </div>
-            <div>
-              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Personal CAD Project // 2026</span>
-              <h3 class="font-technical text-lg font-bold text-slate-100">3-Wheeled Kids Kick Scooter</h3>
-              <p class="text-slate-400 text-xs mt-1 leading-relaxed">
-                Parametric 3-wheeled consumer scooter featuring dual front steering wheels, rear foot brake fender, height-adjustable T-bar, and motion study animation.
-              </p>
-            </div>
-          </div>
-          <button onclick="openProjectModal('kick-scooter')" class="w-full py-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-xs font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group">
-            EXPLORE CASE STUDY & VIDEO
             <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
           </button>
         </div>
@@ -536,23 +536,11 @@
         </div>
       </div>
 
-      <!-- Horizontal Carousel Slider Track -->
+      <!-- Horizontal Carousel Slider Track (Most Complex & Eye-Catchy First) -->
       <div class="relative">
         <div id="sandbox-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
           
-          <!-- Tile 1: F450 Quadcopter Frame (YouTube) -->
-          <div onclick="openProjectModal('drone')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_drone_assembly.png" alt="F450 Quadcopter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">F450 Quadcopter</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
-            </div>
-          </div>
-
-          <!-- Tile 2: 4-Cylinder Engine & Crankshaft (YouTube) -->
+          <!-- Tile 1: 4-Cylinder Engine & Crankshaft (YouTube + Motion Video) - MOST COMPLEX FIRST -->
           <div onclick="openProjectModal('engine')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -567,7 +555,7 @@
             </div>
           </div>
 
-          <!-- Tile 3: Mars Rover Rocker-Bogie (YouTube) -->
+          <!-- Tile 2: Mars Rover Rocker-Bogie Mechanism (YouTube) -->
           <div onclick="openProjectModal('rover')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_rover_model.png" alt="Mars Rover" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -575,6 +563,18 @@
             </div>
             <div class="flex flex-col gap-0.5">
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Mars Rover Rocker-Bogie</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
+            </div>
+          </div>
+
+          <!-- Tile 3: F450 Quadcopter Frame (YouTube) -->
+          <div onclick="openProjectModal('drone')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_drone_assembly.png" alt="F450 Quadcopter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">F450 Quadcopter</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
             </div>
           </div>
