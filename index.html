@@ -436,11 +436,23 @@
         </div>
       </div>
 
-      <!-- Horizontal Carousel Slider Track -->
+      <!-- Horizontal Carousel Slider Track (Sorted by Difficulty: Highest → Lowest) -->
       <div class="relative">
         <div id="projects-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
           
-          <!-- Tile 1: Bike Chassis -->
+          <!-- Tile 1: Automatic Trash Can Lid Shutter (RANK 1 - MOST DIFFICULT) -->
+          <div onclick="openProjectModal('iris')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="iris_open.png" alt="Iris Shutter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">MECHANISM</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Automatic Trash Can Lid</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Iris Shutter Mechanism</span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Tubular Spaceframe Bike Chassis (RANK 2) -->
           <div onclick="openProjectModal('motoframe')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="personal">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="moto_frame_shaded.png" alt="Motorcycle Chassis Frame" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -452,7 +464,19 @@
             </div>
           </div>
 
-          <!-- Tile 2: 3-Wheeled Kids Kick Scooter -->
+          <!-- Tile 3: Electric Scooter Commuter Prototype (RANK 3) -->
+          <div onclick="openProjectModal('scooter')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="scooter_iso_front.png" alt="Electric Scooter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">INTERNSHIP</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Electric Scooter Prototype</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">TCG Design Studio</span>
+            </div>
+          </div>
+
+          <!-- Tile 4: 3-Wheeled Kids Kick Scooter (RANK 4) -->
           <div onclick="openProjectModal('kick-scooter')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="personal">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="kick_scooter_render.png" alt="3-Wheeled Kids Kick Scooter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -467,31 +491,7 @@
             </div>
           </div>
 
-          <!-- Tile 3: Electric Scooter Commuter Prototype -->
-          <div onclick="openProjectModal('scooter')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="scooter_iso_front.png" alt="Electric Scooter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">INTERNSHIP</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Electric Scooter Prototype</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">TCG Design Studio</span>
-            </div>
-          </div>
-
-          <!-- Tile 4: Automatic Trash Can Lid -->
-          <div onclick="openProjectModal('iris')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="iris_open.png" alt="Iris Shutter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">MECHANISM</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Automatic Trash Can Lid</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">Iris Shutter Lid</span>
-            </div>
-          </div>
-
-          <!-- Tile 5: Tibia Bone Fracture Model -->
+          <!-- Tile 5: Tibia Bone Fracture Model (RANK 5) -->
           <div onclick="openProjectModal('tibia')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <i data-lucide="activity" class="w-10 h-10 text-blue-500/20 absolute"></i>
@@ -566,11 +566,11 @@
         </div>
       </div>
 
-      <!-- Horizontal Carousel Slider Track (All 10 Practice Models) -->
+      <!-- Horizontal Carousel Slider Track (Sorted by Difficulty: Highest → Lowest) -->
       <div class="relative">
         <div id="sandbox-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
           
-          <!-- Tile 1: 4-Cylinder Engine & Crankshaft (YouTube + Motion Video) -->
+          <!-- Tile 1: 4-Cylinder Engine & Crankshaft (RANK 1 - MOST DIFFICULT) -->
           <div onclick="openProjectModal('engine')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -585,7 +585,7 @@
             </div>
           </div>
 
-          <!-- Tile 2: Mars Rover Rocker-Bogie Mechanism (YouTube) -->
+          <!-- Tile 2: Mars Rover Rocker-Bogie Mechanism (RANK 2) -->
           <div onclick="openProjectModal('rover')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_rover_model.png" alt="Mars Rover" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -597,7 +597,7 @@
             </div>
           </div>
 
-          <!-- Tile 3: F450 Quadcopter Frame (YouTube) -->
+          <!-- Tile 3: F450 Quadcopter Frame (RANK 3) -->
           <div onclick="openProjectModal('drone')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_drone_assembly.png" alt="F450 Quadcopter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -609,19 +609,7 @@
             </div>
           </div>
 
-          <!-- Tile 4: Parametric Glass Beverage Bottle (Fusion 360) -->
-          <div onclick="openProjectModal('glassbottle')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Glass Beverage Bottle</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Render</span>
-            </div>
-          </div>
-
-          <!-- Tile 5: Parametric 2x4 LEGO Brick (Fusion 360) -->
+          <!-- Tile 4: Parametric 2x4 LEGO Brick (RANK 4) -->
           <div onclick="openProjectModal('legobrick')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_lego_top.png" alt="2x4 LEGO Brick" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -633,19 +621,19 @@
             </div>
           </div>
 
-          <!-- Tile 6: Parametric Metallic Paper Clip (Fusion 360) -->
-          <div onclick="openProjectModal('paperclip')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
+          <!-- Tile 5: Parametric Glass Beverage Bottle (RANK 5) -->
+          <div onclick="openProjectModal('glassbottle')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_paper_clip.png" alt="Parametric Paper Clip" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Metallic Paper Clip</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Sweep</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Glass Beverage Bottle</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Render</span>
             </div>
           </div>
 
-          <!-- Tile 6: Multi-Step Tapered Sleeve (PDF) -->
+          <!-- Tile 6: Multi-Step Tapered Sleeve (RANK 6) -->
           <div onclick="openProjectModal('sleeve')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_shaft_taper_model.png" alt="Tapered Sleeve" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -657,7 +645,7 @@
             </div>
           </div>
 
-          <!-- Tile 7: Hollow Stepped Cylinder (PDF) -->
+          <!-- Tile 7: Hollow Stepped Cylinder (RANK 7) -->
           <div onclick="openProjectModal('collar')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -669,7 +657,19 @@
             </div>
           </div>
 
-          <!-- Tile 8: Exercise 1-4 Stepped Roller Shaft (PDF) -->
+          <!-- Tile 8: Parametric Metallic Paper Clip (RANK 8) -->
+          <div onclick="openProjectModal('paperclip')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_paper_clip.png" alt="Parametric Paper Clip" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Metallic Paper Clip</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Sweep</span>
+            </div>
+          </div>
+
+          <!-- Tile 9: Exercise 1-4 Stepped Roller Shaft (RANK 9) -->
           <div onclick="openProjectModal('roller')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_roller_model.png" alt="Exercise 1-4 Roller Shaft" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -681,7 +681,7 @@
             </div>
           </div>
 
-          <!-- Tile 9: Exercise 2-7 Spherical Base Plunger (PDF) -->
+          <!-- Tile 10: Exercise 2-7 Spherical Base Plunger (RANK 10) -->
           <div onclick="openProjectModal('spherical')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_spherical_model.png" alt="Exercise 2-7 Spherical Plunger" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
