@@ -1296,52 +1296,78 @@
         <!-- Left: Image Viewer & Gallery -->
         <div class="lg:w-1/2 flex flex-col justify-between gap-3">
           <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
-            <img id="modal-iocl-main" src="plant_hydrotest_station_rig.png" alt="10-Station Hydrotesting Rig" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <img id="modal-iocl-main" src="plant_stay_plate_marking.png" alt="Cylinder Stay Plate Requalification Marking" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
             <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
-              VIEW: <span id="modal-iocl-view-label">10-STATION HYDROTEST RIG (25 kg/cm²)</span>
+              VIEW: <span id="modal-iocl-view-label">STAGE 01 // STAY PLATE D-24 STAMP</span>
             </div>
           </div>
 
-          <!-- Thumbnails (13-grid) -->
+          <!-- Thumbnails (13-grid Chronological Order) -->
           <div class="grid grid-cols-7 sm:grid-cols-13 gap-1">
-            <button onclick="switchModalIoclView('plant_hydrotest_station_rig.png', '10-STATION HYDROTEST RIG (25 kg/cm²)', this)" class="border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_hydrotest_station_rig.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_pneumatic_tank.png', 'PNEUMATIC LEAK TEST MACHINE NO. 1', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_pneumatic_tank.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_shot_blasting_machine.png', 'SA 2.5 SHOT BLASTING MACHINE', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_shot_blasting_machine.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_paint_booth_booths.png', 'PRIMER & SPRAY PAINT BOOTHS', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_paint_booth_booths.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_punching_machine.png', 'PNEUMATIC VALVE & HT PUNCHING RIG', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_punching_machine.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_stenciled_cylinders.png', 'TARE WEIGHT STENCILING & STACK', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_stenciled_cylinders.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_overhead_conveyor.jpg', 'OVERHEAD MONORAIL CONVEYOR', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_overhead_conveyor.jpg" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_conveyor_carousel.png', 'CYLINDER CAROUSEL CONVEYOR', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_conveyor_carousel.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_thread_gauge.png', 'BUNG THREAD GAUGES (3/4 NGT)', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
-              <img src="plant_thread_gauge.png" class="max-h-full max-w-full object-cover rounded">
-            </button>
-            <button onclick="switchModalIoclView('plant_stay_plate_marking.png', 'CYLINDER STAY PLATE D-24 STAMP', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+            <!-- 01: Stay Plate -->
+            <button onclick="switchModalIoclView('plant_stay_plate_marking.png', 'STAGE 01 // STAY PLATE D-24 STAMP', this)" class="border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
               <img src="plant_stay_plate_marking.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-cyanAccent font-mono text-[7px] px-0.5 rounded font-bold">01</span>
             </button>
-            <button onclick="switchModalIoclView('plant_bottling_shed.png', 'BOTTLING PLANT INSPECTION SHED', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+            <!-- 02: Bottling Shed -->
+            <button onclick="switchModalIoclView('plant_bottling_shed.png', 'STAGE 02 // BOTTLING INSPECTION SHED', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
               <img src="plant_bottling_shed.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">02</span>
             </button>
-            <button onclick="switchModalIoclView('plant_inspection_shed.png', 'INSPECTION SHED FACILITY SIGN', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+            <!-- 03: Inspection Shed Sign -->
+            <button onclick="switchModalIoclView('plant_inspection_shed.png', 'STAGE 03 // INSPECTION SHED ENTRY', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
               <img src="plant_inspection_shed.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">03</span>
             </button>
-            <button onclick="switchModalIoclView('plant_shot_blasting_shed_sign.png', 'SA 2.5 MACHINE SHED SIGNBOARD', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn">
+            <!-- 04: Thread Gauge -->
+            <button onclick="switchModalIoclView('plant_thread_gauge.png', 'STAGE 04 // BUNG THREAD GAUGING', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
+              <img src="plant_thread_gauge.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">04</span>
+            </button>
+            <!-- 05: Carousel Line -->
+            <button onclick="switchModalIoclView('plant_conveyor_carousel.png', 'STAGE 05 // CAROUSEL FEEDER LINE', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
+              <img src="plant_conveyor_carousel.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">05</span>
+            </button>
+            <!-- 06: Shot Blasting Shed Sign -->
+            <button onclick="switchModalIoclView('plant_shot_blasting_shed_sign.png', 'STAGE 06 // BLASTING SHED ENTRY', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
               <img src="plant_shot_blasting_shed_sign.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">06</span>
+            </button>
+            <!-- 07: Shot Blasting Machine -->
+            <button onclick="switchModalIoclView('plant_shot_blasting_machine.png', 'STAGE 07 // SA 2.5 SHOT BLASTING', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
+              <img src="plant_shot_blasting_machine.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">07</span>
+            </button>
+            <!-- 08: Hydrotest Rig -->
+            <button onclick="switchModalIoclView('plant_hydrotest_station_rig.png', 'STAGE 08 // HYDROTESTING (25 kg/cm²)', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
+              <img src="plant_hydrotest_station_rig.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">08</span>
+            </button>
+            <!-- 09: Overhead Conveyor -->
+            <button onclick="switchModalIoclView('plant_overhead_conveyor.jpg', 'STAGE 09 // OVERHEAD MONORAIL TRACK', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
+              <img src="plant_overhead_conveyor.jpg" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">09</span>
+            </button>
+            <!-- 10: Paint Booths -->
+            <button onclick="switchModalIoclView('plant_paint_booth_booths.png', 'STAGE 10 // PRIMER & SPRAY PAINTING', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
+              <img src="plant_paint_booth_booths.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">10</span>
+            </button>
+            <!-- 11: Pneumatic Tank -->
+            <button onclick="switchModalIoclView('plant_pneumatic_tank.png', 'STAGE 11 // PNEUMATIC LEAK TEST', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
+              <img src="plant_pneumatic_tank.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">11</span>
+            </button>
+            <!-- 12: Punching Machine -->
+            <button onclick="switchModalIoclView('plant_punching_machine.png', 'STAGE 12 // VALVE FIXING & HT STAMP', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
+              <img src="plant_punching_machine.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">12</span>
+            </button>
+            <!-- 13: Stenciled Cylinders -->
+            <button onclick="switchModalIoclView('plant_stenciled_cylinders.png', 'STAGE 13 // STENCILING & DISPATCH', this)" class="border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn relative">
+              <img src="plant_stenciled_cylinders.png" class="max-h-full max-w-full object-cover rounded">
+              <span class="absolute bottom-0.5 right-0.5 bg-slate-950/90 text-slate-400 font-mono text-[7px] px-0.5 rounded font-bold">13</span>
             </button>
           </div>
         </div>
@@ -1350,41 +1376,48 @@
         <div class="lg:w-1/2 flex flex-col justify-between gap-6">
           <div class="flex flex-col gap-4">
             <div>
-              <span id="modal-iocl-stage-badge" class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">STAGE 07–08 // HYDROSTATIC TESTING</span>
-              <h2 id="modal-iocl-title" class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">10-Station Hydrostatic Testing Bench</h2>
+              <span id="modal-iocl-stage-badge" class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">STAGE 01 // VISUAL SEGREGATION</span>
+              <h2 id="modal-iocl-title" class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Cylinder Stay Plate Requalification Marking</h2>
             </div>
             
             <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
               <p id="modal-iocl-p1">
-                <strong>Process Breakdown:</strong> Pressurizes LPG cylinders with water to <strong>25 kg/cm²</strong> for 30–60 seconds to test expansion and weld joint integrity as mandated by PESO & BIS standards.
+                <strong>Process Breakdown:</strong> Visual inspection of stay plate markings (e.g., A/24, B/24, C/24, D/24) in the Cold Repair Shed to segregate cylinders due for 5/10 year statutory testing.
               </p>
               <p id="modal-iocl-p2">
-                <strong>Key Engineering Fix:</strong> Reconfigured pneumatic clamping line fittings and NRV placements to eliminate pressure drops and clamping downtime.
+                <strong>Key Engineering Fix:</strong> Streamlined stay plate recording logbooks into a digital tracking list for faster degassing shed handoff.
               </p>
               <p id="modal-iocl-p3">
-                <strong>Impact & Results:</strong> Zero hydrotest leakage failures, ensuring 100% cylinder safety before painting.
+                <strong>Impact & Results:</strong> 100% compliance with PESO statutory testing schedule.
               </p>
             </div>
             
             <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
               <div>
-                <span id="modal-iocl-spec1-label" class="text-slate-500 block uppercase">Hydro Pressure:</span>
-                <span id="modal-iocl-spec1-val" class="text-cyanAccent font-bold">25 kg/cm²</span>
+                <span id="modal-iocl-spec1-label" class="text-slate-500 block uppercase">Quarter Codes:</span>
+                <span id="modal-iocl-spec1-val" class="text-cyanAccent font-bold">A (Q1), B (Q2), C (Q3), D (Q4)</span>
               </div>
               <div>
-                <span id="modal-iocl-spec2-label" class="text-slate-500 block uppercase">Hold Time:</span>
-                <span id="modal-iocl-spec2-val" class="text-cyanAccent font-bold">30s - 60s</span>
+                <span id="modal-iocl-spec2-label" class="text-slate-500 block uppercase">Re-Test Cycle:</span>
+                <span id="modal-iocl-spec2-val" class="text-cyanAccent font-bold">5 or 10 Year Mandate</span>
               </div>
               <div>
-                <span id="modal-iocl-spec3-label" class="text-slate-500 block uppercase">Testing Medium:</span>
-                <span id="modal-iocl-spec3-val" class="text-slate-300">Water Hydraulic</span>
+                <span id="modal-iocl-spec3-label" class="text-slate-500 block uppercase">Inspection:</span>
+                <span id="modal-iocl-spec3-val" class="text-slate-300">Visual Stay Plate Check</span>
               </div>
               <div>
-                <span id="modal-iocl-spec4-label" class="text-slate-500 block uppercase">Compliance:</span>
-                <span id="modal-iocl-spec4-val" class="text-slate-300">PESO & BIS Standards</span>
+                <span id="modal-iocl-spec4-label" class="text-slate-500 block uppercase">Action:</span>
+                <span id="modal-iocl-spec4-val" class="text-slate-300">Segregated for Degassing</span>
               </div>
             </div>
           </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>REPORT FILE: IOCL-LONI-STP-2025</span>
+            <span>STATUS: CERTIFIED PROJECT</span>
+          </div>
+        </div>
+      </div>
 
           <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
             <span>REPORT FILE: IOCL-LONI-STP-2025</span>
@@ -1531,17 +1564,10 @@
         });
       }
 
-      // Reset iocl modal preview default state
+      // Reset iocl modal preview default state (Stage 01)
       if (projectId === 'iocl') {
-        document.getElementById('modal-iocl-main').src = 'plant_hydrotest_station_rig.png';
-        document.getElementById('modal-iocl-view-label').innerText = 'HYDROTEST STATION RIG (25 kg/cm²)';
-        document.querySelectorAll('.modal-iocl-thumb-btn').forEach((btn, idx) => {
-          if (idx === 0) {
-            btn.className = "border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn";
-          } else {
-            btn.className = "border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-iocl-thumb-btn";
-          }
-        });
+        const firstBtn = document.querySelectorAll('.modal-iocl-thumb-btn')[0];
+        if (firstBtn) switchModalIoclView('plant_stay_plate_marking.png', 'STAGE 01 // STAY PLATE D-24 STAMP', firstBtn);
       }
 
       // Unhide the specific case study
