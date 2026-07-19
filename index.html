@@ -407,7 +407,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">5 PROJECTS FEATURED</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">6 PROJECTS FEATURED</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">Academic & CAD Projects</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -419,8 +419,8 @@
         <div class="flex items-center gap-3 self-start md:self-auto">
           <!-- Filter Tabs -->
           <div class="flex flex-wrap gap-1 bg-slate-950/80 border border-slate-800 p-1 rounded font-mono text-[10px]">
-            <button onclick="filterProjects('all')" id="tab-projects-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all projects-tab-btn">All [5]</button>
-            <button onclick="filterProjects('personal')" id="tab-projects-personal" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all projects-tab-btn">Personal [2]</button>
+            <button onclick="filterProjects('all')" id="tab-projects-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all projects-tab-btn">All [6]</button>
+            <button onclick="filterProjects('personal')" id="tab-projects-personal" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all projects-tab-btn">Personal [3]</button>
             <button onclick="filterProjects('academic')" id="tab-projects-academic" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all projects-tab-btn">Academic & Intern [3]</button>
           </div>
 
@@ -467,7 +467,19 @@
             </div>
           </div>
 
-          <!-- Tile 3: Automatic Trash Can Lid Shutter (THIRD) -->
+          <!-- Tile 3: Formula SAE Spaceframe Chassis (THIRD) -->
+          <div onclick="openProjectModal('fsae')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="personal">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="fsae_chassis_wireframe.png" alt="Formula SAE Spaceframe Chassis" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">FSAE Spaceframe Chassis</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Formula SAE Competition</span>
+            </div>
+          </div>
+
+          <!-- Tile 4: Automatic Trash Can Lid Shutter -->
           <div onclick="openProjectModal('iris')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="iris_open.png" alt="Iris Shutter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -479,7 +491,7 @@
             </div>
           </div>
 
-          <!-- Tile 4: Tubular Spaceframe Bike Chassis -->
+          <!-- Tile 5: Tubular Spaceframe Bike Chassis -->
           <div onclick="openProjectModal('motoframe')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="personal">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="moto_frame_shaded.png" alt="Motorcycle Chassis Frame" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -491,7 +503,7 @@
             </div>
           </div>
 
-          <!-- Tile 5: Tibia Bone Fracture Model -->
+          <!-- Tile 6: Tibia Bone Fracture Model -->
           <div onclick="openProjectModal('tibia')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <i data-lucide="activity" class="w-10 h-10 text-blue-500/20 absolute"></i>
@@ -2149,6 +2161,74 @@
         </div>
       </div>
 
+      <!-- 19. FORMULA SAE RACECAR SPACEFRAME CHASSIS DETAIL MODAL -->
+      <div id="modal-project-fsae" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer & Swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-fsae-main" src="fsae_chassis_wireframe.png" alt="Formula SAE Spaceframe Chassis" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-fsae-view-label">SOLIDWORKS WELDMENT WIREFRAME</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalFsaeView('fsae_chassis_wireframe.png', 'SOLIDWORKS WELDMENT WIREFRAME', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-fsae-thumb-btn font-bold">
+              <i data-lucide="grid" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              WELDMENT WIREFRAME
+            </button>
+            <button onclick="switchModalFsaeView('moto_frame_shaded.png', 'SHADED TUBULAR RENDER', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-fsae-thumb-btn">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              SHADED SOLID VIEW
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS WELDMENTS // COMPETITION CHASSIS DESIGN</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Formula SAE Racecar Spaceframe Chassis</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Project Overview:</strong> Engineered a lightweight AISI 4130 Chromoly steel spaceframe chassis for a Formula SAE (FSAE) competition racecar in SOLIDWORKS Weldments, strictly adhering to FSAE structural rulebook guidelines.
+              </p>
+              <p>
+                <strong>Structural Safety & Triangulation:</strong> Designed Main Hoop (Ø25.4mm x 2.4mm), Front Hoop, Front Bulkhead, and Side Impact Structures with fully triangulated member nodes to achieve a target torsional stiffness >1,500 Nm/degree.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-cyanAccent font-bold">AISI 4130 Chromoly</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Rulebook Rule:</span>
+                <span class="text-cyanAccent font-bold">FSAE T3 Structural Rules</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Main Hoop Tubing:</span>
+                <span class="text-slate-300">Ø25.4mm x 2.41mm WT</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS Weldments</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>PROJECT: FSAE RACECAR CHASSIS</span>
+            <span>TOOL: SOLIDWORKS 3D WELDMENTS</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -2582,6 +2662,16 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-legobrick-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-legobrick-thumb-btn font-bold";
+    }
+
+    function switchModalFsaeView(src, label, btn) {
+      document.getElementById('modal-fsae-main').src = src;
+      document.getElementById('modal-fsae-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-fsae-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-fsae-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-fsae-thumb-btn font-bold";
     }
 
     function scrollProjects(direction) {
