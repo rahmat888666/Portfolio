@@ -536,7 +536,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">5 EXERCISES COMPLETED</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">9 EXERCISES COMPLETED</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice Repository</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -548,9 +548,10 @@
         <div class="flex items-center gap-3 self-start md:self-auto">
           <!-- Filter Tabs -->
           <div class="flex flex-wrap gap-1 bg-slate-950/80 border border-slate-800 p-1 rounded font-mono text-[10px]">
-            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [5]</button>
+            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [9]</button>
             <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [3]</button>
-            <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [2]</button>
+            <button onclick="filterSandbox('fusion')" id="tab-sandbox-fusion" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">Fusion 360 [2]</button>
+            <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [4]</button>
           </div>
 
           <!-- Slider Arrow Buttons -->
@@ -565,11 +566,11 @@
         </div>
       </div>
 
-      <!-- Horizontal Carousel Slider Track (Most Complex & Eye-Catchy First) -->
+      <!-- Horizontal Carousel Slider Track (All 9 Practice Models) -->
       <div class="relative">
         <div id="sandbox-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
           
-          <!-- Tile 1: 4-Cylinder Engine & Crankshaft (YouTube + Motion Video) - MOST COMPLEX FIRST -->
+          <!-- Tile 1: 4-Cylinder Engine & Crankshaft (YouTube + Motion Video) -->
           <div onclick="openProjectModal('engine')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -608,7 +609,31 @@
             </div>
           </div>
 
-          <!-- Tile 4: Multi-Step Tapered Sleeve (PDF) -->
+          <!-- Tile 4: Parametric Glass Beverage Bottle (Fusion 360) -->
+          <div onclick="openProjectModal('glassbottle')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Glass Beverage Bottle</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Render</span>
+            </div>
+          </div>
+
+          <!-- Tile 5: Parametric 2x4 LEGO Brick (Fusion 360) -->
+          <div onclick="openProjectModal('legobrick')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_lego_top.png" alt="2x4 LEGO Brick" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">2x4 LEGO Brick</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Snap Fit Model</span>
+            </div>
+          </div>
+
+          <!-- Tile 6: Multi-Step Tapered Sleeve (PDF) -->
           <div onclick="openProjectModal('sleeve')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_shaft_taper_model.png" alt="Tapered Sleeve" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -620,7 +645,7 @@
             </div>
           </div>
 
-          <!-- Tile 5: Hollow Stepped Cylinder (PDF) -->
+          <!-- Tile 7: Hollow Stepped Cylinder (PDF) -->
           <div onclick="openProjectModal('collar')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -628,6 +653,30 @@
             </div>
             <div class="flex flex-col gap-0.5">
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Hollow Stepped Cylinder</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Dimension Sheet</span>
+            </div>
+          </div>
+
+          <!-- Tile 8: Exercise 1-4 Stepped Roller Shaft (PDF) -->
+          <div onclick="openProjectModal('roller')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_roller_model.png" alt="Exercise 1-4 Roller Shaft" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Exercise 1-4: Roller Shaft</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Dimension Sheet</span>
+            </div>
+          </div>
+
+          <!-- Tile 9: Exercise 2-7 Spherical Base Plunger (PDF) -->
+          <div onclick="openProjectModal('spherical')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_spherical_model.png" alt="Exercise 2-7 Spherical Plunger" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Exercise 2-7: Spherical Plunger</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">PDF Dimension Sheet</span>
             </div>
           </div>
@@ -1685,70 +1734,14 @@
 
         <!-- Single-Line Directory List Container (Excludes items featured above) -->
         <div id="cad-archive-list" class="flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-1 scrollbar-thin">
-
-          <!-- Row 2: Parametric Glass Beverage Bottle -->
-          <div onclick="openProjectModal('glassbottle')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="fusion" data-search="parametric glass beverage bottle container revolve neck spline shell wall fusion 360">
-            <div class="flex items-center gap-3">
-              <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
-              <div class="flex flex-col">
-                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Parametric Glass Beverage Bottle</h4>
-                <span class="font-sans text-[10px] text-slate-400">Glass bottle revolve modeling, spline neck curvature, crown cap finish ring & internal shell wall</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
-              <span class="text-orange-400 bg-slate-900 px-2 py-0.5 rounded border border-orange-500/30">FUSION 360</span>
-              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">CONTAINER PRACTICE</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
-            </div>
+          
+          <div class="p-8 text-center border border-dashed border-slate-800 rounded-lg bg-slate-950/40 flex flex-col items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-8 h-8 text-cyanAccent mb-1"></i>
+            <h4 class="font-technical font-bold text-slate-200 text-sm">ALL 9 PRACTICE EXERCISES ACTIVE IN TOP TRACK</h4>
+            <p class="text-slate-400 font-mono text-xs max-w-md">All 9 practice models & PDF blueprints are currently featured in the top scroller track. As new models past #10 are uploaded, they will automatically overflow into this Master CAD Archive.</p>
           </div>
 
-          <!-- Row 3: Parametric 2x4 Interlocking LEGO Brick -->
-          <div onclick="openProjectModal('legobrick')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="fusion" data-search="parametric 2x4 interlocking lego brick plastic injection molding studs alignment coupling tubes fusion 360 autodesk">
-            <div class="flex items-center gap-3">
-              <img src="practice_lego_top.png" alt="2x4 LEGO Brick" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
-              <div class="flex flex-col">
-                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Parametric 2x4 Interlocking LEGO Brick</h4>
-                <span class="font-sans text-[10px] text-slate-400">2x4 stud matrix array, 3 internal friction-fit alignment tubes & thin-wall plastic shell cavity</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
-              <span class="text-orange-400 bg-slate-900 px-2 py-0.5 rounded border border-orange-500/30">FUSION 360</span>
-              <span class="text-emerald-400 bg-slate-900 px-2 py-0.5 rounded border border-emerald-500/30">INJECTION MOLDING</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
-            </div>
-          </div>
-
-          <!-- Row 4: Exercise 1-4 Chamfered Stepped Roller Shaft -->
-          <div onclick="openProjectModal('roller')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="exercise 1 4 chamfered stepped roller shaft pdf blueprint 100 150 182 20 chamfers solidworks">
-            <div class="flex items-center gap-3">
-              <img src="practice_roller_model.png" alt="Exercise 1-4 Roller Shaft" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
-              <div class="flex flex-col">
-                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
-                <span class="font-sans text-[10px] text-slate-400">Ø100mm x 150mm main body, Ø20mm journal extensions & 5x45° bevel chamfers</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
-              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
-              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">PDF BLUEPRINT</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
-            </div>
-          </div>
-
-          <!-- Row 5: Exercise 2-7 Spherical Base Stepped Plunger -->
-          <div onclick="openProjectModal('spherical')" class="cad-archive-row p-2.5 rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900/80 hover:border-cyanAccent/60 cursor-pointer transition-all flex items-center justify-between gap-4 group" data-category="pdf" data-search="exercise 2 7 spherical base stepped plunger SR15 30 12 10 pdf blueprint solidworks">
-            <div class="flex items-center gap-3">
-              <img src="practice_spherical_model.png" alt="Exercise 2-7 Spherical Plunger" class="w-10 h-10 object-contain rounded bg-slate-900 border border-slate-800 p-0.5 group-hover:scale-110 transition-transform">
-              <div class="flex flex-col">
-                <h4 class="font-technical text-xs font-bold text-slate-100 group-hover:text-cyanAccent transition-colors">Exercise 2-7: Spherical Base Stepped Plunger</h4>
-                <span class="font-sans text-[10px] text-slate-400">SR15 hemispherical dome base, Ø30mm body & Ø12mm x 10mm top locator pin</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 font-mono text-[9px] flex-shrink-0">
-              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">SOLIDWORKS</span>
-              <span class="text-cyanAccent bg-slate-900 px-2 py-0.5 rounded border border-cyanAccent/30">PDF BLUEPRINT</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
-            </div>
-          </div>
+        </div>
 
         </div>
       </div>
