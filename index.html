@@ -536,7 +536,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">9 EXERCISES COMPLETED</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">10 EXERCISES COMPLETED</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice Repository</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -548,9 +548,9 @@
         <div class="flex items-center gap-3 self-start md:self-auto">
           <!-- Filter Tabs -->
           <div class="flex flex-wrap gap-1 bg-slate-950/80 border border-slate-800 p-1 rounded font-mono text-[10px]">
-            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [9]</button>
+            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [10]</button>
             <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [3]</button>
-            <button onclick="filterSandbox('fusion')" id="tab-sandbox-fusion" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">Fusion 360 [2]</button>
+            <button onclick="filterSandbox('fusion')" id="tab-sandbox-fusion" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">Fusion 360 [3]</button>
             <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [4]</button>
           </div>
 
@@ -566,7 +566,7 @@
         </div>
       </div>
 
-      <!-- Horizontal Carousel Slider Track (All 9 Practice Models) -->
+      <!-- Horizontal Carousel Slider Track (All 10 Practice Models) -->
       <div class="relative">
         <div id="sandbox-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
           
@@ -630,6 +630,18 @@
             <div class="flex flex-col gap-0.5">
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">2x4 LEGO Brick</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">Snap Fit Model</span>
+            </div>
+          </div>
+
+          <!-- Tile 6: Parametric Metallic Paper Clip (Fusion 360) -->
+          <div onclick="openProjectModal('paperclip')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_paper_clip.png" alt="Parametric Paper Clip" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Metallic Paper Clip</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Sweep</span>
             </div>
           </div>
 
@@ -2074,6 +2086,66 @@
           <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
             <span>MODEL: 2x4 LEGO BRICK</span>
             <span>TYPE: INJECTION MOLD SNAP FIT</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 18. PARAMETRIC METALLIC PAPER CLIP DETAIL MODAL -->
+      <div id="modal-project-paperclip" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img src="practice_paper_clip.png" alt="Parametric Metallic Paper Clip" class="max-h-full max-w-full object-contain p-2">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              RENDER: FUSION 360 METALLIC SWEEP
+            </div>
+          </div>
+
+          <div class="text-center font-mono text-[10px] text-slate-500 bg-slate-950/40 py-2 border border-slate-800 rounded">
+            FUSION 360 3D PATH SWEEP + TANGENT ARCS
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">AUTODESK FUSION 360 // 3D PATH SWEEP PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Parametric Metallic Paper Clip</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled a standard metallic paper clip in Autodesk Fusion 360 using a continuous 3D sketch path, concentric tangent arc bends, and a circular profile sweep feature.
+              </p>
+              <p>
+                <strong>Geometric Tangency:</strong> Applied smooth G1/G2 sketch constraint relations across all U-turn loop transitions to ensure continuous wire sweep trajectory and spring steel flexibility representation.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Environment:</span>
+                <span class="text-orange-400 font-bold">Autodesk Fusion 360</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Feature Type:</span>
+                <span class="text-cyanAccent font-bold">3D Path Sweep</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">Spring Steel Wire</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Arc Transitions:</span>
+                <span class="text-slate-300">Tangent Continuous</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: METALLIC PAPER CLIP</span>
+            <span>TOOL: AUTODESK FUSION 360</span>
           </div>
         </div>
       </div>
