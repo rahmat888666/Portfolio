@@ -405,8 +405,8 @@
         <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-100 font-technical uppercase">ACADEMIC & CAD PROJECTS</h2>
       </div>
 
-      <!-- Projects Grid (Uniform Cards) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Projects Grid (4 Uniform Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- Project 1: Automatic Lid Opener -->
         <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
@@ -453,7 +453,27 @@
           </button>
         </div>
 
-        <!-- Project 3: 3-Wheeled Kids Kick Scooter Personal Project -->
+        <!-- Project 3: Electric Scooter Commuter Prototype -->
+        <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
+          <div class="flex flex-col gap-4">
+            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center relative overflow-hidden select-none">
+              <img src="scooter_iso_front.png" alt="Scooter" class="max-h-full max-w-full object-contain p-2 hover:scale-105 transition-transform duration-500">
+            </div>
+            <div>
+              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Internship Project // 2025</span>
+              <h3 class="font-technical text-lg font-bold text-slate-100">Electric Scooter Prototype</h3>
+              <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+                Parametric assembly model focusing on packaging, swingarm, styling, and suspension.
+              </p>
+            </div>
+          </div>
+          <button onclick="openProjectModal('scooter')" class="w-full py-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-xs font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-2 group">
+            EXPLORE CASE STUDY
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </button>
+        </div>
+
+        <!-- Project 4: 3-Wheeled Kids Kick Scooter Personal Project -->
         <div class="bento-card rounded overflow-hidden flex flex-col justify-between p-6 gap-6">
           <div class="flex flex-col gap-4">
             <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center relative overflow-hidden select-none">
@@ -487,7 +507,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">6 EXERCISES COMPLETED</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">5 EXERCISES COMPLETED</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice Repository</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -499,8 +519,8 @@
         <div class="flex items-center gap-3 self-start md:self-auto">
           <!-- Filter Tabs -->
           <div class="flex flex-wrap gap-1 bg-slate-950/80 border border-slate-800 p-1 rounded font-mono text-[10px]">
-            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [6]</button>
-            <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube & Personal [4]</button>
+            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [5]</button>
+            <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [3]</button>
             <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [2]</button>
           </div>
 
@@ -556,21 +576,6 @@
             <div class="flex flex-col gap-0.5">
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Mars Rover Rocker-Bogie</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
-            </div>
-          </div>
-
-          <!-- Tile 4: 3-Wheeled Kids Kick Scooter (Personal Project) -->
-          <div onclick="openProjectModal('kick-scooter')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="kick_scooter_render.png" alt="3-Wheeled Kids Kick Scooter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">PERSONAL PROJECT</span>
-              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
-                <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
-              </span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">3-Wheeled Kick Scooter</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">Personal CAD + Motion Study</span>
             </div>
           </div>
 
