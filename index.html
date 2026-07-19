@@ -1294,26 +1294,12 @@
       <!-- 8. IOCL LONI INDUSTRIAL INTERNSHIP REPORT DETAIL MODAL -->
       <div id="modal-project-iocl" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
         <!-- Left: Image Viewer & Gallery -->
-        <div class="lg:w-1/2 flex flex-col gap-3">
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
           <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
             <img id="modal-iocl-main" src="plant_hydrotest_station_rig.png" alt="10-Station Hydrotesting Rig" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
             <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
               VIEW: <span id="modal-iocl-view-label">10-STATION HYDROTEST RIG (25 kg/cm²)</span>
             </div>
-          </div>
-          
-          <!-- Dynamic Photo Explanation Box -->
-          <div class="bg-slate-950/80 border border-slate-800 p-3.5 rounded flex flex-col gap-1.5 font-sans text-xs">
-            <div class="flex items-center justify-between border-b border-slate-900 pb-1.5">
-              <span class="font-technical font-bold text-cyanAccent uppercase text-[11px] flex items-center gap-1.5">
-                <i data-lucide="info" class="w-3.5 h-3.5 text-cyanAccent"></i>
-                <span id="modal-iocl-desc-title">10-Station Hydrostatic Testing Bench</span>
-              </span>
-              <span class="font-mono text-[8px] text-slate-500 uppercase">EQUIPMENT & PROCESS DETAILS</span>
-            </div>
-            <p id="modal-iocl-desc-body" class="text-slate-300 leading-relaxed text-[11px]">
-              Pressurizes LPG cylinders to <strong>25 kg/cm²</strong> using water for 30–60 seconds to verify structural expansion and weld seam integrity before painting, complying with PESO & BIS standards.
-            </p>
           </div>
 
           <!-- Thumbnails (13-grid) -->
@@ -1360,42 +1346,42 @@
           </div>
         </div>
         
-        <!-- Right: Technical Details -->
+        <!-- Right: Technical Details (Dynamic per Picture) -->
         <div class="lg:w-1/2 flex flex-col justify-between gap-6">
           <div class="flex flex-col gap-4">
             <div>
-              <span class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">Industrial Case Study // Plant Engineering</span>
-              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Statutory Testing & Painting (IOCL Loni)</h2>
+              <span id="modal-iocl-stage-badge" class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">STAGE 07–08 // HYDROSTATIC TESTING</span>
+              <h2 id="modal-iocl-title" class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">10-Station Hydrostatic Testing Bench</h2>
             </div>
             
             <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
-              <p>
-                <strong>Project Objective:</strong> Evaluated the 13-stage LPG cylinder requalification and painting facility at the Indane LPG Bottling Plant (IOCL Loni) to identify bottlenecks, improve equipment reliability, and maintain strict PESO & BIS safety standards.
+              <p id="modal-iocl-p1">
+                <strong>Process Breakdown:</strong> Pressurizes LPG cylinders with water to <strong>25 kg/cm²</strong> for 30–60 seconds to test expansion and weld joint integrity as mandated by PESO & BIS standards.
               </p>
-              <p>
-                <strong>Key Engineering Fixes:</strong> Reconfigured pneumatic lines to fix clamp pressure losses, calibrated spray booth nozzle angles to maintain a standard 60-micron coating (30μm primer + 30μm enamel), and proposed a FIFO conveyor transfer system.
+              <p id="modal-iocl-p2">
+                <strong>Key Engineering Fix:</strong> Reconfigured pneumatic clamping line fittings and NRV placements to eliminate pressure drops and clamping downtime.
               </p>
-              <p>
-                <strong>Measurable Outcome:</strong> Reduced cylinder processing cycle time by <strong>12% to 15%</strong> while maintaining strict safety compliance and zero rework.
+              <p id="modal-iocl-p3">
+                <strong>Impact & Results:</strong> Zero hydrotest leakage failures, ensuring 100% cylinder safety before painting.
               </p>
             </div>
             
             <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
               <div>
-                <span class="text-slate-500 block uppercase">Hydro Pressure:</span>
-                <span class="text-cyanAccent font-bold">25 kg/cm²</span>
+                <span id="modal-iocl-spec1-label" class="text-slate-500 block uppercase">Hydro Pressure:</span>
+                <span id="modal-iocl-spec1-val" class="text-cyanAccent font-bold">25 kg/cm²</span>
               </div>
               <div>
-                <span class="text-slate-500 block uppercase">Cycle Time Impact:</span>
-                <span class="text-cyanAccent font-bold">12% - 15% Faster</span>
+                <span id="modal-iocl-spec2-label" class="text-slate-500 block uppercase">Hold Time:</span>
+                <span id="modal-iocl-spec2-val" class="text-cyanAccent font-bold">30s - 60s</span>
               </div>
               <div>
-                <span class="text-slate-500 block uppercase">Surface Coating:</span>
-                <span class="text-slate-300">60μm (IS 2074 / IS 2932)</span>
+                <span id="modal-iocl-spec3-label" class="text-slate-500 block uppercase">Testing Medium:</span>
+                <span id="modal-iocl-spec3-val" class="text-slate-300">Water Hydraulic</span>
               </div>
               <div>
-                <span class="text-slate-500 block uppercase">Safety Standards:</span>
-                <span class="text-slate-300">PESO / BIS Norms</span>
+                <span id="modal-iocl-spec4-label" class="text-slate-500 block uppercase">Compliance:</span>
+                <span id="modal-iocl-spec4-val" class="text-slate-300">PESO & BIS Standards</span>
               </div>
             </div>
           </div>
@@ -1578,56 +1564,173 @@
 
     const ioclPhotoDetails = {
       'plant_hydrotest_station_rig.png': {
+        badge: 'STAGE 07–08 // HYDROSTATIC TESTING',
         title: '10-Station Hydrostatic Testing Bench',
-        desc: 'Pressurizes LPG cylinders to <strong>25 kg/cm²</strong> using water for 30–60 seconds to verify structural expansion and weld seam integrity before painting, complying with PESO & BIS standards.'
+        p1: '<strong>Process Breakdown:</strong> Pressurizes LPG cylinders with water to <strong>25 kg/cm²</strong> for 30–60 seconds to test expansion and weld joint integrity as mandated by PESO & BIS standards.',
+        p2: '<strong>Key Engineering Fix:</strong> Reconfigured pneumatic clamping line fittings and NRV placements to eliminate pressure drops and clamping downtime.',
+        p3: '<strong>Impact & Results:</strong> Zero hydrotest leakage failures, ensuring 100% cylinder safety before painting.',
+        specs: [
+          { label: 'Hydro Pressure:', val: '25 kg/cm²', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Hold Time:', val: '30s - 60s', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Testing Medium:', val: 'Water Hydraulic', valClass: 'text-slate-300' },
+          { label: 'Compliance:', val: 'PESO & BIS Standards', valClass: 'text-slate-300' }
+        ]
       },
       'plant_pneumatic_tank.png': {
+        badge: 'STAGE 11–12 // PNEUMATIC LEAK TESTING',
         title: 'Pneumatic Leak Testing Machine No. 1',
-        desc: 'Submerges air-pressurized cylinders (<strong>12–15 kg/cm² air</strong>) inside a water tank for 60 seconds to detect microscopic air bubbles and valve leaks.'
+        p1: '<strong>Process Breakdown:</strong> Air-pressurizes cylinders with <strong>12–15 kg/cm² (1.2–1.5 MPa) compressed air</strong> and fully submerges them in a water tank to detect micro air bubbles.',
+        p2: '<strong>Key Engineering Fix:</strong> Installed refrigeration-type air dryers to prevent moisture ingress into cylinders during pneumatic testing.',
+        p3: '<strong>Impact & Results:</strong> Guaranteed 100% leak-proof valve and bung joint sealing prior to plant dispatch.',
+        specs: [
+          { label: 'Air Pressure:', val: '12 - 15 kg/cm²', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Test Method:', val: 'Submerged Air-Bubble', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Air Quality:', val: 'Refrigerated Dry Air', valClass: 'text-slate-300' },
+          { label: 'Leak Tolerance:', val: 'Zero Bubble Tolerance', valClass: 'text-slate-300' }
+        ]
       },
       'plant_shot_blasting_machine.png': {
-        title: 'SA 2.5 Shot Blasting Machine & Panel',
-        desc: 'Blasts steel shots at high speed against cylinder surfaces to remove old paint, rust, and scale, achieving an <strong>ISO 8501-1 SA 2.5</strong> metallic grey surface for primer adhesion.'
+        badge: 'STAGE 06–07 // SURFACE PREPARATION',
+        title: 'SA 2.5 Automated Shot Blasting Machine',
+        p1: '<strong>Process Breakdown:</strong> High-speed steel shot blasting removes old paint, heavy rust, and scale, producing a uniform metallic grey finish conforming to <strong>ISO 8501-1 SA 2.5</strong>.',
+        p2: '<strong>Key Engineering Fix:</strong> Calibrated conveyor roller feeding speeds and shot flow rates to eliminate manual grit brushing.',
+        p3: '<strong>Impact & Results:</strong> Superior surface roughness profile for optimal primer paint adhesion.',
+        specs: [
+          { label: 'Surface Standard:', val: 'ISO 8501-1 SA 2.5', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Abrasive Medium:', val: 'High-Speed Steel Shots', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Surface Finish:', val: 'Metallic Grey', valClass: 'text-slate-300' },
+          { label: 'Conveyor Type:', val: 'Automated Roller Chain', valClass: 'text-slate-300' }
+        ]
       },
       'plant_paint_booth_booths.png': {
-        title: 'Primer & Spray Paint Booths',
-        desc: 'Dual-stage spray booth applying Red Oxide Zinc Chromate primer (IS 2074) and Signal Red Enamel (IS 2932), ensuring a <strong>60-micron total DFT</strong> protective coating.'
+        badge: 'STAGE 09–10 // DUAL-COAT PAINTING',
+        title: 'Water Curtain Primer & Spray Paint Booths',
+        p1: '<strong>Process Breakdown:</strong> Applies Red Oxide Zinc Chromate primer (IS 2074) followed by Signal Red Synthetic Enamel topcoat (IS 2932) inside water curtain spray booths.',
+        p2: '<strong>Key Engineering Fix:</strong> Calibrated spray gun air pressures, nozzle angles, and introduced forced air drying, reducing paint consumption and 1-hour sun-drying delays.',
+        p3: '<strong>Impact & Results:</strong> Achieved a uniform <strong>60-micron total DFT coating</strong> with 12-15% faster cycle times.',
+        specs: [
+          { label: 'Primer Coat:', val: '30μm Zinc Chromate', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Topcoat:', val: '30μm Signal Red', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Total DFT:', val: '60 Microns Minimum', valClass: 'text-slate-300' },
+          { label: 'Booth Type:', val: 'Water Curtain Spray', valClass: 'text-slate-300' }
+        ]
       },
       'plant_punching_machine.png': {
-        title: 'Pneumatic Valve Fixing & HT Punching Rig',
-        desc: 'Stamps the unique Hydrostatic Test (HT) number, inspection code, and next re-test date (e.g. 07-25) onto the VP ring as per statutory PESO regulations.'
+        badge: 'STAGE 12–13 // PUNCHING & CERTIFICATION',
+        title: 'Pneumatic Valve Fixing & HT Punching Machine',
+        p1: '<strong>Process Breakdown:</strong> Fits ISI-marked self-closing valves (IS 8737) and punches the unique Hydrostatic Test Number (HT No.) and re-test date (e.g. 07-25) onto the VP ring.',
+        p2: '<strong>Key Engineering Fix:</strong> Standardized torque-controlled pneumatic wrenches to prevent bung thread cross-threading damage.',
+        p3: '<strong>Impact & Results:</strong> Permanent traceability and regulatory compliance for every requalified cylinder.',
+        specs: [
+          { label: 'Valve Standard:', val: 'ISI IS 8737', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Stamping Code:', val: 'HT No. & Date (07-25)', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Tooling:', val: 'Pneumatic Torque Wrench', valClass: 'text-slate-300' },
+          { label: 'Traceability:', val: 'Full ERP Logging', valClass: 'text-slate-300' }
+        ]
       },
       'plant_stenciled_cylinders.png': {
-        title: 'Tare Weight Stenciling & Dispatch Stack',
-        desc: 'Weighs cylinders on calibrated digital scales to verify tare weight tolerances and stencils new weight markings in black paint for accurate LPG filling.'
+        badge: 'STAGE 13 // STENCILING & DISPATCH',
+        title: 'Tare Weight Verification & Stenciling Stack',
+        p1: '<strong>Process Breakdown:</strong> Weighs cylinders on digital scales to verify tare weight tolerances against embossed values, stenciling updated weights in permanent black paint.',
+        p2: '<strong>Key Engineering Fix:</strong> Implemented stenciling alignment jigs for Indane branding, emergency contact (1906), and regulator safety warnings.',
+        p3: '<strong>Impact & Results:</strong> Transparent customer billing and precise LPG filling accuracy during bottling.',
+        specs: [
+          { label: 'Weighing Scale:', val: 'Digital Platform Scale', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Branding:', val: 'Indane & Emergency 1906', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Safety Warning:', val: 'Switch Off Regulator', valClass: 'text-slate-300' },
+          { label: 'Dispatch Status:', val: 'ERP Inventory Ready', valClass: 'text-slate-300' }
+        ]
       },
       'plant_overhead_conveyor.jpg': {
+        badge: 'PLANT UTILITIES // MATERIAL HANDLING',
         title: 'Overhead Monorail Conveyor & Storage Yard',
-        desc: 'Automated overhead hook track system that continuously transports cylinders between shot blasting, spray booth, and drying stations.'
+        p1: '<strong>Process Breakdown:</strong> Continuous overhead monorail conveyor fitted with hanging hooks that transports cylinders continuously between cleaning, painting, and curing bays.',
+        p2: '<strong>Key Engineering Fix:</strong> Proposed ergonomic hook redesign to improve loading efficiency and prevent cylinder drop damage.',
+        p3: '<strong>Impact & Results:</strong> Smooth material transfer reducing manual lifting fatigue across high-volume shifts.',
+        specs: [
+          { label: 'Conveyor System:', val: 'Overhead Monorail Track', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Hanging Fixture:', val: 'Ergonomic Hook Jigs', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Transfer Capacity:', val: 'Continuous Line Flow', valClass: 'text-slate-300' },
+          { label: 'Yard Staging:', val: 'Categorized Batch Stacking', valClass: 'text-slate-300' }
+        ]
       },
       'plant_conveyor_carousel.png': {
-        title: 'Circular Carousel Conveyor Line',
-        desc: 'Rotary transfer line designed to maintain First-In-First-Out (FIFO) sequence during cylinder feeding, degassing, and inspection.'
+        badge: 'PLANT LOGISTICS // FIFO FLOW',
+        title: 'Circular Carousel Conveyor Transfer Line',
+        p1: '<strong>Process Breakdown:</strong> Rotary carousel feeder that organizes cylinders arriving from degassing into single-file alignment for bung thread inspection.',
+        p2: '<strong>Key Engineering Fix:</strong> Proposed continuous conveyor transfer from Cold Repair Shed to eliminate batching delays and ensure First-In-First-Out (FIFO) sequence.',
+        p3: '<strong>Impact & Results:</strong> Reduced idle waiting times and eliminated out-of-sequence cylinder sorting.',
+        specs: [
+          { label: 'Flow Strategy:', val: 'First-In-First-Out (FIFO)', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Mechanism:', val: 'Rotary Circular Track', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Logistics Goal:', val: 'Zero Batching Delay', valClass: 'text-slate-300' },
+          { label: 'Line Speed:', val: 'Synchronized Station Pace', valClass: 'text-slate-300' }
+        ]
       },
       'plant_thread_gauge.png': {
+        badge: 'STAGE 04 // THREAD QUALITY CONTROL',
         title: '3/4" - 14 NGT L9 Bung Thread Gauges',
-        desc: 'Precision plug gauges (Gauge A & B) used to inspect internal bung threads for pitch wear, rust, or cross-threading before valve installation.'
+        p1: '<strong>Process Breakdown:</strong> Inspects internal valve pad (bung) threads using BIS-certified 3/4-14 NGT L9 plug gauges (Gauge A & B) to detect pitch wear or rust.',
+        p2: '<strong>Key Engineering Fix:</strong> Introduced soft wire brush pneumatic cleaning before thread gauging to prevent false rejection of cleanable threads.',
+        p3: '<strong>Impact & Results:</strong> Zero gas leaks around bung threads after valve installation.',
+        specs: [
+          { label: 'Thread Standard:', val: '3/4" - 14 NGT L9', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Gauge Types:', val: 'Gauge A & Gauge B', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Inspection:', val: 'Pitch, Depth & Rust Check', valClass: 'text-slate-300' },
+          { label: 'Acceptance:', val: '100% Gas-Tight Fit', valClass: 'text-slate-300' }
+        ]
       },
       'plant_stay_plate_marking.png': {
-        title: 'LPG Cylinder Stay Plate D-24 Stamp',
-        desc: 'Visual inspection of stay plate markings (e.g. D/24) to determine statutory testing due dates according to 5/10 year requalification intervals.'
+        badge: 'STAGE 01 // VISUAL SEGREGATION',
+        title: 'Cylinder Stay Plate Requalification Marking',
+        p1: '<strong>Process Breakdown:</strong> Visual inspection of stay plate markings (e.g., A/24, B/24, C/24, D/24) in the Cold Repair Shed to segregate cylinders due for 5/10 year statutory testing.',
+        p2: '<strong>Key Engineering Fix:</strong> Streamlined stay plate recording logbooks into a digital tracking list for faster degassing shed handoff.',
+        p3: '<strong>Impact & Results:</strong> 100% compliance with PESO statutory testing schedule.',
+        specs: [
+          { label: 'Quarter Codes:', val: 'A (Q1), B (Q2), C (Q3), D (Q4)', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Re-Test Cycle:', val: '5 or 10 Year Mandate', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Inspection:', val: 'Visual Stay Plate Check', valClass: 'text-slate-300' },
+          { label: 'Action:', val: 'Segregated for Degassing', valClass: 'text-slate-300' }
+        ]
       },
       'plant_bottling_shed.png': {
-        title: 'Indane LPG Bottling Plant Inspection Shed',
-        desc: 'Main plant shed containing mandatory SOP charts, tare weight tables, rejection criteria boards, and cylinder staging areas.'
+        badge: 'PLANT INFRASTRUCTURE // SOP SHED',
+        title: 'Bottling Plant Main Inspection Shed',
+        p1: '<strong>Process Breakdown:</strong> Houses the primary inspection stations, tare weight permissible chart boards, internal inspection SOPs, and cylinder rejection criteria displays.',
+        p2: '<strong>Key Engineering Fix:</strong> Realigned workflow station layouts to reduce back-and-forth movement between inspection bays.',
+        p3: '<strong>Impact & Results:</strong> Clear visual management and strict operator adherence to standard operating procedures.',
+        specs: [
+          { label: 'Facility:', val: 'Loni Bottling Plant Shed', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Visual Management:', val: 'PESO & BIS SOP Boards', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Tare Charts:', val: 'Permissible Weight Limits', valClass: 'text-slate-300' },
+          { label: 'Safety Standard:', val: 'Plant SOP Alignment', valClass: 'text-slate-300' }
+        ]
       },
       'plant_inspection_shed.png': {
-        title: 'External & Internal Inspection Shed Facility',
-        desc: 'Dedicated inspection bay where cylinders undergo visual defect checks, internal borescope inspections, and wall thickness gauging.'
+        badge: 'STAGE 03–05 // IN-DEPTH INSPECTION',
+        title: 'External & Internal Inspection Shed',
+        p1: '<strong>Process Breakdown:</strong> Dedicated bay where cylinders undergo visual dent/corrosion checks, internal borescope endoscope inspection, and ultrasonic bottom plate thickness measurement.',
+        p2: '<strong>Key Engineering Fix:</strong> Integrated ultrasonic thickness gauges (TT-100P) to accurately measure shell wall thickness and reject compromised cylinders.',
+        p3: '<strong>Impact & Results:</strong> Guaranteed structural shell integrity before high-pressure hydrotesting.',
+        specs: [
+          { label: 'Internal Test:', val: 'Light Probe Borescope', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Thickness Test:', val: 'Ultrasonic Gauge (TT-100P)', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Defect Criteria:', val: 'Pitting, Rust & Bulges', valClass: 'text-slate-300' },
+          { label: 'Decision:', val: 'Accept, Repair, or Reject', valClass: 'text-slate-300' }
+        ]
       },
       'plant_shot_blasting_shed_sign.png': {
-        title: 'SA 2.5 Blasting Machine Shed Facility',
-        desc: 'Enclosed plant section housing heavy-duty shot blasting machinery to isolate dust, noise, and steel shot abrasives.'
+        badge: 'PLANT FACILITIES // SHOT BLASTING',
+        title: 'SA 2.5 Shot Blasting Machine Shed',
+        p1: '<strong>Process Breakdown:</strong> Enclosed heavy-duty machine shed built to contain steel shot abrasives, filter dust emissions, and isolate operational noise during blast cleaning.',
+        p2: '<strong>Key Engineering Fix:</strong> Implemented scheduled dust collector cleaning and shot replenishment cycles to maintain SA 2.5 blast efficiency.',
+        p3: '<strong>Impact & Results:</strong> Dust-free plant environment and continuous blast cleaning uptime.',
+        specs: [
+          { label: 'Enclosure:', val: 'Abrasive Containment Shed', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Dust Control:', val: 'Filtered Air Extractor', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Blast Standard:', val: 'SA 2.5 Surface Finish', valClass: 'text-slate-300' },
+          { label: 'Safety Rating:', val: 'Industrial Enclosure', valClass: 'text-slate-300' }
+        ]
       }
     };
 
@@ -1637,8 +1740,27 @@
       
       const details = ioclPhotoDetails[imgSrc];
       if (details) {
-        document.getElementById('modal-iocl-desc-title').innerText = details.title;
-        document.getElementById('modal-iocl-desc-body').innerHTML = details.desc;
+        document.getElementById('modal-iocl-stage-badge').innerText = details.badge;
+        document.getElementById('modal-iocl-title').innerText = details.title;
+        document.getElementById('modal-iocl-p1').innerHTML = details.p1;
+        document.getElementById('modal-iocl-p2').innerHTML = details.p2;
+        document.getElementById('modal-iocl-p3').innerHTML = details.p3;
+
+        document.getElementById('modal-iocl-spec1-label').innerText = details.specs[0].label;
+        document.getElementById('modal-iocl-spec1-val').innerText = details.specs[0].val;
+        document.getElementById('modal-iocl-spec1-val').className = details.specs[0].valClass;
+
+        document.getElementById('modal-iocl-spec2-label').innerText = details.specs[1].label;
+        document.getElementById('modal-iocl-spec2-val').innerText = details.specs[1].val;
+        document.getElementById('modal-iocl-spec2-val').className = details.specs[1].valClass;
+
+        document.getElementById('modal-iocl-spec3-label').innerText = details.specs[2].label;
+        document.getElementById('modal-iocl-spec3-val').innerText = details.specs[2].val;
+        document.getElementById('modal-iocl-spec3-val').className = details.specs[2].valClass;
+
+        document.getElementById('modal-iocl-spec4-label').innerText = details.specs[3].label;
+        document.getElementById('modal-iocl-spec4-val').innerText = details.specs[3].val;
+        document.getElementById('modal-iocl-spec4-val').className = details.specs[3].valClass;
       }
 
       document.querySelectorAll('.modal-iocl-thumb-btn').forEach(b => {
