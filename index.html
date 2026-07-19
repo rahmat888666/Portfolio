@@ -476,206 +476,93 @@
   </section>
 
   <!-- CAD Practice Section -->
-  <section id="sandbox" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-900/60">
-    <div class="flex flex-col gap-10">
+  <section id="sandbox" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-900/60">
+    <div class="flex flex-col gap-8">
       
       <!-- Section Headers -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice</h2>
-          <p class="text-slate-400 text-sm mt-2 max-w-xl font-sans">
-            A repository of 3D parts and drafting exercises modeled to master engineering clearances, tolerance fits, and complex geometries.
+          <div class="flex items-center gap-2 mb-1">
+            <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">5 EXERCISES COMPLETED</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice Repository</h2>
+          <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
+            Click any practice model tile to launch full 3D assembly renders, motion study recordings, and engineering dimension blueprints.
           </p>
         </div>
         
-        <!-- Filter Tabs -->
-        <div class="flex bg-slate-950/60 border border-slate-800 p-1 rounded font-mono text-[10px]">
-          <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1.5 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All Practice Models</button>
-          <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorial Models</button>
-          <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprint Exercises</button>
+        <!-- Filter Tabs (Sleek Compact Pills) -->
+        <div class="flex flex-wrap gap-1.5 bg-slate-950/80 border border-slate-800 p-1 rounded font-mono text-[10px] self-start md:self-auto">
+          <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [5]</button>
+          <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [3]</button>
+          <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [2]</button>
         </div>
       </div>
 
-      <!-- Sandbox Grid -->
-      <div id="sandbox-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Compact Badge-Style Grid Matrix (5 columns) -->
+      <div id="sandbox-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
         
-        <!-- Card 1: Quadcopter Drone (YouTube Tutorial) -->
-        <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="youtube">
-          <div class="flex flex-col gap-3">
-            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none">
-              <img src="practice_drone_assembly.png" alt="Quadcopter Drone Assembly" class="max-h-full max-w-full object-contain p-1.5 hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1.5 py-0.5 rounded shadow z-10 font-bold">YOUTUBE TUTORIAL</div>
-            </div>
-            <div>
-              <span class="text-[9px] font-mono text-blue-400 uppercase tracking-widest block mb-1">Modeled from YouTube Tutorial</span>
-              <h4 class="font-technical font-bold text-slate-200 text-sm">F450 Quadcopter Frame</h4>
-              <p class="text-slate-400 text-[11px] mt-1 leading-relaxed font-sans">
-                Modeled multi-part structural arms, plates, brushless motors, and props by following advanced SOLIDWORKS YouTube assembly guides.
-              </p>
-            </div>
+        <!-- Tile 1: F450 Quadcopter Frame (YouTube) -->
+        <div onclick="openProjectModal('drone')" class="bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+          <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+            <img src="practice_drone_assembly.png" alt="F450 Quadcopter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+            <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
           </div>
-          <div class="border-t border-slate-900 pt-3 flex flex-col gap-3">
-            <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-              <span>TOOL: SOLIDWORKS</span>
-              <span>PARTS: 18+</span>
-            </div>
-            <button onclick="openProjectModal('drone')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
-              EXPLORE ASSEMBLY DETAILS
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-            </button>
+          <div class="flex flex-col gap-0.5">
+            <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">F450 Quadcopter</h4>
+            <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
           </div>
         </div>
 
-        <!-- Card 2: 4-Cylinder Engine & Crankshaft (YouTube Tutorial) -->
-        <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="youtube">
-          <div class="flex flex-col gap-3">
-            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none">
-              <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Inline Engine & Crankshaft Assembly" class="max-h-full max-w-full object-contain p-1.5 hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1.5 py-0.5 rounded shadow z-10 font-bold">YOUTUBE TUTORIAL</div>
-            </div>
-            <div>
-              <span class="text-[9px] font-mono text-blue-400 uppercase tracking-widest block mb-1">Modeled from YouTube Tutorial</span>
-              <h4 class="font-technical font-bold text-slate-200 text-sm">4-Cylinder Engine & Crankshaft</h4>
-              <p class="text-slate-400 text-[11px] mt-1 leading-relaxed font-sans">
-                Modeled 180° offset multi-throw crankshaft, connecting rods, wrist pins, and 4-stroke pistons by following SOLIDWORKS YouTube tutorial series.
-              </p>
-            </div>
+        <!-- Tile 2: 4-Cylinder Engine & Crankshaft (YouTube) -->
+        <div onclick="openProjectModal('engine')" class="bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+          <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+            <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+            <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+              <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
+            </span>
           </div>
-          <div class="border-t border-slate-900 pt-3 flex flex-col gap-3">
-            <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-              <span>TOOL: SOLIDWORKS</span>
-              <span>PARTS: 4 PISTONS + CRANK</span>
-            </div>
-            <button onclick="openProjectModal('engine')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
-              EXPLORE MOTION STUDY
-              <i data-lucide="play-circle" class="w-3.5 h-3.5 group-hover:scale-110 transition-transform text-cyanAccent"></i>
-            </button>
-        </div>
-
-        <!-- Card 3: Mars Rover Rocker-Bogie Mechanism (YouTube Tutorial) -->
-        <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="youtube">
-          <div class="flex flex-col gap-3">
-            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none group/img">
-              <!-- Base: Close-up Assembly -->
-              <img src="practice_rover_model.png" alt="Mars Rover Rocker-Bogie Assembly" class="absolute inset-0 w-full h-full object-contain p-2 transition-opacity duration-300 group-hover/img:opacity-0">
-              <!-- Hover: Obstacle Test Track -->
-              <img src="practice_rover_track.png" alt="Mars Rover Test Track" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity duration-300 group-hover/img:opacity-100 bg-slate-950">
-              
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1.5 py-0.5 rounded shadow z-10 font-bold">YOUTUBE TUTORIAL</div>
-              <div class="absolute bottom-2 right-2 font-mono text-[8px] text-cyanAccent bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded z-10 font-bold">HOVER TO VIEW TRACK</div>
-            </div>
-            <div>
-              <span class="text-[9px] font-mono text-blue-400 uppercase tracking-widest block mb-1">Modeled from YouTube Tutorial</span>
-              <h4 class="font-technical font-bold text-slate-200 text-sm">Mars Rover Rocker-Bogie</h4>
-              <p class="text-slate-400 text-[11px] mt-1 leading-relaxed font-sans">
-                Modeled 6-wheel Rocker-Bogie passive suspension chassis, differential linkages, and obstacle testing track by following SOLIDWORKS YouTube tutorials.
-              </p>
-            </div>
-          </div>
-          <div class="border-t border-slate-900 pt-3 flex flex-col gap-3">
-            <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-              <span>TOOL: SOLIDWORKS</span>
-              <span>WHEELS: 6 INDEPENDENT</span>
-            </div>
-            <button onclick="openProjectModal('rover')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
-              EXPLORE ROVER DETAILS
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-            </button>
+          <div class="flex flex-col gap-0.5">
+            <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">4-Cyl Engine & Crank</h4>
+            <span class="text-[8px] font-mono text-slate-400 truncate">YouTube + Motion Video</span>
           </div>
         </div>
 
-
-
-        <!-- Card 4: Multi-Step Tapered Sleeve (PDF Blueprint) -->
-        <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="pdf">
-          <div class="flex flex-col gap-3">
-            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none group/img">
-              <!-- Base: 4-view render -->
-              <img src="practice_shaft_taper_model.png" alt="Multi-Step Tapered Sleeve Model" class="absolute inset-0 w-full h-full object-contain p-2 transition-opacity duration-300 group-hover/img:opacity-0">
-              <!-- Hover: Dimension blueprint -->
-              <img src="practice_shaft_taper_dim.png" alt="Multi-Step Tapered Sleeve Blueprint" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity duration-300 group-hover/img:opacity-100 bg-slate-950">
-              
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-cyanAccent bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded shadow z-10 font-bold">HOVER TO VIEW BLUEPRINT</div>
-            </div>
-            <div>
-              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Modeled from PDF Dimensions</span>
-              <h4 class="font-technical font-bold text-slate-200 text-sm">Multi-Step Tapered Sleeve</h4>
-              <p class="text-slate-400 text-[11px] mt-1 leading-relaxed font-sans">
-                Modeled multi-step external shaft collar with hollow internal bore directly from standard engineering PDF dimension drawing sheets.
-              </p>
-            </div>
+        <!-- Tile 3: Mars Rover Rocker-Bogie (YouTube) -->
+        <div onclick="openProjectModal('rover')" class="bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+          <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+            <img src="practice_rover_model.png" alt="Mars Rover" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+            <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
           </div>
-          <div class="border-t border-slate-900 pt-3 flex flex-col gap-3">
-            <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-              <span>TOOL: SOLIDWORKS</span>
-              <span>LEN: 180mm</span>
-            </div>
-            <button onclick="openProjectModal('sleeve')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
-              EXPLORE DRAWING DETAILS
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-            </button>
+          <div class="flex flex-col gap-0.5">
+            <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Mars Rover Rocker-Bogie</h4>
+            <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
           </div>
         </div>
 
-        <!-- Card 5: Hollow Stepped Cylinder (PDF Blueprint) -->
-        <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="pdf">
-          <div class="flex flex-col gap-3">
-            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none group/img">
-              <!-- Base: 3D Model -->
-              <img src="practice_shaft_internal_model.png" alt="Internal Stepped Sleeve Model" class="absolute inset-0 w-full h-full object-contain p-2 transition-opacity duration-300 group-hover/img:opacity-0">
-              <!-- Hover: Dimension Blueprint -->
-              <img src="practice_shaft_internal_dim.png" alt="Internal Stepped Sleeve Blueprint" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity duration-300 group-hover/img:opacity-100 bg-slate-950">
-              
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-cyanAccent bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded shadow z-10 font-bold">HOVER TO VIEW BLUEPRINT</div>
-            </div>
-            <div>
-              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Modeled from PDF Dimensions</span>
-              <h4 class="font-technical font-bold text-slate-200 text-sm">Hollow Stepped Cylinder</h4>
-              <p class="text-slate-400 text-[11px] mt-1 leading-relaxed font-sans">
-                Modeled hollow collar bushing featuring a two-stage internal stepped bore directly from standard engineering PDF dimension drawing sheets.
-              </p>
-            </div>
+        <!-- Tile 4: Multi-Step Tapered Sleeve (PDF) -->
+        <div onclick="openProjectModal('sleeve')" class="bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+          <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+            <img src="practice_shaft_taper_model.png" alt="Tapered Sleeve" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+            <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
           </div>
-          <div class="border-t border-slate-900 pt-3 flex flex-col gap-3">
-            <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-              <span>TOOL: SOLIDWORKS</span>
-              <span>LEN: 140mm</span>
-            </div>
-            <button onclick="openProjectModal('collar')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
-              EXPLORE DRAWING DETAILS
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-            </button>
+          <div class="flex flex-col gap-0.5">
+            <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Multi-Step Tapered Sleeve</h4>
+            <span class="text-[8px] font-mono text-slate-400 truncate">PDF Dimension Sheet</span>
           </div>
         </div>
 
-        <!-- Card 6: Concentric Stepped Shaft (PDF Blueprint) -->
-        <div class="bento-card p-4 rounded flex flex-col justify-between gap-4 sandbox-item" data-category="pdf">
-          <div class="flex flex-col gap-3">
-            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/80 relative overflow-hidden select-none group/img">
-              <!-- Base: 3D Model -->
-              <img src="practice_shaft_model.png" alt="Concentric Stepped Shaft Model" class="absolute inset-0 w-full h-full object-contain p-2 transition-opacity duration-300 group-hover/img:opacity-0">
-              <!-- Hover: Dimension Sheet -->
-              <img src="practice_shaft_dim.png" alt="Concentric Stepped Shaft Blueprint" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity duration-300 group-hover/img:opacity-100 bg-slate-950">
-              
-              <div class="absolute top-2 left-2 font-mono text-[8px] text-cyanAccent bg-slate-950/90 border border-slate-800 px-1.5 py-0.5 rounded shadow z-10 font-bold">HOVER TO VIEW BLUEPRINT</div>
-            </div>
-            <div>
-              <span class="text-[9px] font-mono text-cyanAccent uppercase tracking-widest block mb-1">Modeled from PDF Dimensions</span>
-              <h4 class="font-technical font-bold text-slate-200 text-sm">Concentric Stepped Shaft</h4>
-              <p class="text-slate-400 text-[11px] mt-1 leading-relaxed font-sans">
-                Modeled concentric cylindrical shoulders directly from standard engineering PDF dimension drawing sheets, matching all section dimensions.
-              </p>
-            </div>
+        <!-- Tile 5: Hollow Stepped Cylinder (PDF) -->
+        <div onclick="openProjectModal('collar')" class="bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+          <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+            <img src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+            <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
           </div>
-          <div class="border-t border-slate-900 pt-3 flex flex-col gap-3">
-            <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-              <span>TOOL: SOLIDWORKS</span>
-              <span>LEN: 300mm</span>
-            </div>
-            <button onclick="openProjectModal('shaft')" class="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/30 hover:border-blue-500 rounded text-slate-300 hover:text-slate-100 font-technical text-[10px] font-semibold tracking-wider transition-all duration-300 flex items-center justify-center gap-1 group">
-              EXPLORE DRAWING DETAILS
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-            </button>
+          <div class="flex flex-col gap-0.5">
+            <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Hollow Stepped Cylinder</h4>
+            <span class="text-[8px] font-mono text-slate-400 truncate">PDF Dimension Sheet</span>
           </div>
         </div>
 
