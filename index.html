@@ -1376,7 +1376,8 @@
         <div class="lg:w-1/2 flex flex-col justify-between gap-6">
           <div class="flex flex-col gap-4">
             <div>
-              <span id="modal-iocl-stage-badge" class="text-cyanAccent font-mono text-[10px] uppercase font-bold tracking-widest">STAGE 01 // VISUAL SEGREGATION</span>
+              <span class="text-slate-400 font-mono text-[10px] uppercase font-bold tracking-widest block mb-1">IOCL LONI LPG PLANT // 13-STAGE REQUALIFICATION</span>
+              <span id="modal-iocl-stage-badge" class="text-cyanAccent font-mono text-[11px] uppercase font-bold tracking-widest">STAGE 01 // VISUAL SEGREGATION</span>
               <h2 id="modal-iocl-title" class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Cylinder Stay Plate Requalification Marking</h2>
             </div>
             
@@ -1589,123 +1590,6 @@
     }
 
     const ioclPhotoDetails = {
-      'plant_hydrotest_station_rig.png': {
-        badge: 'STAGE 07–08 // HYDROSTATIC TESTING',
-        title: '10-Station Hydrostatic Testing Bench',
-        p1: '<strong>Process Breakdown:</strong> Pressurizes LPG cylinders with water to <strong>25 kg/cm²</strong> for 30–60 seconds to test expansion and weld joint integrity as mandated by PESO & BIS standards.',
-        p2: '<strong>Key Engineering Fix:</strong> Reconfigured pneumatic clamping line fittings and NRV placements to eliminate pressure drops and clamping downtime.',
-        p3: '<strong>Impact & Results:</strong> Zero hydrotest leakage failures, ensuring 100% cylinder safety before painting.',
-        specs: [
-          { label: 'Hydro Pressure:', val: '25 kg/cm²', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Hold Time:', val: '30s - 60s', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Testing Medium:', val: 'Water Hydraulic', valClass: 'text-slate-300' },
-          { label: 'Compliance:', val: 'PESO & BIS Standards', valClass: 'text-slate-300' }
-        ]
-      },
-      'plant_pneumatic_tank.png': {
-        badge: 'STAGE 11–12 // PNEUMATIC LEAK TESTING',
-        title: 'Pneumatic Leak Testing Machine No. 1',
-        p1: '<strong>Process Breakdown:</strong> Air-pressurizes cylinders with <strong>12–15 kg/cm² (1.2–1.5 MPa) compressed air</strong> and fully submerges them in a water tank to detect micro air bubbles.',
-        p2: '<strong>Key Engineering Fix:</strong> Installed refrigeration-type air dryers to prevent moisture ingress into cylinders during pneumatic testing.',
-        p3: '<strong>Impact & Results:</strong> Guaranteed 100% leak-proof valve and bung joint sealing prior to plant dispatch.',
-        specs: [
-          { label: 'Air Pressure:', val: '12 - 15 kg/cm²', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Test Method:', val: 'Submerged Air-Bubble', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Air Quality:', val: 'Refrigerated Dry Air', valClass: 'text-slate-300' },
-          { label: 'Leak Tolerance:', val: 'Zero Bubble Tolerance', valClass: 'text-slate-300' }
-        ]
-      },
-      'plant_shot_blasting_machine.png': {
-        badge: 'STAGE 06–07 // SURFACE PREPARATION',
-        title: 'SA 2.5 Automated Shot Blasting Machine',
-        p1: '<strong>Process Breakdown:</strong> High-speed steel shot blasting removes old paint, heavy rust, and scale, producing a uniform metallic grey finish conforming to <strong>ISO 8501-1 SA 2.5</strong>.',
-        p2: '<strong>Key Engineering Fix:</strong> Calibrated conveyor roller feeding speeds and shot flow rates to eliminate manual grit brushing.',
-        p3: '<strong>Impact & Results:</strong> Superior surface roughness profile for optimal primer paint adhesion.',
-        specs: [
-          { label: 'Surface Standard:', val: 'ISO 8501-1 SA 2.5', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Abrasive Medium:', val: 'High-Speed Steel Shots', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Surface Finish:', val: 'Metallic Grey', valClass: 'text-slate-300' },
-          { label: 'Conveyor Type:', val: 'Automated Roller Chain', valClass: 'text-slate-300' }
-        ]
-      },
-      'plant_paint_booth_booths.png': {
-        badge: 'STAGE 09–10 // DUAL-COAT PAINTING',
-        title: 'Water Curtain Primer & Spray Paint Booths',
-        p1: '<strong>Process Breakdown:</strong> Applies Red Oxide Zinc Chromate primer (IS 2074) followed by Signal Red Synthetic Enamel topcoat (IS 2932) inside water curtain spray booths.',
-        p2: '<strong>Key Engineering Fix:</strong> Calibrated spray gun air pressures, nozzle angles, and introduced forced air drying, reducing paint consumption and 1-hour sun-drying delays.',
-        p3: '<strong>Impact & Results:</strong> Achieved a uniform <strong>60-micron total DFT coating</strong> with 12-15% faster cycle times.',
-        specs: [
-          { label: 'Primer Coat:', val: '30μm Zinc Chromate', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Topcoat:', val: '30μm Signal Red', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Total DFT:', val: '60 Microns Minimum', valClass: 'text-slate-300' },
-          { label: 'Booth Type:', val: 'Water Curtain Spray', valClass: 'text-slate-300' }
-        ]
-      },
-      'plant_punching_machine.png': {
-        badge: 'STAGE 12–13 // PUNCHING & CERTIFICATION',
-        title: 'Pneumatic Valve Fixing & HT Punching Machine',
-        p1: '<strong>Process Breakdown:</strong> Fits ISI-marked self-closing valves (IS 8737) and punches the unique Hydrostatic Test Number (HT No.) and re-test date (e.g. 07-25) onto the VP ring.',
-        p2: '<strong>Key Engineering Fix:</strong> Standardized torque-controlled pneumatic wrenches to prevent bung thread cross-threading damage.',
-        p3: '<strong>Impact & Results:</strong> Permanent traceability and regulatory compliance for every requalified cylinder.',
-        specs: [
-          { label: 'Valve Standard:', val: 'ISI IS 8737', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Stamping Code:', val: 'HT No. & Date (07-25)', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Tooling:', val: 'Pneumatic Torque Wrench', valClass: 'text-slate-300' },
-          { label: 'Traceability:', val: 'Full ERP Logging', valClass: 'text-slate-300' }
-        ]
-      },
-      'plant_stenciled_cylinders.png': {
-        badge: 'STAGE 13 // STENCILING & DISPATCH',
-        title: 'Tare Weight Verification & Stenciling Stack',
-        p1: '<strong>Process Breakdown:</strong> Weighs cylinders on digital scales to verify tare weight tolerances against embossed values, stenciling updated weights in permanent black paint.',
-        p2: '<strong>Key Engineering Fix:</strong> Implemented stenciling alignment jigs for Indane branding, emergency contact (1906), and regulator safety warnings.',
-        p3: '<strong>Impact & Results:</strong> Transparent customer billing and precise LPG filling accuracy during bottling.',
-        specs: [
-          { label: 'Weighing Scale:', val: 'Digital Platform Scale', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Branding:', val: 'Indane & Emergency 1906', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Safety Warning:', val: 'Switch Off Regulator', valClass: 'text-slate-300' },
-          { label: 'Dispatch Status:', val: 'ERP Inventory Ready', valClass: 'text-slate-300' }
-        ]
-      },
-      'plant_overhead_conveyor.jpg': {
-        badge: 'PLANT UTILITIES // MATERIAL HANDLING',
-        title: 'Overhead Monorail Conveyor & Storage Yard',
-        p1: '<strong>Process Breakdown:</strong> Continuous overhead monorail conveyor fitted with hanging hooks that transports cylinders continuously between cleaning, painting, and curing bays.',
-        p2: '<strong>Key Engineering Fix:</strong> Proposed ergonomic hook redesign to improve loading efficiency and prevent cylinder drop damage.',
-        p3: '<strong>Impact & Results:</strong> Smooth material transfer reducing manual lifting fatigue across high-volume shifts.',
-        specs: [
-          { label: 'Conveyor System:', val: 'Overhead Monorail Track', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Hanging Fixture:', val: 'Ergonomic Hook Jigs', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Transfer Capacity:', val: 'Continuous Line Flow', valClass: 'text-slate-300' },
-          { label: 'Yard Staging:', val: 'Categorized Batch Stacking', valClass: 'text-slate-300' }
-        ]
-      },
-      'plant_conveyor_carousel.png': {
-        badge: 'PLANT LOGISTICS // FIFO FLOW',
-        title: 'Circular Carousel Conveyor Transfer Line',
-        p1: '<strong>Process Breakdown:</strong> Rotary carousel feeder that organizes cylinders arriving from degassing into single-file alignment for bung thread inspection.',
-        p2: '<strong>Key Engineering Fix:</strong> Proposed continuous conveyor transfer from Cold Repair Shed to eliminate batching delays and ensure First-In-First-Out (FIFO) sequence.',
-        p3: '<strong>Impact & Results:</strong> Reduced idle waiting times and eliminated out-of-sequence cylinder sorting.',
-        specs: [
-          { label: 'Flow Strategy:', val: 'First-In-First-Out (FIFO)', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Mechanism:', val: 'Rotary Circular Track', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Logistics Goal:', val: 'Zero Batching Delay', valClass: 'text-slate-300' },
-          { label: 'Line Speed:', val: 'Synchronized Station Pace', valClass: 'text-slate-300' }
-        ]
-      },
-      'plant_thread_gauge.png': {
-        badge: 'STAGE 04 // THREAD QUALITY CONTROL',
-        title: '3/4" - 14 NGT L9 Bung Thread Gauges',
-        p1: '<strong>Process Breakdown:</strong> Inspects internal valve pad (bung) threads using BIS-certified 3/4-14 NGT L9 plug gauges (Gauge A & B) to detect pitch wear or rust.',
-        p2: '<strong>Key Engineering Fix:</strong> Introduced soft wire brush pneumatic cleaning before thread gauging to prevent false rejection of cleanable threads.',
-        p3: '<strong>Impact & Results:</strong> Zero gas leaks around bung threads after valve installation.',
-        specs: [
-          { label: 'Thread Standard:', val: '3/4" - 14 NGT L9', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Gauge Types:', val: 'Gauge A & Gauge B', valClass: 'text-cyanAccent font-bold' },
-          { label: 'Inspection:', val: 'Pitch, Depth & Rust Check', valClass: 'text-slate-300' },
-          { label: 'Acceptance:', val: '100% Gas-Tight Fit', valClass: 'text-slate-300' }
-        ]
-      },
       'plant_stay_plate_marking.png': {
         badge: 'STAGE 01 // VISUAL SEGREGATION',
         title: 'Cylinder Stay Plate Requalification Marking',
@@ -1720,7 +1604,7 @@
         ]
       },
       'plant_bottling_shed.png': {
-        badge: 'PLANT INFRASTRUCTURE // SOP SHED',
+        badge: 'STAGE 02 // BOTTLING PLANT INSPECTION SHED',
         title: 'Bottling Plant Main Inspection Shed',
         p1: '<strong>Process Breakdown:</strong> Houses the primary inspection stations, tare weight permissible chart boards, internal inspection SOPs, and cylinder rejection criteria displays.',
         p2: '<strong>Key Engineering Fix:</strong> Realigned workflow station layouts to reduce back-and-forth movement between inspection bays.',
@@ -1733,7 +1617,7 @@
         ]
       },
       'plant_inspection_shed.png': {
-        badge: 'STAGE 03–05 // IN-DEPTH INSPECTION',
+        badge: 'STAGE 03 // INSPECTION SHED ENTRY',
         title: 'External & Internal Inspection Shed',
         p1: '<strong>Process Breakdown:</strong> Dedicated bay where cylinders undergo visual dent/corrosion checks, internal borescope endoscope inspection, and ultrasonic bottom plate thickness measurement.',
         p2: '<strong>Key Engineering Fix:</strong> Integrated ultrasonic thickness gauges (TT-100P) to accurately measure shell wall thickness and reject compromised cylinders.',
@@ -1745,8 +1629,34 @@
           { label: 'Decision:', val: 'Accept, Repair, or Reject', valClass: 'text-slate-300' }
         ]
       },
+      'plant_thread_gauge.png': {
+        badge: 'STAGE 04 // BUNG THREAD QUALITY INSPECTION',
+        title: '3/4" - 14 NGT L9 Bung Thread Gauges',
+        p1: '<strong>Process Breakdown:</strong> Inspects internal valve pad (bung) threads using BIS-certified 3/4-14 NGT L9 plug gauges (Gauge A & B) to detect pitch wear or rust.',
+        p2: '<strong>Key Engineering Fix:</strong> Introduced soft wire brush pneumatic cleaning before thread gauging to prevent false rejection of cleanable threads.',
+        p3: '<strong>Impact & Results:</strong> Zero gas leaks around bung threads after valve installation.',
+        specs: [
+          { label: 'Thread Standard:', val: '3/4" - 14 NGT L9', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Gauge Types:', val: 'Gauge A & Gauge B', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Inspection:', val: 'Pitch, Depth & Rust Check', valClass: 'text-slate-300' },
+          { label: 'Acceptance:', val: '100% Gas-Tight Fit', valClass: 'text-slate-300' }
+        ]
+      },
+      'plant_conveyor_carousel.png': {
+        badge: 'STAGE 05 // CAROUSEL FEEDER LINE',
+        title: 'Circular Carousel Conveyor Transfer Line',
+        p1: '<strong>Process Breakdown:</strong> Rotary carousel feeder that organizes cylinders arriving from degassing into single-file alignment for bung thread inspection.',
+        p2: '<strong>Key Engineering Fix:</strong> Proposed continuous conveyor transfer from Cold Repair Shed to eliminate batching delays and ensure First-In-First-Out (FIFO) sequence.',
+        p3: '<strong>Impact & Results:</strong> Reduced idle waiting times and eliminated out-of-sequence cylinder sorting.',
+        specs: [
+          { label: 'Flow Strategy:', val: 'First-In-First-Out (FIFO)', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Mechanism:', val: 'Rotary Circular Track', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Logistics Goal:', val: 'Zero Batching Delay', valClass: 'text-slate-300' },
+          { label: 'Line Speed:', val: 'Synchronized Station Pace', valClass: 'text-slate-300' }
+        ]
+      },
       'plant_shot_blasting_shed_sign.png': {
-        badge: 'PLANT FACILITIES // SHOT BLASTING',
+        badge: 'STAGE 06 // BLASTING SHED ENTRY',
         title: 'SA 2.5 Shot Blasting Machine Shed',
         p1: '<strong>Process Breakdown:</strong> Enclosed heavy-duty machine shed built to contain steel shot abrasives, filter dust emissions, and isolate operational noise during blast cleaning.',
         p2: '<strong>Key Engineering Fix:</strong> Implemented scheduled dust collector cleaning and shot replenishment cycles to maintain SA 2.5 blast efficiency.',
@@ -1756,6 +1666,97 @@
           { label: 'Dust Control:', val: 'Filtered Air Extractor', valClass: 'text-cyanAccent font-bold' },
           { label: 'Blast Standard:', val: 'SA 2.5 Surface Finish', valClass: 'text-slate-300' },
           { label: 'Safety Rating:', val: 'Industrial Enclosure', valClass: 'text-slate-300' }
+        ]
+      },
+      'plant_shot_blasting_machine.png': {
+        badge: 'STAGE 07 // SA 2.5 SHOT BLASTING',
+        title: 'SA 2.5 Automated Shot Blasting Machine',
+        p1: '<strong>Process Breakdown:</strong> High-speed steel shot blasting removes old paint, heavy rust, and scale, producing a uniform metallic grey finish conforming to <strong>ISO 8501-1 SA 2.5</strong>.',
+        p2: '<strong>Key Engineering Fix:</strong> Calibrated conveyor roller feeding speeds and shot flow rates to eliminate manual grit brushing.',
+        p3: '<strong>Impact & Results:</strong> Superior surface roughness profile for optimal primer paint adhesion.',
+        specs: [
+          { label: 'Surface Standard:', val: 'ISO 8501-1 SA 2.5', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Abrasive Medium:', val: 'High-Speed Steel Shots', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Surface Finish:', val: 'Metallic Grey', valClass: 'text-slate-300' },
+          { label: 'Conveyor Type:', val: 'Automated Roller Chain', valClass: 'text-slate-300' }
+        ]
+      },
+      'plant_hydrotest_station_rig.png': {
+        badge: 'STAGE 08 // HYDROSTATIC TESTING',
+        title: '10-Station Hydrostatic Testing Bench',
+        p1: '<strong>Process Breakdown:</strong> Pressurizes LPG cylinders with water to <strong>25 kg/cm²</strong> for 30–60 seconds to test expansion and weld joint integrity as mandated by PESO & BIS standards.',
+        p2: '<strong>Key Engineering Fix:</strong> Reconfigured pneumatic clamping line fittings and NRV placements to eliminate pressure drops and clamping downtime.',
+        p3: '<strong>Impact & Results:</strong> Zero hydrotest leakage failures, ensuring 100% cylinder safety before painting.',
+        specs: [
+          { label: 'Hydro Pressure:', val: '25 kg/cm²', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Hold Time:', val: '30s - 60s', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Testing Medium:', val: 'Water Hydraulic', valClass: 'text-slate-300' },
+          { label: 'Compliance:', val: 'PESO & BIS Standards', valClass: 'text-slate-300' }
+        ]
+      },
+      'plant_overhead_conveyor.jpg': {
+        badge: 'STAGE 09 // OVERHEAD MONORAIL TRACK',
+        title: 'Overhead Monorail Conveyor & Storage Yard',
+        p1: '<strong>Process Breakdown:</strong> Continuous overhead monorail conveyor fitted with hanging hooks that transports cylinders continuously between cleaning, painting, and curing bays.',
+        p2: '<strong>Key Engineering Fix:</strong> Proposed ergonomic hook redesign to improve loading efficiency and prevent cylinder drop damage.',
+        p3: '<strong>Impact & Results:</strong> Smooth material transfer reducing manual lifting fatigue across high-volume shifts.',
+        specs: [
+          { label: 'Conveyor System:', val: 'Overhead Monorail Track', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Hanging Fixture:', val: 'Ergonomic Hook Jigs', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Transfer Capacity:', val: 'Continuous Line Flow', valClass: 'text-slate-300' },
+          { label: 'Yard Staging:', val: 'Categorized Batch Stacking', valClass: 'text-slate-300' }
+        ]
+      },
+      'plant_paint_booth_booths.png': {
+        badge: 'STAGE 10 // PRIMER & SPRAY PAINTING',
+        title: 'Water Curtain Primer & Spray Paint Booths',
+        p1: '<strong>Process Breakdown:</strong> Applies Red Oxide Zinc Chromate primer (IS 2074) followed by Signal Red Synthetic Enamel topcoat (IS 2932) inside water curtain spray booths.',
+        p2: '<strong>Key Engineering Fix:</strong> Calibrated spray gun air pressures, nozzle angles, and introduced forced air drying, reducing paint consumption and 1-hour sun-drying delays.',
+        p3: '<strong>Impact & Results:</strong> Achieved a uniform <strong>60-micron total DFT coating</strong> with 12-15% faster cycle times.',
+        specs: [
+          { label: 'Primer Coat:', val: '30μm Zinc Chromate', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Topcoat:', val: '30μm Signal Red', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Total DFT:', val: '60 Microns Minimum', valClass: 'text-slate-300' },
+          { label: 'Booth Type:', val: 'Water Curtain Spray', valClass: 'text-slate-300' }
+        ]
+      },
+      'plant_pneumatic_tank.png': {
+        badge: 'STAGE 11 // PNEUMATIC LEAK TESTING',
+        title: 'Pneumatic Leak Testing Machine No. 1',
+        p1: '<strong>Process Breakdown:</strong> Air-pressurizes cylinders with <strong>12–15 kg/cm² (1.2–1.5 MPa) compressed air</strong> and fully submerges them in a water tank to detect micro air bubbles.',
+        p2: '<strong>Key Engineering Fix:</strong> Installed refrigeration-type air dryers to prevent moisture ingress into cylinders during pneumatic testing.',
+        p3: '<strong>Impact & Results:</strong> Guaranteed 100% leak-proof valve and bung joint sealing prior to plant dispatch.',
+        specs: [
+          { label: 'Air Pressure:', val: '12 - 15 kg/cm²', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Test Method:', val: 'Submerged Air-Bubble', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Air Quality:', val: 'Refrigerated Dry Air', valClass: 'text-slate-300' },
+          { label: 'Leak Tolerance:', val: 'Zero Bubble Tolerance', valClass: 'text-slate-300' }
+        ]
+      },
+      'plant_punching_machine.png': {
+        badge: 'STAGE 12 // VALVE FIXING & HT STAMP',
+        title: 'Pneumatic Valve Fixing & HT Punching Machine',
+        p1: '<strong>Process Breakdown:</strong> Fits ISI-marked self-closing valves (IS 8737) and punches the unique Hydrostatic Test Number (HT No.) and re-test date (e.g. 07-25) onto the VP ring.',
+        p2: '<strong>Key Engineering Fix:</strong> Standardized torque-controlled pneumatic wrenches to prevent bung thread cross-threading damage.',
+        p3: '<strong>Impact & Results:</strong> Permanent traceability and regulatory compliance for every requalified cylinder.',
+        specs: [
+          { label: 'Valve Standard:', val: 'ISI IS 8737', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Stamping Code:', val: 'HT No. & Date (07-25)', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Tooling:', val: 'Pneumatic Torque Wrench', valClass: 'text-slate-300' },
+          { label: 'Traceability:', val: 'Full ERP Logging', valClass: 'text-slate-300' }
+        ]
+      },
+      'plant_stenciled_cylinders.png': {
+        badge: 'STAGE 13 // TARE WEIGHT STENCILING & DISPATCH',
+        title: 'Tare Weight Verification & Stenciling Stack',
+        p1: '<strong>Process Breakdown:</strong> Weighs cylinders on digital scales to verify tare weight tolerances against embossed values, stenciling updated weights in permanent black paint.',
+        p2: '<strong>Key Engineering Fix:</strong> Implemented stenciling alignment jigs for Indane branding, emergency contact (1906), and regulator safety warnings.',
+        p3: '<strong>Impact & Results:</strong> Transparent customer billing and precise LPG filling accuracy during bottling.',
+        specs: [
+          { label: 'Weighing Scale:', val: 'Digital Platform Scale', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Branding:', val: 'Indane & Emergency 1906', valClass: 'text-cyanAccent font-bold' },
+          { label: 'Safety Warning:', val: 'Switch Off Regulator', valClass: 'text-slate-300' },
+          { label: 'Dispatch Status:', val: 'ERP Inventory Ready', valClass: 'text-slate-300' }
         ]
       }
     };
