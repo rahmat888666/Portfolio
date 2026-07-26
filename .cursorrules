@@ -8,3 +8,4 @@
 ### 🛑 Git Push Constraints
 - **No Automatic Pushing**: Do NOT automatically execute \git push\ in the background or on your own initiative.
 - **Explicit Push Command**: Only execute a \git push\ command when the user explicitly instructs you to push the changes online (e.g., when the user writes " push\, \git push\, or \push it online\).
+- **Double-Check Confirmation**: Even when the user types "push" or requests a push, you must always ask for explicit confirmation (e.g., "Would you like me to push these changes online now?") and wait for a confirmation response before executing the \git push\ command.
