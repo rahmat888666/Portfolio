@@ -1,0 +1,6 @@
+# Project Rules: Mechanical Engineering Portfolio
+
+### 🛡️ Duplicate CAD Model Guardrail
+- **Check for Redundant Models**: Whenever the user uploads or asks to add a new CAD model to any section, compare it with the existing models in the portfolio.
+- **Proactive Confirmation**: If you detect that the new model is identical, highly similar, or serves as a replacement for an existing model, **you must explicitly ask the user** if they want to delete or replace the previous model before making any changes.
+- **Always Show Full List**: Whenever asking about duplicates, deletions, or recommending placement positions, **you must always display the full numbered list of all completed models** in the repository so the user can see the entire layout context.

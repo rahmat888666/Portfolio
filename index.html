@@ -539,6 +539,647 @@
 
   </section>
 
+  <!-- Recent CAD Practice Uploads Section (Chronological Scroller of 30 Slots) -->
+  <section id="recent-practice" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-900/60">
+    <div class="flex flex-col gap-6">
+      
+      <!-- Section Header with Controls -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            <span class="font-mono text-[10px] text-blue-400 uppercase tracking-widest font-bold">RECENT PRACTICE UPLOADS [50 SLOTS]</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">Recent CAD Uploads</h2>
+          <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
+            A chronological timeline scroller showing my most recent 3D modeling practice exercises in exact upload sequence.
+          </p>
+        </div>
+        
+        <!-- Controls: Slider Arrows -->
+        <div class="flex items-center gap-3 self-end md:self-auto">
+          <!-- Slider Arrow Buttons -->
+          <div class="flex gap-1.5">
+            <button onclick="scrollRecentPractice(-250)" class="w-8 h-8 rounded border border-slate-800 bg-slate-950 flex items-center justify-center text-slate-400 hover:text-slate-200 hover:border-cyanAccent transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            </button>
+            <button onclick="scrollRecentPractice(250)" class="w-8 h-8 rounded border border-slate-800 bg-slate-950 flex items-center justify-center text-slate-400 hover:text-slate-200 hover:border-cyanAccent transition-all">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horizontal Carousel Slider Track (Chronological Order) -->
+      <div class="relative">
+        <div id="recent-practice-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
+          
+          <!-- Tile 1: Exercise 1-5: L-Bracket with Rib (PDF Blueprint) -->
+          <div onclick="openProjectModal('lbracket')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_lbracket_model.png" alt="L-Bracket with Rib" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Ex 1-5: L-Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Exercise 1-3: Clevis Bracket (PDF Blueprint) -->
+          <div onclick="openProjectModal('clevis')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_clevis_model.png" alt="Clevis Bracket" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Ex 1-3: Clevis Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Slotted Perforated Cylinder (SOLIDWORKS) -->
+          <div onclick="openProjectModal('cylinder')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_cylinder_model.png" alt="Slotted Perforated Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Perforated Cylinder</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Sheet Metal</span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Sheet Metal Connector Bracket (SOLIDWORKS) -->
+          <div onclick="openProjectModal('bracket')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_bracket_model.png" alt="Sheet Metal Bracket" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Sheet Metal Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Sheet Metal</span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Sheet Metal Utility Enclosure (SOLIDWORKS) -->
+          <div onclick="openProjectModal('sheetmetal')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_sheetmetal_model.png" alt="Sheet Metal Enclosure" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Sheet Metal Enclosure</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Sheet Metal</span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Modern Decorative Flower Vase with Stand (SOLIDWORKS) -->
+          <div onclick="openProjectModal('vase')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_vase_model.png" alt="Modern Decorative Flower Vase" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Decorative Flower Vase</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Lofted Surface & Stand</span>
+            </div>
+          </div>
+
+          <!-- Tile 3: Brass Threaded Pipe Tee-Joint Fitting (YouTube) -->
+          <div onclick="openProjectModal('tjoint')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_tjoint_model.png" alt="Brass Threaded Pipe Tee-Joint" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Brass Pipe Tee-Joint</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Threaded Tee</span>
+            </div>
+          </div>
+
+          <!-- Tile 4: Ergonomic Water Pitcher & Jug (SOLIDWORKS) -->
+          <div onclick="openProjectModal('pitcher')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_pitcher_model.png" alt="Ergonomic Water Pitcher" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Water Pitcher & Jug</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Shell & Section</span>
+            </div>
+          </div>
+
+          <!-- Tile 5: Parametric Wire Mesh Storage Bowl (YouTube) -->
+          <div onclick="openProjectModal('wirebowl')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_wire_bowl_model.png" alt="Parametric Wire Mesh Storage Bowl" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Wire Mesh Storage Bowl</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS 3D Sweep</span>
+            </div>
+          </div>
+
+          <!-- Tile 6: 5-Blade Marine Propeller (YouTube) -->
+          <div onclick="openProjectModal('propeller')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_propeller_model.png" alt="5-Blade Marine Propeller" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">5-Blade Marine Propeller</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Surface Loft</span>
+            </div>
+          </div>
+
+          <!-- Tile 7: Ergonomic Whiteboard Duster (SOLIDWORKS) -->
+          <div onclick="openProjectModal('duster')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_duster_model.png" alt="Ergonomic Whiteboard Duster" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Whiteboard Duster</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Ergonomic</span>
+            </div>
+          </div>
+
+          <!-- Tile 8: Automotive Alloy Wheel Rim (YouTube) -->
+          <div onclick="openProjectModal('wheelrim')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_wheel_rim_model.png" alt="Automotive Alloy Wheel Rim" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Automotive Alloy Wheel</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Tutorial</span>
+            </div>
+          </div>
+
+          <!-- Tile 9: Parametric Metallic Paper Clip (Fusion 360) -->
+          <div onclick="openProjectModal('paperclip')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_paper_clip.png" alt="Parametric Paper Clip" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Metallic Paper Clip</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">3D Path Sweep</span>
+            </div>
+          </div>
+
+          <!-- Tile 10: Parametric Glass Beverage Bottle (Fusion 360) -->
+          <div onclick="openProjectModal('glassbottle')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Glass Beverage Bottle</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Render</span>
+            </div>
+          </div>
+
+          <!-- Tile 11: Parametric 2x4 LEGO Brick (Fusion 360) -->
+          <div onclick="openProjectModal('legobrick')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_lego_top.png" alt="2x4 LEGO Brick" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">2x4 LEGO Brick</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Snap Fit Model</span>
+            </div>
+          </div>
+
+          <!-- Tile 12: Exercise 2-7 Spherical Plunger (PDF Blueprint) -->
+          <div onclick="openProjectModal('spherical')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_shaft_model.png" alt="Spherical Base Plunger" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Spherical Base Plunger</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint Ex 2-7</span>
+            </div>
+          </div>
+
+          <!-- Tile 13: Exercise 1-4 Roller Shaft (PDF Blueprint) -->
+          <div onclick="openProjectModal('roller')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_stepped_shaft.png" alt="Chamfered Roller Shaft" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Chamfered Roller Shaft</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint Ex 1-4</span>
+            </div>
+          </div>
+
+          <!-- Tile 14: Hollow Stepped Cylinder (PDF Blueprint) -->
+          <div onclick="openProjectModal('collar')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Hollow Stepped Cylinder</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint</span>
+            </div>
+          </div>
+
+          <!-- Tile 15: Multi-Step Tapered Sleeve (PDF Blueprint) -->
+          <div onclick="openProjectModal('sleeve')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_shaft_taper_model.png" alt="Multi-Step Tapered Sleeve" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Multi-Step Tapered Sleeve</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint</span>
+            </div>
+          </div>
+
+          <!-- Tile 20: F450 Quadcopter Frame (YouTube) -->
+          <div onclick="openProjectModal('drone')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_drone_assembly.png" alt="F450 Quadcopter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">F450 Quadcopter</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
+            </div>
+          </div>
+
+          <!-- Tile 21: Mars Rover Rocker-Bogie Mechanism (YouTube) -->
+          <div onclick="openProjectModal('rover')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_rover_model.png" alt="Mars Rover" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Mars Rover Rocker-Bogie</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
+            </div>
+          </div>
+
+          <!-- Tile 22: 4-Cylinder Engine & Crankshaft (YouTube + Motion Video) -->
+          <div onclick="openProjectModal('engine')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">4-Cyl Engine & Crank</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube + Motion Video</span>
+            </div>
+          </div>
+
+          <!-- Tile 22: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 22</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 23: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 23</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 24: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 24</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 25: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 25</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 26: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 26</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 27: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 27</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 28: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 28</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 29: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 29</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 30: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 30</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 31: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 31</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 32: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 32</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 33: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 33</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 34: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 34</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 35: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 35</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 36: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 36</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 37: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 37</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 38: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 38</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 39: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 39</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 40: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 40</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 41: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 41</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 42: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 42</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 43: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 43</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 44: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 44</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 45: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 45</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 46: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 46</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 47: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 47</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 48: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 48</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 49: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 49</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+          <!-- Tile 50: Upcoming Practice Slot (Placeholder) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
+            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
+              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Practice Upload Slot 50</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CAD Practice Section -->
   <section id="sandbox" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-900/60">
     <div class="flex flex-col gap-6">
@@ -548,7 +1189,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">30 EXERCISES TOTAL</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">30 PRACTICE SLOTS [22 COMPLETED]</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Practice Repository</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -562,9 +1203,9 @@
           <div class="flex flex-wrap gap-1 bg-slate-950/80 border border-slate-800 p-1 rounded font-mono text-[10px]">
             <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [30]</button>
             <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [11]</button>
-            <button onclick="filterSandbox('solidworks')" id="tab-sandbox-solidworks" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">SOLIDWORKS [7]</button>
+            <button onclick="filterSandbox('solidworks')" id="tab-sandbox-solidworks" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">SOLIDWORKS [6]</button>
             <button onclick="filterSandbox('fusion')" id="tab-sandbox-fusion" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">Fusion 360 [6]</button>
-            <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [6]</button>
+            <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [7]</button>
           </div>
 
           <!-- Slider Arrow Buttons -->
@@ -583,54 +1224,54 @@
       <div class="relative">
         <div id="sandbox-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
           
-          <!-- Tile 1: Sheet Metal Utility Enclosure (SOLIDWORKS / YouTube) -->
-          <div onclick="openProjectModal('sheetmetal')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
+          <!-- Tile 1: 4-Cylinder Engine & Crankshaft (YouTube + Motion Video) -->
+          <div onclick="openProjectModal('engine')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_sheetmetal_model.png" alt="Sheet Metal Enclosure" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+              <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
               <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
                 <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Sheet Metal Enclosure</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Sheet Metal</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">4-Cyl Engine & Crank</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube + Motion Video</span>
             </div>
           </div>
 
-          <!-- Tile 2: Modern Decorative Flower Vase with Stand (SOLIDWORKS) -->
-          <div onclick="openProjectModal('vase')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
+          <!-- Tile 2: Mars Rover Rocker-Bogie Mechanism (YouTube) -->
+          <div onclick="openProjectModal('rover')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_vase_model.png" alt="Modern Decorative Flower Vase" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Decorative Flower Vase</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">Lofted Surface & Stand</span>
-            </div>
-          </div>
-
-          <!-- Tile 3: Brass Threaded Pipe Tee-Joint Fitting (YouTube) -->
-          <div onclick="openProjectModal('tjoint')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_tjoint_model.png" alt="Brass Threaded Pipe Tee-Joint" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <img src="practice_rover_model.png" alt="Mars Rover" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Brass Pipe Tee-Joint</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Threaded Tee</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Mars Rover Rocker-Bogie</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
             </div>
           </div>
 
-          <!-- Tile 4: Ergonomic Water Pitcher & Jug (SOLIDWORKS) -->
-          <div onclick="openProjectModal('pitcher')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
+          <!-- Tile 3: F450 Quadcopter Frame (YouTube) -->
+          <div onclick="openProjectModal('drone')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_pitcher_model.png" alt="Ergonomic Water Pitcher" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+              <img src="practice_drone_assembly.png" alt="F450 Quadcopter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Water Pitcher & Jug</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Shell & Section</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">F450 Quadcopter</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
+            </div>
+          </div>
+
+          <!-- Tile 4: Automotive Alloy Wheel Rim (YouTube) -->
+          <div onclick="openProjectModal('wheelrim')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_wheel_rim_model.png" alt="Automotive Alloy Wheel Rim" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Automotive Alloy Wheel</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Tutorial</span>
             </div>
           </div>
 
@@ -658,7 +1299,43 @@
             </div>
           </div>
 
-          <!-- Tile 7: Ergonomic Whiteboard Duster (SOLIDWORKS) -->
+          <!-- Tile 7: Brass Threaded Pipe Tee-Joint Fitting (YouTube) -->
+          <div onclick="openProjectModal('tjoint')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_tjoint_model.png" alt="Brass Threaded Pipe Tee-Joint" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Brass Pipe Tee-Joint</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Threaded Tee</span>
+            </div>
+          </div>
+
+          <!-- Tile 8: Ergonomic Water Pitcher & Jug (SOLIDWORKS) -->
+          <div onclick="openProjectModal('pitcher')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_pitcher_model.png" alt="Ergonomic Water Pitcher" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Water Pitcher & Jug</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Shell & Section</span>
+            </div>
+          </div>
+
+          <!-- Tile 9: Modern Decorative Flower Vase with Stand (SOLIDWORKS) -->
+          <div onclick="openProjectModal('vase')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_vase_model.png" alt="Modern Decorative Flower Vase" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Decorative Flower Vase</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Lofted Surface & Stand</span>
+            </div>
+          </div>
+
+          <!-- Tile 10: Ergonomic Whiteboard Duster (SOLIDWORKS) -->
           <div onclick="openProjectModal('duster')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_duster_model.png" alt="Ergonomic Whiteboard Duster" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -670,39 +1347,48 @@
             </div>
           </div>
 
-          <!-- Tile 8: Automotive Alloy Wheel Rim (YouTube) -->
-          <div onclick="openProjectModal('wheelrim')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+          <!-- Sandbox Tile: Sheet Metal Utility Enclosure (SOLIDWORKS) -->
+          <div onclick="openProjectModal('sheetmetal')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_wheel_rim_model.png" alt="Automotive Alloy Wheel Rim" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+              <img src="practice_sheetmetal_model.png" alt="Sheet Metal Enclosure" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
+              </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Automotive Alloy Wheel</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Sheet Metal Enclosure</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Tutorial</span>
             </div>
           </div>
 
-          <!-- Tile 9: Parametric Metallic Paper Clip (Fusion 360) -->
-          <div onclick="openProjectModal('paperclip')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
+          <!-- Sandbox Tile: Sheet Metal Connector Bracket (SOLIDWORKS) -->
+          <div onclick="openProjectModal('bracket')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_paper_clip.png" alt="Parametric Paper Clip" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
+              <img src="practice_bracket_model.png" alt="Sheet Metal Bracket" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
+              </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Metallic Paper Clip</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">3D Path Sweep</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Sheet Metal Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Tutorial</span>
             </div>
           </div>
 
-          <!-- Tile 10: Parametric Glass Beverage Bottle (Fusion 360) -->
-          <div onclick="openProjectModal('glassbottle')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
+          <!-- Sandbox Tile: Slotted Perforated Cylinder (SOLIDWORKS) -->
+          <div onclick="openProjectModal('cylinder')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
+              <img src="practice_cylinder_model.png" alt="Slotted Perforated Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
+              </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Glass Beverage Bottle</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Render</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Perforated Cylinder</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Tutorial</span>
             </div>
           </div>
 
@@ -718,43 +1404,31 @@
             </div>
           </div>
 
-          <!-- Tile 12: Exercise 2-7 Spherical Plunger (PDF Blueprint) -->
-          <div onclick="openProjectModal('spherical')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+          <!-- Tile 12: Parametric Glass Beverage Bottle (Fusion 360) -->
+          <div onclick="openProjectModal('glassbottle')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_shaft_model.png" alt="Spherical Base Plunger" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <img src="practice_glass_bottle.png" alt="Parametric Glass Bottle" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Spherical Base Plunger</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint Ex 2-7</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Glass Beverage Bottle</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Render</span>
             </div>
           </div>
 
-          <!-- Tile 13: Exercise 1-4 Roller Shaft (PDF Blueprint) -->
-          <div onclick="openProjectModal('roller')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+          <!-- Tile 13: Parametric Metallic Paper Clip (Fusion 360) -->
+          <div onclick="openProjectModal('paperclip')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-orange-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="fusion">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_stepped_shaft.png" alt="Chamfered Roller Shaft" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <img src="practice_paper_clip.png" alt="Parametric Paper Clip" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Chamfered Roller Shaft</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint Ex 1-4</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors">Metallic Paper Clip</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">3D Path Sweep</span>
             </div>
           </div>
 
-          <!-- Tile 14: Hollow Stepped Cylinder (PDF Blueprint) -->
-          <div onclick="openProjectModal('collar')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Hollow Stepped Cylinder</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint</span>
-            </div>
-          </div>
-
-          <!-- Tile 15: Multi-Step Tapered Sleeve (PDF Blueprint) -->
+          <!-- Tile 14: Multi-Step Tapered Sleeve (PDF Blueprint) -->
           <div onclick="openProjectModal('sleeve')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_shaft_taper_model.png" alt="Multi-Step Tapered Sleeve" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -766,174 +1440,163 @@
             </div>
           </div>
 
-          <!-- Tile 16: F450 Quadcopter Frame (YouTube) -->
-          <div onclick="openProjectModal('drone')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+          <!-- Tile 15: Hollow Stepped Cylinder (PDF Blueprint) -->
+          <div onclick="openProjectModal('collar')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_drone_assembly.png" alt="F450 Quadcopter" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+              <img src="practice_shaft_internal_model.png" alt="Hollow Stepped Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">F450 Quadcopter</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Hollow Stepped Cylinder</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint</span>
             </div>
           </div>
 
-          <!-- Tile 17: Mars Rover Rocker-Bogie Mechanism (YouTube) -->
-          <div onclick="openProjectModal('rover')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
+          <!-- Sandbox Tile: Exercise 1-3 Clevis Bracket (PDF Blueprint) -->
+          <div onclick="openProjectModal('clevis')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="practice_rover_model.png" alt="Mars Rover" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">Mars Rover Rocker-Bogie</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube Tutorial</span>
-            </div>
-          </div>
-
-          <!-- Tile 18: 4-Cylinder Engine & Crankshaft (YouTube + Motion Video) -->
-          <div onclick="openProjectModal('engine')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="youtube">
-            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <img src="engine_crankshaft_assembly.png" alt="4-Cylinder Engine" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
-              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
+              <img src="practice_clevis_model.png" alt="Clevis Bracket" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
               <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
-                <i data-lucide="play-circle" class="w-2.5 h-2.5"></i> VIDEO
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors">4-Cyl Engine & Crank</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">YouTube + Motion Video</span>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Ex 1-3: Clevis Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
             </div>
           </div>
 
-          <!-- Tile 19: Upcoming YouTube Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="youtube">
+          <!-- Tile 16: Exercise 1-4 Roller Shaft (PDF Blueprint) -->
+          <div onclick="openProjectModal('roller')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_stepped_shaft.png" alt="Chamfered Roller Shaft" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Chamfered Roller Shaft</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint Ex 1-4</span>
+            </div>
+          </div>
+
+          <!-- Sandbox Tile: Exercise 1-5 L-Bracket with Rib (PDF Blueprint) -->
+          <div onclick="openProjectModal('lbracket')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_lbracket_model.png" alt="L-Bracket with Rib" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Ex 1-5: L-Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
+            </div>
+          </div>
+
+          <!-- Tile 17: Exercise 2-7 Spherical Plunger (PDF Blueprint) -->
+          <div onclick="openProjectModal('spherical')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_shaft_model.png" alt="Spherical Base Plunger" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Spherical Base Plunger</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint Ex 2-7</span>
+            </div>
+          </div>
+
+          <!-- YouTube Placeholder 1 (Sandbox Slot 18) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="youtube">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
               <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">YouTube Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming Video Tutorial</span>
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">YouTube Practice Slot 8</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
             </div>
           </div>
 
-          <!-- Tile 20: Upcoming YouTube Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="youtube">
+          <!-- YouTube Placeholder 2 (Sandbox Slot 19) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="youtube">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
               <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">YouTube Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming Video Tutorial</span>
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">YouTube Practice Slot 9</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
             </div>
           </div>
 
-          <!-- Tile 21: Upcoming YouTube Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="youtube">
+          <!-- YouTube Placeholder 3 (Sandbox Slot 20) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="youtube">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
               <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">YouTube Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming Video Tutorial</span>
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">YouTube Practice Slot 10</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
             </div>
           </div>
 
-          <!-- Tile 22: Upcoming YouTube Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="youtube">
+          <!-- YouTube Placeholder 4 (Sandbox Slot 21) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="youtube">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
               <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">YouTube Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming Video Tutorial</span>
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">YouTube Practice Slot 11</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
             </div>
           </div>
 
-          <!-- Tile 23: Upcoming SOLIDWORKS Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="solidworks">
+
+
+          <!-- Fusion Placeholder 1 (Sandbox Slot 25) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="fusion">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
               <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">SOLIDWORKS Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming 3D Design</span>
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Fusion 360 Practice Slot 4</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
             </div>
           </div>
 
-          <!-- Tile 24: Upcoming SOLIDWORKS Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="solidworks">
+          <!-- Fusion Placeholder 2 (Sandbox Slot 26) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="fusion">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
               <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">SOLIDWORKS Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming 3D Design</span>
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Fusion 360 Practice Slot 5</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
             </div>
           </div>
 
-          <!-- Tile 25: Upcoming SOLIDWORKS Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="solidworks">
+          <!-- Fusion Placeholder 3 (Sandbox Slot 27) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="fusion">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
               <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">SOLIDWORKS Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming 3D Design</span>
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Fusion 360 Practice Slot 6</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
             </div>
           </div>
 
-          <!-- Tile 26: Upcoming Fusion 360 Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="fusion">
+
+
+
+
+          <!-- PDF Blueprint Placeholder 3 (Sandbox Slot 30) -->
+          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="pdf">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
               <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Fusion 360 Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming Parametric Model</span>
-            </div>
-          </div>
-
-          <!-- Tile 27: Upcoming Fusion 360 Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="fusion">
-            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
-              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Fusion 360 Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming Parametric Model</span>
-            </div>
-          </div>
-
-          <!-- Tile 28: Upcoming Fusion 360 Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="fusion">
-            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
-              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Fusion 360 Practice Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming Parametric Model</span>
-            </div>
-          </div>
-
-          <!-- Tile 29: Upcoming PDF Blueprint Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="pdf">
-            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
-              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">PDF Blueprint Slot</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming Machining Blueprint</span>
-            </div>
-          </div>
-
-          <!-- Tile 30: Upcoming PDF Blueprint Project Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 sandbox-item opacity-45 select-none" data-category="pdf">
-            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
-              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate">PDF Blueprint Slot</h4>
-              <span class="text-[8px] font-mono text-slate-400 truncate">Upcoming Machining Blueprint</span>
+              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">PDF Blueprint Slot 7</h4>
+              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
             </div>
           </div>
 
@@ -1983,10 +2646,10 @@
 
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [30]</button>
-          <button onclick="filterCadArchiveCategory('youtube')" id="archive-tab-youtube" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">YOUTUBE TUTORIALS [11]</button>
-          <button onclick="filterCadArchiveCategory('solidworks')" id="archive-tab-solidworks" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">SOLIDWORKS [7]</button>
-          <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 [6]</button>
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [22]</button>
+          <button onclick="filterCadArchiveCategory('youtube')" id="archive-tab-youtube" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">YOUTUBE TUTORIALS [7]</button>
+          <button onclick="filterCadArchiveCategory('solidworks')" id="archive-tab-solidworks" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">SOLIDWORKS [6]</button>
+          <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 [3]</button>
           <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [6]</button>
         </div>
 
@@ -1997,7 +2660,7 @@
           <div class="cad-archive-section flex flex-col gap-2" data-category="youtube">
             <div class="flex items-center gap-2 border-b border-slate-800 pb-1.5 font-mono text-[11px] text-blue-400 font-bold uppercase tracking-wider">
               <i data-lucide="youtube" class="w-3.5 h-3.5 text-red-500"></i>
-              <span>YouTube Video Tutorials [7 Models + 4 Upcoming Slots]</span>
+              <span>YouTube Video Tutorials [7 Models]</span>
             </div>
 
             <!-- Row 1: Engine -->
@@ -2118,72 +2781,16 @@
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all"></i>
               </div>
             </div>
-
-            <!-- YouTube Placeholder 1 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="youtube" data-search="upcoming youtube practice slot video tutorial">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming YouTube Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">Video tutorial implementation in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">YOUTUBE</span>
-            </div>
-
-            <!-- YouTube Placeholder 2 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="youtube" data-search="upcoming youtube practice slot video tutorial">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming YouTube Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">Video tutorial implementation in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">YOUTUBE</span>
-            </div>
-
-            <!-- YouTube Placeholder 3 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="youtube" data-search="upcoming youtube practice slot video tutorial">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming YouTube Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">Video tutorial implementation in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">YOUTUBE</span>
-            </div>
-
-            <!-- YouTube Placeholder 4 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="youtube" data-search="upcoming youtube practice slot video tutorial">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming YouTube Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">Video tutorial implementation in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">YOUTUBE</span>
-            </div>
           </div>
 
           <!-- Category Group 2: SOLIDWORKS Practice Models -->
           <div class="cad-archive-section flex flex-col gap-2" data-category="solidworks">
             <div class="flex items-center gap-2 border-b border-slate-800 pb-1.5 font-mono text-[11px] text-blue-400 font-bold uppercase tracking-wider">
               <i data-lucide="box" class="w-3.5 h-3.5 text-blue-400"></i>
-              <span>SOLIDWORKS 3D CAD Models [4 Models + 3 Upcoming Slots]</span>
+              <span>SOLIDWORKS 3D CAD Models [6 Models]</span>
             </div>
 
-            <!-- Row: Sheet Metal -->
+            <!-- Row: Sheet Metal Enclosure -->
             <div onclick="openProjectModal('sheetmetal')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="solidworks" data-search="sheet metal utility enclosure solidworks flat pattern louvers forming tool base flange youtube">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
@@ -2192,6 +2799,40 @@
                 <div class="flex flex-col gap-0.5">
                   <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">Sheet Metal Utility Enclosure</h4>
                   <span class="text-[9px] font-mono text-slate-400">SOLIDWORKS • Base Flange, ventilation louvers forming tool & 2D Flat Pattern layout</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-blue-400 bg-slate-950 border border-blue-500/30 uppercase">SOLIDWORKS</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all"></i>
+              </div>
+            </div>
+
+            <!-- Row: Sheet Metal Bracket -->
+            <div onclick="openProjectModal('bracket')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="solidworks" data-search="sheet metal connector bracket solidworks flat pattern edge flange bend gusset forming tool hole wizard youtube">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                  <img src="practice_bracket_model.png" alt="Sheet Metal Bracket" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">Sheet Metal Connector Bracket</h4>
+                  <span class="text-[9px] font-mono text-slate-400">SOLIDWORKS • Edge Flanges, reinforcing bend gussets (embosses) & 2D Flat Pattern layout</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-blue-400 bg-slate-950 border border-blue-500/30 uppercase">SOLIDWORKS</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all"></i>
+              </div>
+            </div>
+
+            <!-- Row: Slotted Perforated Cylinder -->
+            <div onclick="openProjectModal('cylinder')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="solidworks" data-search="slotted perforated sheet metal cylinder solidworks flat pattern roll bend loft bend linear pattern cutouts youtube">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                  <img src="practice_cylinder_model.png" alt="Slotted Perforated Cylinder" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">Slotted Perforated Cylinder</h4>
+                  <span class="text-[9px] font-mono text-slate-400">SOLIDWORKS • Roll Bending, Unfold/Fold cutouts & Linear Pattern</span>
                 </div>
               </div>
               <div class="flex items-center gap-2">
@@ -2250,55 +2891,13 @@
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-1 transition-all"></i>
               </div>
             </div>
-
-            <!-- SOLIDWORKS Placeholder 1 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="solidworks" data-search="upcoming solidworks practice slot 3d design">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming SOLIDWORKS Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">SOLIDWORKS 3D design implementation in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">SOLIDWORKS</span>
-            </div>
-
-            <!-- SOLIDWORKS Placeholder 2 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="solidworks" data-search="upcoming solidworks practice slot 3d design">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming SOLIDWORKS Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">SOLIDWORKS 3D design implementation in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">SOLIDWORKS</span>
-            </div>
-
-            <!-- SOLIDWORKS Placeholder 3 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="solidworks" data-search="upcoming solidworks practice slot 3d design">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming SOLIDWORKS Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">SOLIDWORKS 3D design implementation in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">SOLIDWORKS</span>
-            </div>
           </div>
 
           <!-- Category Group 3: Fusion 360 Practice Models -->
           <div class="cad-archive-section flex flex-col gap-2" data-category="fusion">
             <div class="flex items-center gap-2 border-b border-slate-800 pb-1.5 font-mono text-[11px] text-orange-400 font-bold uppercase tracking-wider">
               <i data-lucide="layers" class="w-3.5 h-3.5 text-orange-400"></i>
-              <span>Autodesk Fusion 360 Models [3 Models + 3 Upcoming Slots]</span>
+              <span>Autodesk Fusion 360 Models [3 Models]</span>
             </div>
 
             <!-- Row 11: LEGO Brick -->
@@ -2351,55 +2950,13 @@
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all"></i>
               </div>
             </div>
-
-            <!-- Fusion 360 Placeholder 1 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="fusion" data-search="upcoming fusion 360 practice slot parametric model">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming Fusion 360 Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">Fusion 360 parametric design in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">FUSION 360</span>
-            </div>
-
-            <!-- Fusion 360 Placeholder 2 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="fusion" data-search="upcoming fusion 360 practice slot parametric model">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming Fusion 360 Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">Fusion 360 parametric design in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">FUSION 360</span>
-            </div>
-
-            <!-- Fusion 360 Placeholder 3 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="fusion" data-search="upcoming fusion 360 practice slot parametric model">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming Fusion 360 Practice Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">Fusion 360 parametric design in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">FUSION 360</span>
-            </div>
           </div>
 
           <!-- Category Group 4: PDF Blueprints -->
           <div class="cad-archive-section flex flex-col gap-2" data-category="pdf">
             <div class="flex items-center gap-2 border-b border-slate-800 pb-1.5 font-mono text-[11px] text-cyanAccent font-bold uppercase tracking-wider">
               <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
-              <span>PDF Engineering Blueprint Exercises [4 Models + 2 Upcoming Slots]</span>
+              <span>PDF Engineering Blueprint Exercises [6 Models]</span>
             </div>
 
             <!-- Row 14: Tapered Sleeve -->
@@ -2436,6 +2993,23 @@
               </div>
             </div>
 
+            <!-- Row: Exercise 1-3 Clevis Bracket -->
+            <div onclick="openProjectModal('clevis')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-search="exercise 1-3 clevis bracket solidworks extrude cut hollow boss metric blueprint pdf">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                  <img src="practice_clevis_model.png" alt="Exercise 1-3 Clevis Bracket" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">Exercise 1-3: Clevis Bracket</h4>
+                  <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Extruded U-Bracket & Aligned Hollow Bosses</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+              </div>
+            </div>
+
             <!-- Row 16: Roller Shaft -->
             <div onclick="openProjectModal('roller')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-search="exercise 1-4 chamfered stepped roller shaft pdf blueprint">
               <div class="flex items-center gap-3">
@@ -2445,6 +3019,23 @@
                 <div class="flex flex-col gap-0.5">
                   <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • Journal Extensions & 5x45° Bevel Chamfers</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+              </div>
+            </div>
+
+            <!-- Row: Exercise 1-5 L-Bracket with Rib -->
+            <div onclick="openProjectModal('lbracket')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-search="exercise 1-5 l bracket with rib solidworks extrude cut hollow boss metric blueprint pdf">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                  <img src="practice_lbracket_model.png" alt="Exercise 1-5 L-Bracket with Rib" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">Exercise 1-5: L-Bracket with Rib</h4>
+                  <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS L-Profile Extrusion, Transverse Rib & Flange Hole</span>
                 </div>
               </div>
               <div class="flex items-center gap-2">
@@ -2468,34 +3059,6 @@
                 <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
               </div>
-            </div>
-
-            <!-- PDF Placeholder 1 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="pdf" data-search="upcoming pdf blueprint practice slot machining blueprint">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming PDF Blueprint Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">Machining blueprint modeling in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">PDF BLUEPRINT</span>
-            </div>
-
-            <!-- PDF Placeholder 2 -->
-            <div class="cad-archive-row flex items-center justify-between p-3 bg-slate-950/20 border border-dashed border-slate-800/80 rounded-lg opacity-40 select-none" data-category="pdf" data-search="upcoming pdf blueprint practice slot machining blueprint">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded border border-dashed border-slate-800 bg-slate-950/10 flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="plus-circle" class="w-5 h-5 text-slate-700"></i>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-600 text-xs">Upcoming PDF Blueprint Slot</h4>
-                  <span class="text-[9px] font-mono text-slate-700">Machining blueprint modeling in progress</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-slate-700 bg-slate-950/20 border border-slate-800/35 uppercase">PDF BLUEPRINT</span>
             </div>
           </div>
 
@@ -3275,6 +3838,270 @@
         </div>
       </div>
 
+      <!-- 23b. SOLIDWORKS SHEET METAL CONNECTOR BRACKET DETAIL MODAL -->
+      <div id="modal-project-bracket" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer & Swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-bracket-main" src="practice_bracket_model.png" alt="Sheet Metal Bracket" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-bracket-view-label">3D FOLDED MODEL</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalBracketView('practice_bracket_model.png', '3D FOLDED MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-bracket-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              3D FOLDED MODEL
+            </button>
+            <button onclick="switchModalBracketView('practice_bracket_flat.png', '2D FLAT PATTERN LAYOUT', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-bracket-thumb-btn">
+              <i data-lucide="layout" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              2D FLAT PATTERN
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // SHEET METAL DESIGN & FABRICATION PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Sheet Metal Connector Bracket</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Designed a heavy-duty sheet metal mounting/connector bracket featuring structural reinforcing gussets (embosses), mounting slots, and a central alignment port.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Utilized Base Flange, Edge Flanges, and a custom forming tool to create the reinforcing gussets along the bend lines to prevent deflection under load. Calibrated exact bend allowances, K-factor (0.44), and generated a 2D Flat Pattern layout ready for press brake bending and CNC punching.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS Sheet Metal</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Edge Flange, bend gusset</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">2.0mm Steel Plate</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Tutorial Source:</span>
+                <a href="https://youtu.be/Q3eiBb54S1c?si=Ri-bmMxfsN-QDaic" target="_blank" class="text-cyanAccent hover:underline font-bold flex items-center gap-1">
+                  <i data-lucide="youtube" class="w-3 h-3 text-red-500"></i> YouTube Video
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: SHEET METAL BRACKET</span>
+            <span>TYPE: SOLIDWORKS PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 23c. SOLIDWORKS SLOT PERFORATED CYLINDER DETAIL MODAL -->
+      <div id="modal-project-cylinder" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer (Single Image with both perspectives) -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img src="practice_cylinder_model.png" alt="Slotted Perforated Cylinder" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: FOLDED & ALIGNED PERSPECTIVES
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // SHEET METAL DESIGN & FABRICATION PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Slotted Perforated Cylinder</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Designed a rolled sheet metal cylinder featuring a patterned array of slotted air-vent holes and a longitudinal seam split.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Utilized the unfold/fold method to sketch and pattern the slot array in the flat state before rolling the body, ensuring accurate slot geometry without distortion. Calibrated the K-factor to 0.44 for standard slip-roll fabrication.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS Sheet Metal</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Unfold/Fold, linear pattern</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">1.2mm Aluminum Sheet</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Tutorial Source:</span>
+                <a href="https://youtu.be/F8DJHqwSHCk?si=SVfBW-4rVlqW5cCh" target="_blank" class="text-cyanAccent hover:underline font-bold flex items-center gap-1">
+                  <i data-lucide="youtube" class="w-3 h-3 text-red-500"></i> YouTube Video
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: SLOTTED CYLINDER</span>
+            <span>TYPE: SOLIDWORKS PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 23d. Exercise 1-3 Clevis Bracket Practice Detail Modal -->
+      <div id="modal-project-clevis" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer with swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-clevis-main" src="practice_clevis_model.png" alt="Clevis Bracket" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-clevis-view-label">3D MODEL</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalClevisView('practice_clevis_model.png', '3D MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-clevis-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              3D MODEL
+            </button>
+            <button onclick="switchModalClevisView('practice_clevis_dim.png', 'BLUEPRINT DRAWING', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-clevis-thumb-btn">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              BLUEPRINT
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // PDF BLUEPRINT PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Exercise 1-3: U-Shaped Clevis Bracket</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled a standard U-shaped clevis mount coupling block from a metric 2D blueprint drawing, ensuring all dimensions conform to precision machining specs.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Created the primary U-channel profiles using simple extruded sketches, then added concentric hollow cylindrical bosses on the outer faces using coaxial sketch relations and aligned bore holes.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Extruded Boss & Aligned Bores</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">Cast Carbon Steel</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Dimension Spec:</span>
+                <span class="text-slate-300">Metric (mm) Blueprint Ex. 4</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: CLEVIS BRACKET</span>
+            <span>TYPE: BLUEPRINT PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 23e. Exercise 1-5 L-Bracket with Rib Practice Detail Modal -->
+      <div id="modal-project-lbracket" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer with swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-900/50 flex items-center justify-center overflow-hidden">
+            <img id="modal-lbracket-main" src="practice_lbracket_model.png" alt="L-Bracket with Rib" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-lbracket-view-label">3D MODEL</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalLbracketView('practice_lbracket_model.png', '3D MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-lbracket-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              3D MODEL
+            </button>
+            <button onclick="switchModalLbracketView('practice_lbracket_dim.png', 'BLUEPRINT DRAWING', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-lbracket-thumb-btn">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              BLUEPRINT
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // PDF BLUEPRINT PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Exercise 1-5: L-Bracket with Rib</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled a standard L-shaped flange bracket coupling block from a metric 2D blueprint drawing, ensuring all dimensions conform to precision machining specs.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Created the primary L-profile and transverse structural support rib using extruded sketches, then added a concentric hollow cylindrical boss and mounting hole using coaxial sketch relations and aligned cuts.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Extruded Profile, Rib & Hollow Boss</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">Cast Carbon Steel</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Dimension Spec:</span>
+                <span class="text-slate-300">Metric (mm) Blueprint Ex. 5</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: L-BRACKET</span>
+            <span>TYPE: BLUEPRINT PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
       <!-- 24. ERGONOMIC WATER PITCHER & JUG PRACTICE DETAIL MODAL -->
       <div id="modal-project-pitcher" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
         <!-- Left: Image Viewer -->
@@ -3585,6 +4412,50 @@
             btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-sheetmetal-thumb-btn font-bold";
           } else {
             btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-sheetmetal-thumb-btn";
+          }
+        });
+      }
+
+      // Reset bracket modal preview default state
+      if (projectId === 'bracket') {
+        document.getElementById('modal-bracket-main').src = 'practice_bracket_model.png';
+        document.getElementById('modal-bracket-view-label').innerText = '3D FOLDED MODEL';
+        document.querySelectorAll('.modal-bracket-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-bracket-thumb-btn font-bold";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-bracket-thumb-btn";
+          }
+        });
+      }
+
+      // Reset cylinder modal preview default state
+      if (projectId === 'cylinder') {
+        // No thumbnails to reset as it uses a single dual-perspective image
+      }
+
+      // Reset clevis modal preview default state
+      if (projectId === 'clevis') {
+        document.getElementById('modal-clevis-main').src = 'practice_clevis_model.png';
+        document.getElementById('modal-clevis-view-label').innerText = '3D MODEL';
+        document.querySelectorAll('.modal-clevis-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-clevis-thumb-btn font-bold";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-clevis-thumb-btn";
+          }
+        });
+      }
+
+      // Reset lbracket modal preview default state
+      if (projectId === 'lbracket') {
+        document.getElementById('modal-lbracket-main').src = 'practice_lbracket_model.png';
+        document.getElementById('modal-lbracket-view-label').innerText = '3D MODEL';
+        document.querySelectorAll('.modal-lbracket-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-lbracket-thumb-btn font-bold";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-lbracket-thumb-btn";
           }
         });
       }
@@ -3930,6 +4801,43 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-sheetmetal-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-sheetmetal-thumb-btn font-bold";
+    }
+
+    function switchModalBracketView(src, label, btn) {
+      document.getElementById('modal-bracket-main').src = src;
+      document.getElementById('modal-bracket-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-bracket-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-bracket-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-bracket-thumb-btn font-bold";
+    }
+
+    function switchModalClevisView(src, label, btn) {
+      document.getElementById('modal-clevis-main').src = src;
+      document.getElementById('modal-clevis-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-clevis-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-clevis-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-clevis-thumb-btn font-bold";
+    }
+
+    function switchModalLbracketView(src, label, btn) {
+      document.getElementById('modal-lbracket-main').src = src;
+      document.getElementById('modal-lbracket-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-lbracket-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-lbracket-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-lbracket-thumb-btn font-bold";
+    }
+
+    function scrollRecentPractice(direction) {
+      const container = document.getElementById('recent-practice-grid');
+      if (container) {
+        container.scrollBy({ left: direction, behavior: 'smooth' });
+      }
     }
 
     function scrollProjects(direction) {
