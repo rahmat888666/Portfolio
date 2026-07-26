@@ -142,26 +142,6 @@
             <span class="font-mono text-[9px] text-slate-500 uppercase tracking-wider">3D Printing</span>
           </div>
         </div>
-
-        <!-- Achievements Bar -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4 border-t border-slate-900/40 pt-4 text-left">
-          <div class="flex flex-col border-r border-slate-900 pr-2">
-            <span class="font-mono text-cyanAccent font-bold text-xl md:text-2xl tracking-tight">12–15%</span>
-            <span class="font-mono text-[9px] text-slate-500 uppercase tracking-wider mt-0.5">Cycle Reduction (IOCL)</span>
-          </div>
-          <div class="flex flex-col sm:border-r border-slate-900 pr-2 sm:pl-2">
-            <span class="font-mono text-cyanAccent font-bold text-xl md:text-2xl tracking-tight">100%</span>
-            <span class="font-mono text-[9px] text-slate-500 uppercase tracking-wider mt-0.5">PESO Compliance</span>
-          </div>
-          <div class="flex flex-col border-r border-slate-900 pr-2 sm:pl-2">
-            <span class="font-mono text-cyanAccent font-bold text-xl md:text-2xl tracking-tight">22/30</span>
-            <span class="font-mono text-[9px] text-slate-500 uppercase tracking-wider mt-0.5">CAD Exercises Done</span>
-          </div>
-          <div class="flex flex-col sm:pl-2">
-            <span class="font-mono text-cyanAccent font-bold text-xl md:text-2xl tracking-tight">12</span>
-            <span class="font-mono text-[9px] text-slate-500 uppercase tracking-wider mt-0.5">Iris Sub-assemblies</span>
-          </div>
-        </div>
       </div>
 
       <!-- Rotating Gear HUD (Right) -->
@@ -701,7 +681,22 @@
       <div class="relative">
         <div id="recent-practice-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
           
-          <!-- Tile 1: Exercise 1-5: L-Bracket with Rib (PDF Blueprint) -->
+          <!-- Tile 1: Exercise 6: Offset L-Bracket (PDF Blueprint) -->
+          <div onclick="openProjectModal('ex6')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_ex6_model.png" alt="Offset L-Bracket" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Ex. 6: Offset L-Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Exercise 1-5: L-Bracket with Rib (PDF Blueprint) -->
           <div onclick="openProjectModal('lbracket')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_lbracket_model.png" alt="L-Bracket with Rib" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
@@ -983,16 +978,7 @@
             </div>
           </div>
 
-          <!-- Tile 22: Upcoming Practice Slot (Placeholder) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
-            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
-              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Double Universal Joint</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
-            </div>
-          </div>
+
 
           <!-- Tile 23: Upcoming Practice Slot (Placeholder) -->
           <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none">
@@ -1316,7 +1302,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [22 Completed]</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [23 Completed]</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Skill Gallery</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -1633,6 +1619,21 @@
             </div>
           </div>
 
+          <!-- Sandbox Tile: Exercise 6 Offset L-Bracket (PDF Blueprint) -->
+          <div onclick="openProjectModal('ex6')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_ex6_model.png" alt="Ex. 6 Offset L-Bracket" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Ex. 6 Offset L-Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
+            </div>
+          </div>
+
           <!-- YouTube Placeholder 1 (Sandbox Slot 18) -->
           <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="youtube">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
@@ -1710,16 +1711,7 @@
             </div>
           </div>
 
-          <!-- PDF Blueprint Placeholder 3 (Sandbox Slot 30) -->
-          <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="pdf">
-            <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
-              <i data-lucide="plus-circle" class="w-8 h-8 text-slate-700"></i>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-600 text-xs truncate">Plummer Block Bearing</h4>
-              <span class="text-[8px] font-mono text-slate-700 truncate">Upcoming design exercise</span>
-            </div>
-          </div>
+
 
           <!-- End of Track Tile: Master CAD Archive launcher -->
           <div onclick="openProjectModal('cad-archive')" class="w-48 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/60 p-4 rounded-lg flex flex-col items-center justify-center text-center gap-2.5 cursor-pointer hover:border-cyanAccent hover:bg-slate-900/80 transition-all duration-300 group">
@@ -4181,6 +4173,74 @@
         </div>
       </div>
 
+      <!-- Exercise 6: Offset L-Bracket Practice Detail Modal -->
+      <div id="modal-project-ex6" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer with swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950 flex items-center justify-center overflow-hidden">
+            <img id="modal-ex6-main" src="practice_ex6_model.png" alt="Ex. 6 Offset L-Bracket" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-ex6-view-label">3D MODEL</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalEx6View('practice_ex6_model.png', '3D MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex6-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              3D MODEL
+            </button>
+            <button onclick="switchModalEx6View('practice_ex6_blueprint.png', 'BLUEPRINT DRAWING', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex6-thumb-btn">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              BLUEPRINT
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // PDF BLUEPRINT PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Ex. 6: Offset L-Bracket</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled a structural support offset bracket featuring multiple hole placements, designed using mechanical drafting principles from a 2D blueprint drawing.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Generated the vertical flange, offset upper tab, and base plate profiles using extrusion techniques. Utilized standard dimension constraints to establish the exact Ø26 mm central bore position and Ø22 mm dual mounting holes.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Offset Flange, Bored Openings & Rounded Profiles</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">Cast Carbon Steel</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Dimension Spec:</span>
+                <span class="text-slate-300">Metric (mm) Blueprint Ex. 6</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: OFFSET L-BRACKET</span>
+            <span>TYPE: BLUEPRINT PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
       <!-- 24. ERGONOMIC WATER PITCHER & JUG PRACTICE DETAIL MODAL -->
       <div id="modal-project-pitcher" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
         <!-- Left: Image Viewer -->
@@ -4535,6 +4595,19 @@
             btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-lbracket-thumb-btn font-bold";
           } else {
             btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-lbracket-thumb-btn";
+          }
+        });
+      }
+
+      // Reset ex6 modal preview default state
+      if (projectId === 'ex6') {
+        document.getElementById('modal-ex6-main').src = 'practice_ex6_model.png';
+        document.getElementById('modal-ex6-view-label').innerText = '3D MODEL';
+        document.querySelectorAll('.modal-ex6-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex6-thumb-btn font-bold";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex6-thumb-btn";
           }
         });
       }
@@ -4910,6 +4983,16 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-lbracket-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-lbracket-thumb-btn font-bold";
+    }
+
+    function switchModalEx6View(src, label, btn) {
+      document.getElementById('modal-ex6-main').src = src;
+      document.getElementById('modal-ex6-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-ex6-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex6-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex6-thumb-btn font-bold";
     }
 
     function scrollRecentPractice(direction) {
