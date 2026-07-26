@@ -5170,15 +5170,29 @@
       const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : '';
       
       const rows = document.querySelectorAll('.cad-archive-row');
-      rows.forEach(row => {
-        const rowCategory = row.getAttribute('data-category');
-        const categoryMatch = activeArchiveCategory === 'all' || rowCategory === activeArchiveCategory;
-        const searchMatch = !searchVal || (row.getAttribute('data-search') && row.getAttribute('data-search').toLowerCase().includes(searchVal));
-        
-        if (categoryMatch && searchMatch) {
-          row.classList.remove('hidden');
-        } else {
-          row.classList.add('hidden');
+      
+      gsap.to(rows, {
+        opacity: 0,
+        scale: 0.98,
+        duration: 0.15,
+        onComplete: () => {
+          rows.forEach(row => {
+            const rowCategory = row.getAttribute('data-category');
+            const categoryMatch = activeArchiveCategory === 'all' || rowCategory === activeArchiveCategory;
+            const searchMatch = !searchVal || (row.getAttribute('data-search') && row.getAttribute('data-search').toLowerCase().includes(searchVal));
+            
+            if (categoryMatch && searchMatch) {
+              row.classList.remove('hidden');
+            } else {
+              row.classList.add('hidden');
+            }
+          });
+          
+          const visibleRows = document.querySelectorAll('.cad-archive-row:not(.hidden)');
+          gsap.fromTo(visibleRows, 
+            { opacity: 0, scale: 0.98 },
+            { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", stagger: 0.02 }
+          );
         }
       });
     }
