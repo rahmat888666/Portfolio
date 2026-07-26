@@ -4345,8 +4345,18 @@
 
     // Modal Overlay Control Logic
     const projectModal = document.getElementById('project-modal');
+    let openedFromArchive = false;
     
     function openProjectModal(projectId) {
+      const archiveModal = document.getElementById('modal-project-cad-archive');
+      const isArchiveOpen = archiveModal && !archiveModal.classList.contains('hidden');
+      
+      if (isArchiveOpen) {
+        openedFromArchive = true;
+      } else if (projectId === 'cad-archive') {
+        openedFromArchive = false;
+      }
+
       // Hide all case study elements first
       document.querySelectorAll('[id^="modal-project-"]').forEach(el => el.classList.add('hidden'));
       
@@ -4950,6 +4960,11 @@
     }
 
     function closeProjectModal() {
+      if (openedFromArchive) {
+        openProjectModal('cad-archive');
+        return;
+      }
+
       // Pause any video that might be playing inside modals
       const irisVid = document.getElementById('iris-modal-video');
       if (irisVid) irisVid.pause();
