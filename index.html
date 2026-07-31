@@ -680,6 +680,20 @@
       <!-- Horizontal Carousel Slider Track (Chronological Order) -->
       <div class="relative">
         <div id="recent-practice-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
+          <!-- Tile 1: Exercise 1 & 2: Spline & Geneva Gear Sketches (PDF Blueprint) -->
+          <div onclick="openProjectModal('ex2')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_ex2_blueprint.png" alt="Spline & Geneva Gear Sketches" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Ex. 1 & 2: Gear Sketches</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS 2D Drafting</span>
+            </div>
+          </div>
           <!-- Tile 1: Exercise 3 & 4: Circular Array Flange (PDF Blueprint) -->
           <div onclick="openProjectModal('ex3')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
@@ -1404,7 +1418,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [27 Completed]</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [28 Completed]</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Skill Gallery</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -1718,6 +1732,20 @@
             <div class="flex flex-col gap-0.5">
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>20</span>Ex. 3 & 4: Array Flange</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Array & Fillet</span>
+            </div>
+          </div>
+          <!-- Tile: Exercise 1 & 2: Spline & Geneva Gear Sketches (PDF Blueprint) -->
+          <div onclick="openProjectModal('ex2')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_ex2_blueprint.png" alt="Spline & Geneva Gear Sketches" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>21</span>Ex. 1 & 2: Gear Sketches</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS 2D Drafting</span>
             </div>
           </div><div onclick="openProjectModal('roller')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
@@ -2868,11 +2896,11 @@
 
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [27]</button>
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [28]</button>
           <button onclick="filterCadArchiveCategory('youtube')" id="archive-tab-youtube" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">YOUTUBE TUTORIALS [9]</button>
           <button onclick="filterCadArchiveCategory('solidworks')" id="archive-tab-solidworks" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">SOLIDWORKS [6]</button>
           <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 [3]</button>
-          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [9]</button>
+          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [10]</button>
         </div>
 
         <!-- Single-Line Directory List Container Segregated by Type -->
@@ -3314,6 +3342,23 @@
               </div>
             </div>
 
+                    <!-- Row 26: Exercise 1 & 2 Spline & Geneva Gear Sketches -->
+            <div onclick="openProjectModal('ex2')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-search="exercise 1 2 spline geneva gear sketches solidworks 2d drafting circular array offset dimensions metric imperial blueprint pdf">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                  <img src="practice_ex2_blueprint.png" alt="Spline & Geneva Gear Sketches" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">26. Exercise 1 & 2: Spline & Geneva Gear Sketches</h4>
+                  <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS 2D Sketching, Circular Pattern & Imperial Arc Constraints</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950/80 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+              </div>
+            </div>
+
           <!-- Row 16: Roller Shaft -->
             <div onclick="openProjectModal('roller')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-search="exercise 1-4 chamfered stepped roller shaft pdf blueprint">
               <div class="flex items-center gap-3">
@@ -3321,7 +3366,7 @@
                   <img src="practice_stepped_shaft.png" alt="Roller Shaft" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">26. Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">27. Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • Journal Extensions & 5x45° Bevel Chamfers</span>
                 </div>
               </div>
@@ -3341,7 +3386,7 @@
                   <img src="practice_shaft_taper_model.png" alt="Tapered Sleeve" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">27. Multi-Step Tapered Sleeve</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">28. Multi-Step Tapered Sleeve</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • 4-Stage Concentric Machining Steps</span>
                 </div>
               </div>
@@ -3422,6 +3467,81 @@
 
           <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
             <span>MODEL: CIRCULAR ARRAY FLANGE</span>
+            <span>TYPE: BLUEPRINT PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
+            <!-- Exercise 1 & 2: Spline & Geneva Gear Sketches Detail Modal -->
+      <div id="modal-project-ex2" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer with swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950 flex items-center justify-center overflow-hidden">
+            <img id="modal-ex2-main" src="practice_ex2_blueprint.png" alt="Ex. 1 & 2 Spline & Geneva Gear Sketches" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-ex2-view-label">BLUEPRINT</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-3 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalEx2View('practice_ex2_blueprint.png', 'BLUEPRINT', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex2-thumb-btn font-bold">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              BLUEPRINT
+            </button>
+            <button onclick="switchModalEx2View('practice_ex2_spline.png', 'SKETCH 1: SPLINE GEAR', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex2-thumb-btn">
+              <i data-lucide="edit-3" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              SPLINE GEAR
+            </button>
+            <button onclick="switchModalEx2View('practice_ex2_geneva.png', 'SKETCH 2: GENEVA WHEEL', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex2-thumb-btn">
+              <i data-lucide="edit-3" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              GENEVA WHEEL
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // 2D DRAFTING & CONSTRAINTS</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Ex. 1 & 2: Gear Sketches</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Designed two fully-dimensioned 2D sketch layouts in SOLIDWORKS (Sketch 1 Spline Gear and Sketch 2 Geneva Star Wheel) using imperial units, establishing absolute sketch definition.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> 
+                <em>Sketch 1:</em> Sketched the spline gear plate showing Ø1.75" tips and Ø0.75" bore. Profiled internal keyways and a 30° circular pattern of 12 rectangular spline teeth (width 0.150").
+                <br>
+                <em>Sketch 2:</em> Profiled the Geneva indexing star wheel showing Ø5.14" outer vertices, Ø1.00" bore, and circular slot paths (width 0.50"). Constrained transition arcs of radius R0.90 centered at 30° spacing intervals.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Radial Arrays, Arc Tangents & Keyway Slots</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">N/A (2D Sketch Practice)</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Dimension Spec:</span>
+                <span class="text-slate-300">Imperial (inches) Blueprint Ex. 1 & 2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: SPLINE & GENEVA GEARS</span>
             <span>TYPE: BLUEPRINT PRACTICE</span>
           </div>
         </div>
@@ -5111,6 +5231,19 @@
         });
       }
 
+            // Reset ex2 modal preview default state
+      if (projectId === 'ex2') {
+        document.getElementById('modal-ex2-main').src = 'practice_ex2_blueprint.png';
+        document.getElementById('modal-ex2-view-label').innerText = 'BLUEPRINT';
+        document.querySelectorAll('.modal-ex2-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex2-thumb-btn font-bold";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex2-thumb-btn";
+          }
+        });
+      }
+
       // Reset shaft modal preview default state
       if (projectId === 'shaft') {
         document.getElementById('modal-shaft-main').src = 'practice_shaft_model.png';
@@ -5553,7 +5686,17 @@
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-rover-thumb-btn font-bold";
     }
 
-        function switchModalEx3View(src, label, btn) {
+            function switchModalEx2View(src, label, btn) {
+      document.getElementById('modal-ex2-main').src = src;
+      document.getElementById('modal-ex2-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-ex2-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex2-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex2-thumb-btn font-bold";
+    }
+
+    function switchModalEx3View(src, label, btn) {
       document.getElementById('modal-ex3-main').src = src;
       document.getElementById('modal-ex3-view-label').innerText = label;
       
