@@ -680,6 +680,20 @@
       <!-- Horizontal Carousel Slider Track (Chronological Order) -->
       <div class="relative">
         <div id="recent-practice-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
+          <!-- Tile 1: Exercise 1-6: Clamping Plate (PDF Blueprint) -->
+          <div onclick="openProjectModal('ex6')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_ex6_blueprint.png" alt="Clamping Plate" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Ex. 1-6: Clamping Plate</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS 2D Sketching</span>
+            </div>
+          </div>
           <!-- Tile 1: Exercise 1 & 2: Spline & Geneva Gear Sketches (PDF Blueprint) -->
           <div onclick="openProjectModal('ex2')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
@@ -1418,7 +1432,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [28 Completed]</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [29 Completed]</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Skill Gallery</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -1544,7 +1558,21 @@
 
 
           <!-- Tile: Miter Flange Sheet Metal Tray (YouTube Tutorial) -->
-          <div onclick="openProjectModal('miterflange')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="youtube">
+          
+          <!-- Tile: Exercise 1-6: Clamping Plate (PDF Blueprint) -->
+          <div onclick="openProjectModal('ex6')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_ex6_blueprint.png" alt="Clamping Plate" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>08</span>Ex. 1-6: Clamping Plate</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS 2D Sketching</span>
+            </div>
+          </div><div onclick="openProjectModal('miterflange')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="youtube">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_miter_folded.png" alt="Miter Flange" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
@@ -1553,7 +1581,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>08</span>Miter Flange Tray</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>09</span>Miter Flange Tray</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Sheet Metal</span>
             </div>
           </div><div onclick="openProjectModal('solidsheet')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="youtube">
@@ -1565,7 +1593,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>09</span>Solid to Sheet Metal</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>10</span>Solid to Sheet Metal</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Conversion</span>
             </div>
           </div>
@@ -1578,7 +1606,7 @@
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>10</span>Water Pitcher & Jug</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>11</span>Water Pitcher & Jug</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Shell & Section</span>
             </div>
           </div>
@@ -1590,7 +1618,7 @@
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>11</span>Decorative Flower Vase</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>12</span>Decorative Flower Vase</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">Lofted Surface & Stand</span>
             </div>
           </div>
@@ -1602,7 +1630,7 @@
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>12</span>Whiteboard Duster</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>13</span>Whiteboard Duster</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Ergonomic</span>
             </div>
           </div>
@@ -1617,7 +1645,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>13</span>Sheet Metal Enclosure</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>14</span>Sheet Metal Enclosure</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Tutorial</span>
             </div>
           </div>
@@ -1632,7 +1660,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>14</span>Sheet Metal Bracket</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>15</span>Sheet Metal Bracket</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Tutorial</span>
             </div>
           </div>
@@ -1647,7 +1675,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>15</span>Perforated Cylinder</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>16</span>Perforated Cylinder</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Tutorial</span>
             </div>
           </div>
@@ -1659,7 +1687,7 @@
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>16</span>2x4 LEGO Brick</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>17</span>2x4 LEGO Brick</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">Snap Fit Model</span>
             </div>
           </div>
@@ -1671,7 +1699,7 @@
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>17</span>Glass Beverage Bottle</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>18</span>Glass Beverage Bottle</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">Fusion 360 Render</span>
             </div>
           </div>
@@ -1683,7 +1711,7 @@
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-orange-400 bg-slate-950/90 border border-orange-500/30 px-1 py-0.5 rounded font-bold">FUSION 360</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>18</span>Metallic Paper Clip</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-orange-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>19</span>Metallic Paper Clip</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">3D Path Sweep</span>
             </div>
           </div>
@@ -1695,7 +1723,7 @@
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>19</span>Multi-Step Tapered Sleeve</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>20</span>Multi-Step Tapered Sleeve</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint</span>
             </div>
           </div>
@@ -1713,7 +1741,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>20</span>Ex 1-3: Clevis Bracket</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>21</span>Ex 1-3: Clevis Bracket</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
             </div>
           </div>
@@ -1730,7 +1758,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>20</span>Ex. 3 & 4: Array Flange</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>22</span>Ex. 3 & 4: Array Flange</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Array & Fillet</span>
             </div>
           </div>
@@ -1744,7 +1772,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>21</span>Ex. 1 & 2: Gear Sketches</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>23</span>Ex. 1 & 2: Gear Sketches</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS 2D Drafting</span>
             </div>
           </div><div onclick="openProjectModal('roller')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group" data-category="pdf">
@@ -1753,7 +1781,7 @@
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>21</span>Chamfered Roller Shaft</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>24</span>Chamfered Roller Shaft</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">PDF Blueprint Ex 1-4</span>
             </div>
           </div>
@@ -1768,7 +1796,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>22</span>Ex 1-5: L-Bracket</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>25</span>Ex 1-5: L-Bracket</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
             </div>
           </div>
@@ -1799,7 +1827,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>23</span>Ex. 1: Clevis Bracket</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>26</span>Ex. 1: Clevis Bracket</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Presspull</span>
             </div>
           </div><div onclick="openProjectModal('ex11')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="pdf">
@@ -1811,7 +1839,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>24</span>Ex. 11: Double-Ended Wrench</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>27</span>Ex. 11: Double-Ended Wrench</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Sketch & Extrusion</span>
             </div>
           </div><div onclick="openProjectModal('ex10')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="pdf">
@@ -1823,7 +1851,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>25</span>Ex. 10: Anchor Bracket</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>28</span>Ex. 10: Anchor Bracket</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
             </div>
           </div><div onclick="openProjectModal('ex8')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="pdf">
@@ -1835,7 +1863,7 @@
               </span>
             </div>
             <div class="flex flex-col gap-0.5">
-              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>26</span>Ex. 8: Slider Clevis Link</h4>
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>29</span>Ex. 8: Slider Clevis Link</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
             </div>
           </div>
@@ -2896,11 +2924,11 @@
 
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [28]</button>
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [29]</button>
           <button onclick="filterCadArchiveCategory('youtube')" id="archive-tab-youtube" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">YOUTUBE TUTORIALS [9]</button>
           <button onclick="filterCadArchiveCategory('solidworks')" id="archive-tab-solidworks" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">SOLIDWORKS [6]</button>
           <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 [3]</button>
-          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [10]</button>
+          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [11]</button>
         </div>
 
         <!-- Single-Line Directory List Container Segregated by Type -->
@@ -3024,14 +3052,31 @@
               </div>
             </div>
 
-                              <!-- Row 8: Miter Flange Sheet Metal Tray -->
+                                        <!-- Row 8: Exercise 1-6: Clamping Plate -->
+            <div onclick="openProjectModal('ex6')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-search="exercise 1-6 clamping plate bracket solidworks 2d drafting sketch constraints circular array slots metric dimensions blueprint pdf">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                  <img src="practice_ex6_blueprint.png" alt="Clamping Plate" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">8. Exercise 1-6: Clamping Plate</h4>
+                  <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS sketch constraints, 6-Hole Linear Pattern & Curved Splines</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950/80 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+              </div>
+            </div>
+
+          <!-- Row 8: Miter Flange Sheet Metal Tray -->
             <div onclick="openProjectModal('miterflange')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="youtube" data-search="miter flange base flange sheet metal folded tray flat pattern section view solidworks tutorial youtube video">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
                   <img src="practice_miter_folded.png" alt="Miter Flange" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">8. Miter Flange Sheet Metal Tray</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">9. Miter Flange Sheet Metal Tray</h4>
                   <span class="text-[9px] font-mono text-slate-400">YouTube Tutorial • SOLIDWORKS Base Flange, Multi-Bend Miter Flange & Flat Pattern</span>
                 </div>
               </div>
@@ -3048,7 +3093,7 @@
                   <img src="practice_sheetmetal_folded.png" alt="Solid to Sheet Metal" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">9. Solid to Sheet Metal Conversion</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">10. Solid to Sheet Metal Conversion</h4>
                   <span class="text-[9px] font-mono text-slate-400">YouTube Tutorial • SOLIDWORKS Convert to Sheet Metal, Rip Edges & Flat Pattern</span>
                 </div>
               </div>
@@ -3065,7 +3110,7 @@
                   <img src="practice_sheetmetal_model.png" alt="Sheet Metal Enclosure" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">10. Sheet Metal Utility Enclosure</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">11. Sheet Metal Utility Enclosure</h4>
                   <span class="text-[9px] font-mono text-slate-400">SOLIDWORKS • Base Flange, ventilation louvers forming tool & 2D Flat Pattern layout</span>
                 </div>
               </div>
@@ -3082,7 +3127,7 @@
                   <img src="practice_bracket_model.png" alt="Sheet Metal Bracket" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">11. Sheet Metal Connector Bracket</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">12. Sheet Metal Connector Bracket</h4>
                   <span class="text-[9px] font-mono text-slate-400">SOLIDWORKS • Edge Flanges, reinforcing bend gussets (embosses) & 2D Flat Pattern layout</span>
                 </div>
               </div>
@@ -3099,7 +3144,7 @@
                   <img src="practice_cylinder_model.png" alt="Slotted Perforated Cylinder" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">12. Slotted Perforated Cylinder</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">13. Slotted Perforated Cylinder</h4>
                   <span class="text-[9px] font-mono text-slate-400">SOLIDWORKS • Roll Bending, Unfold/Fold cutouts & Linear Pattern</span>
                 </div>
               </div>
@@ -3116,7 +3161,7 @@
                   <img src="practice_pitcher_model.png" alt="Water Pitcher & Jug" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">13. Ergonomic Water Pitcher & Jug</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">14. Ergonomic Water Pitcher & Jug</h4>
                   <span class="text-[9px] font-mono text-slate-400">SOLIDWORKS • Revolve Body, Shell Feature & 3D Section Cut</span>
                 </div>
               </div>
@@ -3133,7 +3178,7 @@
                   <img src="practice_vase_model.png" alt="Decorative Flower Vase" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">14. Modern Decorative Flower Vase with Stand</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">15. Modern Decorative Flower Vase with Stand</h4>
                   <span class="text-[9px] font-mono text-slate-400">SOLIDWORKS • Surface Lofting, Shell Feature & Mahogany Stand Base</span>
                 </div>
               </div>
@@ -3150,7 +3195,7 @@
                   <img src="practice_duster_model.png" alt="Whiteboard Duster" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">15. Ergonomic Whiteboard Duster</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">16. Ergonomic Whiteboard Duster</h4>
                   <span class="text-[9px] font-mono text-slate-400">SOLIDWORKS • Polypropylene Molded Handle & Felt Wiping Pad</span>
                 </div>
               </div>
@@ -3167,7 +3212,7 @@
                   <img src="practice_lego_top.png" alt="2x4 LEGO Brick" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-orange-400 transition-colors">16. Parametric 2x4 Interlocking LEGO Brick</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-orange-400 transition-colors">17. Parametric 2x4 Interlocking LEGO Brick</h4>
                   <span class="text-[9px] font-mono text-slate-400">Fusion 360 • Stud Matrix Extrude & Bottom Coupling Tubes</span>
                 </div>
               </div>
@@ -3184,7 +3229,7 @@
                   <img src="practice_glass_bottle.png" alt="Glass Beverage Bottle" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-orange-400 transition-colors">17. Parametric Glass Beverage Bottle</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-orange-400 transition-colors">18. Parametric Glass Beverage Bottle</h4>
                   <span class="text-[9px] font-mono text-slate-400">Fusion 360 • Revolve Body & Transparent Glass Refraction Optics</span>
                 </div>
               </div>
@@ -3201,7 +3246,7 @@
                   <img src="practice_ex8_model.png" alt="Slider Clevis Link" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">18. Exercise 8: Slider Clevis Link</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">19. Exercise 8: Slider Clevis Link</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Slide Guide Channel & Coaxial Clevis Ears</span>
                 </div>
               </div>
@@ -3221,7 +3266,7 @@
                   <img src="practice_ex10_model.png" alt="Anchor Bracket" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">19. Exercise 10: Anchor Bracket</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">20. Exercise 10: Anchor Bracket</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Hollow Pivot cylinder, Alignment Web & Flange Plate</span>
                 </div>
               </div>
@@ -3244,7 +3289,7 @@
                   <img src="practice_ex1_model.png" alt="Presspull Clevis Bracket" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">20. Exercise 1: Presspull Clevis Bracket</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">21. Exercise 1: Presspull Clevis Bracket</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Front Cylinder, Bore Keyway & Double Flange Bosses</span>
                 </div>
               </div>
@@ -3261,7 +3306,7 @@
                   <img src="practice_ex11_model.png" alt="Double-Ended Open Wrench" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">21. Exercise 11: Double-Ended Open Wrench</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">22. Exercise 11: Double-Ended Open Wrench</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Sketch Constraints & Tangent Transition Profiles</span>
                 </div>
               </div>
@@ -3278,7 +3323,7 @@
                   <img src="practice_lbracket_model.png" alt="Exercise 1-5 L-Bracket with Rib" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">22. Exercise 1-5: L-Bracket with Rib</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">23. Exercise 1-5: L-Bracket with Rib</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS L-Profile Extrusion, Transverse Rib & Flange Hole</span>
                 </div>
               </div>
@@ -3295,7 +3340,7 @@
                   <img src="practice_clevis_model.png" alt="Exercise 1-3 Clevis Bracket" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">23. Exercise 1-3: Clevis Bracket</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">24. Exercise 1-3: Clevis Bracket</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Extruded U-Bracket & Aligned Hollow Bosses</span>
                 </div>
               </div>
@@ -3312,7 +3357,7 @@
                   <img src="practice_paper_clip.png" alt="Metallic Paper Clip" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-orange-400 transition-colors">24. Parametric Metallic Paper Clip</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-orange-400 transition-colors">25. Parametric Metallic Paper Clip</h4>
                   <span class="text-[9px] font-mono text-slate-400">Fusion 360 • 3D Path Sweep Trajectory & Tangent Arcs</span>
                 </div>
               </div>
@@ -3332,7 +3377,7 @@
                   <img src="practice_ex3_model.png" alt="Circular Array Flange" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">25. Exercise 3 & 4: Circular Array Flange</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">26. Exercise 3 & 4: Circular Array Flange</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Circular Pattern, Curved Slot Cutouts & Mirror Command</span>
                 </div>
               </div>
@@ -3349,7 +3394,7 @@
                   <img src="practice_ex2_blueprint.png" alt="Spline & Geneva Gear Sketches" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">26. Exercise 1 & 2: Spline & Geneva Gear Sketches</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">27. Exercise 1 & 2: Spline & Geneva Gear Sketches</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS 2D Sketching, Circular Pattern & Imperial Arc Constraints</span>
                 </div>
               </div>
@@ -3366,7 +3411,7 @@
                   <img src="practice_stepped_shaft.png" alt="Roller Shaft" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">27. Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">28. Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • Journal Extensions & 5x45° Bevel Chamfers</span>
                 </div>
               </div>
@@ -3386,7 +3431,7 @@
                   <img src="practice_shaft_taper_model.png" alt="Tapered Sleeve" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">28. Multi-Step Tapered Sleeve</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">29. Multi-Step Tapered Sleeve</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • 4-Stage Concentric Machining Steps</span>
                 </div>
               </div>
@@ -4186,6 +4231,74 @@
       <!-- 23. SOLIDWORKS SHEET METAL UTILITY ENCLOSURE DETAIL MODAL -->
             <!-- Solid to Sheet Metal Detail Modal -->
             <!-- Miter Flange Detail Modal -->
+            <!-- Exercise 1-6: Clamping Plate Detail Modal -->
+      <div id="modal-project-ex6" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer with swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950 flex items-center justify-center overflow-hidden">
+            <img id="modal-ex6-main" src="practice_ex6_blueprint.png" alt="Ex. 1-6 Clamping Plate" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-ex6-view-label">BLUEPRINT DRAWING</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalEx6View('practice_ex6_blueprint.png', 'BLUEPRINT DRAWING', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex6-thumb-btn font-bold">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              BLUEPRINT
+            </button>
+            <button onclick="switchModalEx6View('practice_ex6_sketch.png', 'SKETCH CONSTRAINTS', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex6-thumb-btn">
+              <i data-lucide="edit-3" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              SKETCH CONSTRAINTS
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // PDF BLUEPRINT PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Ex. 1-6: Clamping Plate</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Designed a highly detailed 2D profile sketch of a universal mounting bracket / clamping plate in SOLIDWORKS, focusing on spline transitions, concentric offsets, linear patterns, and fully-defined geometric constraints.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Sketched the baseline geometry establishing the bottom 6-hole linear pattern (holes Ø12 mm spaced evenly over 106 mm). Constrained the central bore (Ø76 mm) with concentric pitch circles. Profiled the complex ears (top ear R15 with Ø16 hole, left ear R12 with Ø13 hole, and bottom right ear R14 with Ø28 hole) utilizing tangent arcs, splines, and precise angular offsets.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Linear Patterns, Tangency & Curved Splines</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">N/A (2D Sketch Practice)</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Dimension Spec:</span>
+                <span class="text-slate-300">Metric (mm) Blueprint Ex. 1-6</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: UNIVERSAL CLAMPING PLATE</span>
+            <span>TYPE: BLUEPRINT PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
       <div id="modal-project-miterflange" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
         <!-- Left: Image Viewer with swapper -->
         <div class="lg:w-1/2 flex flex-col justify-between gap-3">
@@ -5272,7 +5385,20 @@
 
       
 
-                  // Reset miterflange modal preview default state
+                        // Reset ex6 modal preview default state
+      if (projectId === 'ex6') {
+        document.getElementById('modal-ex6-main').src = 'practice_ex6_blueprint.png';
+        document.getElementById('modal-ex6-view-label').innerText = 'BLUEPRINT DRAWING';
+        document.querySelectorAll('.modal-ex6-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex6-thumb-btn font-bold";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex6-thumb-btn";
+          }
+        });
+      }
+
+      // Reset miterflange modal preview default state
       if (projectId === 'miterflange') {
         document.getElementById('modal-miterflange-main').src = 'practice_miter_folded.png';
         document.getElementById('modal-miterflange-view-label').innerText = '3D FOLDED PART';
@@ -6030,7 +6156,17 @@
     }
 
     // Switch between Interactive CAD and Blueprint sheet inside Multi-Step Sleeve modal
-            function switchModalMiterflangeView(src, label, btn) {
+                function switchModalEx6View(src, label, btn) {
+      document.getElementById('modal-ex6-main').src = src;
+      document.getElementById('modal-ex6-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-ex6-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex6-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex6-thumb-btn font-bold";
+    }
+
+    function switchModalMiterflangeView(src, label, btn) {
       document.getElementById('modal-miterflange-main').src = src;
       document.getElementById('modal-miterflange-view-label').innerText = label;
       
