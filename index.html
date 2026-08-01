@@ -680,6 +680,20 @@
       <!-- Horizontal Carousel Slider Track (Chronological Order) -->
       <div class="relative">
         <div id="recent-practice-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
+          <!-- Tile 1: Slotted Guide Block (PDF Blueprint) -->
+          <div onclick="openProjectModal('guideblock')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_guideblock_model.png" alt="Slotted Guide Block" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Slotted Guide Block</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Dovetail Slot</span>
+            </div>
+          </div>
           <!-- Tile 1: Exercise 1-6: Clamping Plate (PDF Blueprint) -->
           <div onclick="openProjectModal('ex6')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
@@ -1432,7 +1446,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [29 Completed]</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [30 Completed]</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Skill Gallery</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -1865,6 +1879,20 @@
             <div class="flex flex-col gap-0.5">
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>29</span>Ex. 8: Slider Clevis Link</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
+            </div>
+          </div>
+          <!-- Tile: Slotted Guide Block (PDF Blueprint) -->
+          <div onclick="openProjectModal('guideblock')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_guideblock_model.png" alt="Slotted Guide Block" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>30</span>Slotted Guide Block</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Dovetail Slot</span>
             </div>
           </div>
 
@@ -2476,6 +2504,74 @@
         </div>
       </div>
 
+      <!-- Slotted Guide Block Detail Modal -->
+      <div id="modal-project-guideblock" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer with swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950 flex items-center justify-center overflow-hidden">
+            <img id="modal-guideblock-main" src="practice_guideblock_model.png" alt="Slotted Guide Block" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-guideblock-view-label">3D MODEL</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalGuideblockView('practice_guideblock_model.png', '3D MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-guideblock-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              3D MODEL
+            </button>
+            <button onclick="switchModalGuideblockView('practice_guideblock_blueprint.png', 'BLUEPRINT DRAWING', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-guideblock-thumb-btn">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              BLUEPRINT
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // PDF BLUEPRINT PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Slotted Guide Block</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled a high-tolerance slotted guide bracket in SOLIDWORKS using imperial coordinates, integrating features such as a 60° dovetail channel pocket, a double-stage cylindrical guide pin, and slot cuts.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Extruded the main rectangular bracket block (6.00" x 3.62" x 2.00"). Sketched a 60° profile cutout on the rear face and extruded a channel cut (depth 1.00", width 4.000") to produce the alignment dovetail. Extruded the concentric cylindrical bosses (Ø2.75" base and Ø1.50" neck extension) from the front face. Placed a pocket cut through the neck tip to create a 0.375" wide slot.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Dovetail V-Pocket, Stepped Cylinder & Slot Cuts</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">Cast Ductile Iron</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Dimension Spec:</span>
+                <span class="text-slate-300">Imperial (inches) Part 3 Blueprint</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: SLOTTED GUIDE BLOCK</span>
+            <span>TYPE: BLUEPRINT PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
       <!-- 6. HOLLOW STEPPED CYLINDER DETAIL (Sandbox) -->
       
 
@@ -2924,11 +3020,11 @@
 
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [29]</button>
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [30]</button>
           <button onclick="filterCadArchiveCategory('youtube')" id="archive-tab-youtube" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">YOUTUBE TUTORIALS [9]</button>
           <button onclick="filterCadArchiveCategory('solidworks')" id="archive-tab-solidworks" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">SOLIDWORKS [6]</button>
           <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 [3]</button>
-          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [11]</button>
+          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [12]</button>
         </div>
 
         <!-- Single-Line Directory List Container Segregated by Type -->
@@ -3437,6 +3533,23 @@
               </div>
               <div class="flex items-center gap-2">
                 <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+              </div>
+            </div>
+
+                    <!-- Row 30: Slotted Guide Block -->
+            <div onclick="openProjectModal('guideblock')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-search="slotted guide block part 3 imperial dimensions dovetail slot circular cuts chamfers solidworks blueprint pdf">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                  <img src="practice_guideblock_model.png" alt="Slotted Guide Block" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">30. Slotted Guide Block</h4>
+                  <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Dovetail Pocket, Concentric Cylinder Extrusions & Front Chamfers</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950/80 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
               </div>
             </div>
@@ -5370,6 +5483,19 @@
         });
       }
 
+            // Reset guideblock modal preview default state
+      if (projectId === 'guideblock') {
+        document.getElementById('modal-guideblock-main').src = 'practice_guideblock_model.png';
+        document.getElementById('modal-guideblock-view-label').innerText = '3D MODEL';
+        document.querySelectorAll('.modal-guideblock-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-guideblock-thumb-btn font-bold";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-guideblock-thumb-btn";
+          }
+        });
+      }
+
       // Reset sleeve modal preview default state
       if (projectId === 'sleeve') {
         document.getElementById('modal-sleeve-main').src = 'practice_shaft_taper_model.png';
@@ -6184,6 +6310,16 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-blue-500 transition-all text-slate-400 modal-solidsheet-thumb-btn";
       });
       btn.className = "border-2 border-blue-500 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-blue-500 transition-all text-slate-200 modal-solidsheet-thumb-btn font-bold";
+    }
+
+        function switchModalGuideblockView(src, label, btn) {
+      document.getElementById('modal-guideblock-main').src = src;
+      document.getElementById('modal-guideblock-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-guideblock-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-guideblock-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-guideblock-thumb-btn font-bold";
     }
 
     function switchModalSleeveView(imgSrc, label, btn) {
