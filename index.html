@@ -680,6 +680,20 @@
       <!-- Horizontal Carousel Slider Track (Chronological Order) -->
       <div class="relative">
         <div id="recent-practice-grid" class="flex gap-4 overflow-x-auto snap-x scroll-smooth scrollbar-thin py-3 px-1 border border-slate-900/60 rounded-xl bg-slate-950/40">
+          <!-- Tile 1: Dual-Boss Offset Bracket (PDF Blueprint) -->
+          <div onclick="openProjectModal('offsetbracket')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_offsetbracket_model.png" alt="Dual-Boss Offset Bracket" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors">Dual-Boss Offset Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Dual Bearing Hubs</span>
+            </div>
+          </div>
           <!-- Tile 1: Pipe Support Cradle (PDF Blueprint) -->
           <div onclick="openProjectModal('pipecradle')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
@@ -1474,7 +1488,7 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [32 Completed]</span>
+            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">3D Modeling Practice Log — 30 Slots [33 Completed]</span>
           </div>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-100 font-technical uppercase">CAD Skill Gallery</h2>
           <p class="text-slate-400 text-xs mt-1 max-w-xl font-sans">
@@ -1799,6 +1813,20 @@
             <div class="flex flex-col gap-0.5">
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>22</span>Ex 1-3: Clevis Bracket</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Extrusion</span>
+            </div>
+          </div>
+          <!-- Tile: Dual-Boss Offset Bracket (PDF Blueprint) -->
+          <div onclick="openProjectModal('offsetbracket')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_offsetbracket_model.png" alt="Dual-Boss Offset Bracket" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>22</span>Dual-Boss Offset Bracket</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Dual Bearing Hubs</span>
             </div>
           </div>
 
@@ -3144,11 +3172,11 @@
 
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [32]</button>
+          <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [33]</button>
           <button onclick="filterCadArchiveCategory('youtube')" id="archive-tab-youtube" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">YOUTUBE TUTORIALS [9]</button>
           <button onclick="filterCadArchiveCategory('solidworks')" id="archive-tab-solidworks" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">SOLIDWORKS [6]</button>
           <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 [3]</button>
-          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [14]</button>
+          <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [15]</button>
         </div>
 
         <!-- Single-Line Directory List Container Segregated by Type -->
@@ -3587,6 +3615,23 @@
               </div>
             </div>
 
+                    <!-- Row 26: Dual-Boss Offset Bracket -->
+            <div onclick="openProjectModal('offsetbracket')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-search="dual boss offset bearing bracket support base cut holes upright web solidworks blueprint pdf metric mm">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                  <img src="practice_offsetbracket_model.png" alt="Dual-Boss Offset Bracket" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">26. Dual-Boss Offset Bracket</h4>
+                  <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Dual Hub Bosses, Vertical Upright Plate & Underneath Relief Cut</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950/80 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+              </div>
+            </div>
+
           <!-- Row 13: Paper Clip -->
             <div onclick="openProjectModal('paperclip')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-orange-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="fusion" data-search="parametric metallic paper clip fusion 360 sweep">
               <div class="flex items-center gap-3">
@@ -3594,7 +3639,7 @@
                   <img src="practice_paper_clip.png" alt="Metallic Paper Clip" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-orange-400 transition-colors">26. Parametric Metallic Paper Clip</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-orange-400 transition-colors">27. Parametric Metallic Paper Clip</h4>
                   <span class="text-[9px] font-mono text-slate-400">Fusion 360 • 3D Path Sweep Trajectory & Tangent Arcs</span>
                 </div>
               </div>
@@ -3614,7 +3659,7 @@
                   <img src="practice_ex3_model.png" alt="Circular Array Flange" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">27. Exercise 3 & 4: Circular Array Flange</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">28. Exercise 3 & 4: Circular Array Flange</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Circular Pattern, Curved Slot Cutouts & Mirror Command</span>
                 </div>
               </div>
@@ -3631,7 +3676,7 @@
                   <img src="practice_ex2_blueprint.png" alt="Spline & Geneva Gear Sketches" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">28. Exercise 1 & 2: Spline & Geneva Gear Sketches</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">29. Exercise 1 & 2: Spline & Geneva Gear Sketches</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS 2D Sketching, Circular Pattern & Imperial Arc Constraints</span>
                 </div>
               </div>
@@ -3648,7 +3693,7 @@
                   <img src="practice_stepped_shaft.png" alt="Roller Shaft" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">29. Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">30. Exercise 1-4: Chamfered Stepped Roller Shaft</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • Journal Extensions & 5x45° Bevel Chamfers</span>
                 </div>
               </div>
@@ -3668,7 +3713,7 @@
                   <img src="practice_pipecradle_model.png" alt="Pipe Support Cradle" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">30. Pipe Support Cradle</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">31. Pipe Support Cradle</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS U-Shaped Pipe Saddle, Support Column & Reinforcing Side Ribs</span>
                 </div>
               </div>
@@ -3685,7 +3730,7 @@
                   <img src="practice_shaft_taper_model.png" alt="Tapered Sleeve" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">31. Multi-Step Tapered Sleeve</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">32. Multi-Step Tapered Sleeve</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • 4-Stage Concentric Machining Steps</span>
                 </div>
               </div>
@@ -3702,7 +3747,7 @@
                   <img src="practice_guideblock_model.png" alt="Slotted Guide Block" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">32. Slotted Guide Block</h4>
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">33. Slotted Guide Block</h4>
                   <span class="text-[9px] font-mono text-slate-400">PDF Dimension Sheet • SOLIDWORKS Dovetail Pocket, Concentric Cylinder Extrusions & Front Chamfers</span>
                 </div>
               </div>
@@ -3717,6 +3762,74 @@
 
       <!-- 13. EXERCISE 1-4 ROLLER SHAFT DETAIL MODAL -->
             <!-- Exercise 3 & 4: Circular Array Flange Detail Modal -->
+            <!-- Dual-Boss Offset Bracket Detail Modal -->
+      <div id="modal-project-offsetbracket" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer with swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950 flex items-center justify-center overflow-hidden">
+            <img id="modal-offsetbracket-main" src="practice_offsetbracket_model.png" alt="Dual-Boss Offset Bracket" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-offsetbracket-view-label">3D MODEL</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalOffsetbracketView('practice_offsetbracket_model.png', '3D MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-offsetbracket-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              3D MODEL
+            </button>
+            <button onclick="switchModalOffsetbracketView('practice_offsetbracket_blueprint.png', 'BLUEPRINT DRAWING', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-offsetbracket-thumb-btn">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              BLUEPRINT
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // PDF BLUEPRINT PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Dual-Boss Offset Bracket</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled a structural dual-bearing shaft support / offset mounting bracket in SOLIDWORKS using metric parameters, integrating varying hub projections, relief geometry, and filleted transitions.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Extruded the base flange (140 mm x 85 mm x 18 mm thickness) with a 2 mm underneath channel cut to create landing pads. Constructed the vertical upright web (12 mm thickness) featuring draft angles on the back. Extruded the two offset hub bosses (lower boss: center height 56 mm, Ø40 mm outer, Ø20 mm hole; higher boss: center height 118 mm, Ø50 mm outer, Ø30 mm hole, offset by 50 mm). Joined them with a R25 tangent fillet arc.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Dual Hubs, Upright Support & Underneath Relief Cut</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">Cast Carbon Steel</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Dimension Spec:</span>
+                <span class="text-slate-300">Metric (mm) Part 6 Blueprint</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: DUAL-BOSS OFFSET BRACKET</span>
+            <span>TYPE: BLUEPRINT PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
       <div id="modal-project-ex3" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
         <!-- Left: Image Viewer with swapper -->
         <div class="lg:w-1/2 flex flex-col justify-between gap-3">
@@ -5674,7 +5787,20 @@
       // Hide all case study elements first
       document.querySelectorAll('[id^="modal-project-"]').forEach(el => el.classList.add('hidden'));
       
-            // Reset ex3 modal preview default state
+                  // Reset offsetbracket modal preview default state
+      if (projectId === 'offsetbracket') {
+        document.getElementById('modal-offsetbracket-main').src = 'practice_offsetbracket_model.png';
+        document.getElementById('modal-offsetbracket-view-label').innerText = '3D MODEL';
+        document.querySelectorAll('.modal-offsetbracket-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-offsetbracket-thumb-btn font-bold";
+          } else {
+            btn.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-offsetbracket-thumb-btn";
+          }
+        });
+      }
+
+      // Reset ex3 modal preview default state
       if (projectId === 'ex3') {
         document.getElementById('modal-ex3-main').src = 'practice_ex3_model.png';
         document.getElementById('modal-ex3-view-label').innerText = '3D MODEL';
@@ -6202,6 +6328,16 @@
         b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex2-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex2-thumb-btn font-bold";
+    }
+
+        function switchModalOffsetbracketView(src, label, btn) {
+      document.getElementById('modal-offsetbracket-main').src = src;
+      document.getElementById('modal-offsetbracket-view-label').innerText = label;
+      
+      document.querySelectorAll('.modal-offsetbracket-thumb-btn').forEach(b => {
+        b.className = "border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-offsetbracket-thumb-btn";
+      });
+      btn.className = "border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-offsetbracket-thumb-btn font-bold";
     }
 
     function switchModalEx3View(src, label, btn) {
