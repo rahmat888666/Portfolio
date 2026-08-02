@@ -613,12 +613,7 @@
           <!-- Tile 6: Tibia Bone Fracture Model -->
           <div onclick="openProjectModal('tibia')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 project-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="academic">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
-              <i data-lucide="activity" class="w-10 h-10 text-blue-500/20 absolute"></i>
-              <svg class="w-12 h-16 text-cyanAccent/70" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
-                <path d="M48 10 C42 12, 38 22, 46 28 L46 72 C38 78, 42 88, 50 88 C58 88, 62 78, 54 72 L54 28 C62 22, 58 12, 50 10 Z" />
-                <path d="M43 45 L55 49" stroke="#ef4444" stroke-width="2" />
-                <path d="M44 50 L56 54" stroke="#ef4444" stroke-dasharray="2 2" />
-              </svg>
+              <img src="tibia_project_report.png" alt="Tibia Fracture Model" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">MEDICAL</span>
             </div>
             <div class="flex flex-col gap-0.5">
@@ -2298,11 +2293,12 @@
       <div id="modal-project-tibia" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
         <!-- Left: Interactive CAD Widget -->
         <div class="lg:w-1/2 flex flex-col gap-4">
-          <div class="cad-workbench-bg rounded h-[320px] md:h-[400px] flex items-center justify-center relative">
+          <div class="cad-workbench-bg rounded h-[320px] md:h-[400px] flex items-center justify-center relative overflow-hidden">
             <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
             <div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
-            <div class="absolute top-3 left-4 font-mono text-[9px] text-cyanAccent select-none">MODEL: ORTHO_TIBIA_BONE_MODEL.STL</div>
+            <div id="modal-tibia-title" class="absolute top-3 left-4 font-mono text-[9px] text-cyanAccent select-none">MODEL: ORTHO_TIBIA_BONE_MODEL.STL</div>
             
+            <!-- SVG digital model -->
             <svg id="modal-svg-bone" class="w-64 h-64 md:w-80 md:h-80 text-blue-400 transition-all duration-300" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
               <path d="M46 10 C38 12, 34 22, 44 28 L46 72 C35 78, 38 88, 50 88 C62 88, 65 78, 54 72 L54 28 C64 22, 60 12, 46 10 Z" fill="rgba(255,255,255,0.02)" />
               <path id="modal-frac-plane-1" d="M43 45 L55 49" stroke="rgba(239, 68, 68, 0.7)" stroke-width="1.2" class="modal-bone-slice" />
@@ -2314,15 +2310,39 @@
                 <text x="24" y="50" fill="#06b6d4" font-size="3" font-family="monospace" text-anchor="middle" transform="rotate(-90 24 50)">STUDY HEIGHT: 345.00mm</text>
               </g>
             </svg>
+
+            <!-- Real Photo Display (Hidden by default) -->
+            <img id="modal-tibia-photo" src="" alt="Tibia Photo" class="hidden max-h-full max-w-full object-contain p-4 rounded transition-all duration-300">
           </div>
           
-          <div class="bento-card p-4 rounded font-mono text-xs flex flex-col gap-2 bg-slate-950/40">
+          <!-- Slider Container -->
+          <div id="modal-tibia-slider-container" class="bento-card p-4 rounded font-mono text-xs flex flex-col gap-2 bg-slate-950/40">
             <span class="text-cyanAccent font-bold">FRACTURE DEPTH SLICE</span>
             <input type="range" id="modal-section-slider" min="0" max="100" value="0" class="w-full accent-cyanAccent cursor-pointer">
             <div class="flex justify-between text-[10px] text-slate-500 mt-1">
               <span>0% (CLEAN)</span>
               <span>100% (SECTIONED)</span>
             </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-4 gap-2 font-mono text-[9px]">
+            <button onclick="switchTibiaModalView('digital', this)" class="border-2 border-cyanAccent bg-slate-900 py-1.5 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-100 modal-tibia-thumb-btn font-bold">
+              <i data-lucide="cpu" class="w-3 h-3 text-cyanAccent"></i>
+              3D CAD SLIDER
+            </button>
+            <button onclick="switchTibiaModalView('report', this)" class="border-2 border-slate-800 bg-slate-900 py-1.5 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-tibia-thumb-btn">
+              <i data-lucide="file-text" class="w-3 h-3"></i>
+              PRINT REPORT
+            </button>
+            <button onclick="switchTibiaModalView('full', this)" class="border-2 border-slate-800 bg-slate-900 py-1.5 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-tibia-thumb-btn">
+              <i data-lucide="image" class="w-3 h-3"></i>
+              SOLID PRINT
+            </button>
+            <button onclick="switchTibiaModalView('pieces', this)" class="border-2 border-slate-800 bg-slate-900 py-1.5 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-tibia-thumb-btn">
+              <i data-lucide="scissors" class="w-3 h-3"></i>
+              FRACTURED
+            </button>
           </div>
         </div>
         
@@ -6813,6 +6833,47 @@
         b.className = "border border-slate-800 bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-scooter-thumb-btn";
       });
       btn.className = "border-2 border-cyanAccent bg-slate-900 aspect-square rounded p-1 flex items-center justify-center hover:border-cyanAccent transition-all modal-scooter-thumb-btn";
+    }
+
+    // Tibia Modal View Switcher (CAD Workbench vs Real Print Photos)
+    function switchTibiaModalView(viewType, btnElement) {
+      const svgBone = document.getElementById('modal-svg-bone');
+      const tibiaPhoto = document.getElementById('modal-tibia-photo');
+      const titleEl = document.getElementById('modal-tibia-title');
+      const sliderContainer = document.getElementById('modal-tibia-slider-container');
+      
+      // Update active button styling
+      document.querySelectorAll('.modal-tibia-thumb-btn').forEach(btn => {
+        btn.className = "border border-slate-800 bg-slate-900 py-1.5 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-400 modal-tibia-thumb-btn";
+        const icon = btn.querySelector('i');
+        if (icon) icon.classList.remove('text-cyanAccent');
+      });
+      
+      btnElement.className = "border-2 border-cyanAccent bg-slate-900 py-1.5 rounded flex items-center justify-center gap-1 hover:border-cyanAccent transition-all text-slate-100 modal-tibia-thumb-btn font-bold";
+      const activeIcon = btnElement.querySelector('i');
+      if (activeIcon) activeIcon.classList.add('text-cyanAccent');
+      
+      if (viewType === 'digital') {
+        svgBone.classList.remove('hidden');
+        tibiaPhoto.classList.add('hidden');
+        sliderContainer.classList.remove('hidden');
+        titleEl.textContent = 'MODEL: ORTHO_TIBIA_BONE_MODEL.STL';
+      } else {
+        svgBone.classList.add('hidden');
+        tibiaPhoto.classList.remove('hidden');
+        sliderContainer.classList.add('hidden');
+        
+        if (viewType === 'report') {
+          tibiaPhoto.src = 'tibia_project_report.png';
+          titleEl.textContent = 'PHOTO: 3D PRINTING FRACTURE REPORT';
+        } else if (viewType === 'full') {
+          tibiaPhoto.src = 'tibia_project_full.jpg';
+          titleEl.textContent = 'PHOTO: SOLID 3D PRINTED TIBIA MODEL';
+        } else if (viewType === 'pieces') {
+          tibiaPhoto.src = 'tibia_project_pieces.jpg';
+          titleEl.textContent = 'PHOTO: FRACTURED 3D PRINTED PIECES';
+        }
+      }
     }
 
     // Floating Particles Canvas
