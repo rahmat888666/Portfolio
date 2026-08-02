@@ -3208,15 +3208,15 @@
 
         <!-- Gallery Grid of Theory Sheets (Placeholders ready to be populated with real images) -->
         <div id="theory-sheets-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs mt-2">
-          <!-- Placeholder 1: Thermodynamics -->
-          <div class="bento-card p-4 rounded flex flex-col gap-3 bg-slate-950/40 border border-slate-900 select-none opacity-80 hover:opacity-100 hover:border-cyanAccent transition-all duration-300">
-            <div class="aspect-[4/3] w-full border border-dashed border-slate-800 rounded bg-slate-950/60 flex items-center justify-center relative overflow-hidden">
-              <div class="absolute top-2 left-2 text-[8px] text-cyanAccent uppercase tracking-widest font-bold font-mono bg-slate-950/80 px-1 py-0.5 rounded border border-cyanAccent/30">THERMO</div>
-              <i data-lucide="image" class="w-8 h-8 text-slate-800 animate-pulse"></i>
+          <!-- Card 1: Sheet Metal K-Factor (Active) -->
+          <div onclick="openProjectModal('theory-kfactor')" class="bento-card p-4 rounded flex flex-col gap-3 bg-slate-950/40 border border-slate-900 cursor-pointer hover:border-cyanAccent transition-all duration-300 group">
+            <div class="aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950/60 flex items-center justify-center relative overflow-hidden">
+              <img src="theory_sheetmetal_kfactor.jpg" alt="Sheet Metal K-Factor" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <span class="absolute top-2 left-2 text-[8px] text-cyanAccent uppercase tracking-widest font-bold font-mono bg-slate-950/80 px-1 py-0.5 rounded border border-cyanAccent/30">ACTIVE SHEET</span>
             </div>
             <div class="flex flex-col gap-1">
-              <h4 class="font-technical text-xs font-bold text-slate-200 uppercase">Thermodynamics & Heat Transfer</h4>
-              <p class="text-slate-400 text-[10px] leading-relaxed font-sans">Formula sheet & cycle calculations: Rankine, Otto, Diesel, and Heat Exchanger equations.</p>
+              <h4 class="font-technical text-xs font-bold text-slate-200 uppercase group-hover:text-cyanAccent transition-colors">Sheet Metal K-Factor</h4>
+              <p class="text-slate-400 text-[10px] leading-relaxed font-sans">Formula sheet & calculations: Neutral Axis position, bending allowance, and flat pattern generation.</p>
             </div>
           </div>
 
@@ -3242,6 +3242,60 @@
               <h4 class="font-technical text-xs font-bold text-slate-200 uppercase">Fluid Mechanics & Hydraulics</h4>
               <p class="text-slate-400 text-[10px] leading-relaxed font-sans">Bernoulli's equations, pipe friction factors (Moody chart), and pump sizing rules.</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14. THEORY SHEET DETAIL MODAL: K-FACTOR -->
+      <div id="modal-project-theory-kfactor" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left Side: Infographic view -->
+        <div class="lg:w-1/2 flex flex-col gap-4">
+          <div class="cad-workbench-bg rounded h-[360px] md:h-[480px] flex items-center justify-center relative overflow-hidden bg-slate-950/60 border border-slate-800">
+            <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
+            <div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+            <div class="absolute top-3 left-4 font-mono text-[9px] text-cyanAccent select-none">FILE: THEORY_SHEETMETAL_KFACTOR.JPG</div>
+            <div class="absolute top-3 right-4 font-mono text-[9px] text-slate-500 select-none">TYPE: INFOGRAPHIC STUDY SHEET</div>
+            
+            <img src="theory_sheetmetal_kfactor.jpg" alt="Sheet Metal K-Factor Theory Infographic" class="max-h-full max-w-full object-contain p-4 hover:scale-105 transition-transform duration-300">
+          </div>
+        </div>
+
+        <!-- Right Side: Details & Explanation -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">SHEET METAL THEORY // INFOGRAPHIC STUDY SHEET</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">Sheet Metal K-Factor</h2>
+            </div>
+            
+            <p class="text-slate-400 text-xs font-sans leading-relaxed">
+              An essential reference infographic explaining the <strong>K-Factor</strong> in sheet metal design. It acts as the mathematical multiplier that determines where the neutral axis lies during a bend, directly influencing flat pattern generation and bend allowance calculations.
+            </p>
+
+            <div class="border-t border-slate-800/80 pt-4 flex flex-col gap-3 font-mono text-xs">
+              <span class="text-cyanAccent font-bold uppercase tracking-wider">Core Theory Takeaways</span>
+              <ul class="list-disc list-inside text-slate-300 text-[11px] space-y-2 leading-relaxed font-sans">
+                <li><strong>What is it?</strong> It represents the position of the Neutral Axis relative to the sheet thickness.</li>
+                <li><strong>Neutral Axis:</strong> The middle layer of sheet metal that remains unstretched and uncompressed after bending.</li>
+                <li><strong>Formula:</strong> K-Factor = t / T (Distance of neutral axis from inside face t divided by sheet thickness T).</li>
+                <li><strong>Common Values:</strong> Typically between 0 and 0.5. Standard default in SOLIDWORKS and Fusion 360 is <strong>0.33</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <div class="bento-card p-4 rounded font-mono text-xs bg-slate-950/40 border border-slate-900">
+              <span class="text-cyanAccent font-bold">INTERVIEW & PRACTICAL TIP</span>
+              <p class="text-slate-400 text-[10px] mt-1.5 leading-relaxed font-sans">
+                <strong>Q:</strong> What happens to the flat length if the K-Factor is too low?<br>
+                <strong>A:</strong> A low K-Factor (0.25 - 0.30) means the neutral axis is closer to the inside face of the bend, resulting in a <strong>shortened</strong> calculated flat length. A higher K-Factor shifts it towards the center, making the flat length longer.
+              </p>
+            </div>
+            
+            <a href="theory_sheetmetal_kfactor.jpg" download="theory_sheetmetal_kfactor.jpg" class="w-full py-3 bg-gradient-to-r from-blue-600 to-cyanAccent hover:from-blue-500 hover:to-cyan-400 text-white font-technical text-xs font-bold uppercase tracking-wider rounded shadow-lg hover:shadow-cyanAccent/20 transition-all duration-300 flex items-center justify-center gap-2 group">
+              <i data-lucide="download" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+              Download Full High-Res Sheet
+            </a>
           </div>
         </div>
       </div>
