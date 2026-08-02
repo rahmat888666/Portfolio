@@ -2158,6 +2158,24 @@
           </a>
         </div>
       </div>
+
+      <!-- Theory Archive Launcher (Just like Master CAD Archive) -->
+      <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 p-5 bento-card rounded-lg bg-slate-950/40 max-w-2xl mx-auto w-full border border-slate-800">
+        <div class="flex items-center gap-4 text-left">
+          <div class="w-10 h-10 rounded bg-cyanAccent/10 border border-cyanAccent/30 flex items-center justify-center text-cyanAccent flex-shrink-0">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <div class="flex flex-col">
+            <h4 class="font-technical text-sm font-bold text-slate-200 uppercase">Theory & Formulas</h4>
+            <p class="text-slate-400 text-[10px] font-sans">Engineering formula sheets, calculation notes & summaries.</p>
+          </div>
+        </div>
+        <button onclick="openProjectModal('theory-archive')" class="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyanAccent hover:from-blue-500 hover:to-cyan-400 text-white font-technical text-xs font-bold uppercase tracking-wider rounded shadow-lg hover:shadow-cyanAccent/20 transition-all duration-300 flex items-center gap-2 whitespace-nowrap group">
+          <i data-lucide="book-open" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+          EXPLORE THEORY
+        </button>
+      </div>
+
     </div>
   </section>
 
@@ -3170,6 +3188,60 @@
           <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
             <span>FILE: KIDS-KICK-SCOOTER-3W.SLDASM</span>
             <span>SIMULATION: MOTION STUDY MP4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13. THEORY ARCHIVE DIRECTORY MODAL -->
+      <div id="modal-project-theory-archive" class="hidden flex flex-col gap-6 text-left max-w-5xl mx-auto w-full">
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
+              <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest font-bold">EDUCATIONAL RESOURCES // CORE ENGINEERING KNOWLEDGE</span>
+            </div>
+            <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase">Engineering Theory & Notes</h2>
+            <p class="text-slate-400 text-xs mt-1">A compiled directory of engineering theory guides, formula references, and calculations study sheets.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Grid of Theory Sheets (Placeholders ready to be populated with real images) -->
+        <div id="theory-sheets-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs mt-2">
+          <!-- Placeholder 1: Thermodynamics -->
+          <div class="bento-card p-4 rounded flex flex-col gap-3 bg-slate-950/40 border border-slate-900 select-none opacity-80 hover:opacity-100 hover:border-cyanAccent transition-all duration-300">
+            <div class="aspect-[4/3] w-full border border-dashed border-slate-800 rounded bg-slate-950/60 flex items-center justify-center relative overflow-hidden">
+              <div class="absolute top-2 left-2 text-[8px] text-cyanAccent uppercase tracking-widest font-bold font-mono bg-slate-950/80 px-1 py-0.5 rounded border border-cyanAccent/30">THERMO</div>
+              <i data-lucide="image" class="w-8 h-8 text-slate-800 animate-pulse"></i>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="font-technical text-xs font-bold text-slate-200 uppercase">Thermodynamics & Heat Transfer</h4>
+              <p class="text-slate-400 text-[10px] leading-relaxed font-sans">Formula sheet & cycle calculations: Rankine, Otto, Diesel, and Heat Exchanger equations.</p>
+            </div>
+          </div>
+
+          <!-- Placeholder 2: Strength of Materials -->
+          <div class="bento-card p-4 rounded flex flex-col gap-3 bg-slate-950/40 border border-slate-900 select-none opacity-80 hover:opacity-100 hover:border-cyanAccent transition-all duration-300">
+            <div class="aspect-[4/3] w-full border border-dashed border-slate-800 rounded bg-slate-950/60 flex items-center justify-center relative overflow-hidden">
+              <div class="absolute top-2 left-2 text-[8px] text-cyanAccent uppercase tracking-widest font-bold font-mono bg-slate-950/80 px-1 py-0.5 rounded border border-cyanAccent/30">FEA // SOM</div>
+              <i data-lucide="image" class="w-8 h-8 text-slate-800 animate-pulse"></i>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="font-technical text-xs font-bold text-slate-200 uppercase">Strength of Materials</h4>
+              <p class="text-slate-400 text-[10px] leading-relaxed font-sans">Stress-strain charts, Mohr's circle analysis, and beam deflection formulas.</p>
+            </div>
+          </div>
+
+          <!-- Placeholder 3: Fluid Mechanics -->
+          <div class="bento-card p-4 rounded flex flex-col gap-3 bg-slate-950/40 border border-slate-900 select-none opacity-80 hover:opacity-100 hover:border-cyanAccent transition-all duration-300">
+            <div class="aspect-[4/3] w-full border border-dashed border-slate-800 rounded bg-slate-950/60 flex items-center justify-center relative overflow-hidden">
+              <div class="absolute top-2 left-2 text-[8px] text-cyanAccent uppercase tracking-widest font-bold font-mono bg-slate-950/80 px-1 py-0.5 rounded border border-cyanAccent/30">HYDRAULICS</div>
+              <i data-lucide="image" class="w-8 h-8 text-slate-800 animate-pulse"></i>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="font-technical text-xs font-bold text-slate-200 uppercase">Fluid Mechanics & Hydraulics</h4>
+              <p class="text-slate-400 text-[10px] leading-relaxed font-sans">Bernoulli's equations, pipe friction factors (Moody chart), and pump sizing rules.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -5809,7 +5881,7 @@
       const prevBtn = document.getElementById('modal-nav-prev');
       const nextBtn = document.getElementById('modal-nav-next');
       if (prevBtn && nextBtn) {
-        if (projectId === 'iocl' || projectId === 'cad-archive') {
+        if (projectId === 'iocl' || projectId === 'cad-archive' || projectId === 'theory-archive') {
           prevBtn.style.display = 'none';
           nextBtn.style.display = 'none';
         } else {
