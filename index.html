@@ -1500,11 +1500,12 @@
         <div class="flex items-center gap-3 self-start md:self-auto">
           <!-- Filter Tabs -->
           <div class="flex flex-wrap gap-1 bg-slate-950/80 border border-slate-800 p-1 rounded font-mono text-[10px]">
-            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [30]</button>
-            <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [11]</button>
-            <button onclick="filterSandbox('solidworks')" id="tab-sandbox-solidworks" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">SOLIDWORKS [6]</button>
-            <button onclick="filterSandbox('fusion')" id="tab-sandbox-fusion" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">Fusion 360 [6]</button>
-            <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [7]</button>
+            <button onclick="filterSandbox('all')" id="tab-sandbox-all" class="px-3 py-1.5 rounded text-slate-100 bg-blue-600 font-bold uppercase transition-all sandbox-tab-btn">All [33]</button>
+            <button onclick="filterSandbox('youtube')" id="tab-sandbox-youtube" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">YouTube Tutorials [7]</button>
+            <button onclick="filterSandbox('solidworks')" id="tab-sandbox-solidworks" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">SOLIDWORKS [3]</button>
+            <button onclick="filterSandbox('sheetmetal')" id="tab-sandbox-sheetmetal" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn font-bold text-cyanAccent">Sheet Metal [5]</button>
+            <button onclick="filterSandbox('fusion')" id="tab-sandbox-fusion" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">Fusion 360 [3]</button>
+            <button onclick="filterSandbox('pdf')" id="tab-sandbox-pdf" class="px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 uppercase transition-all sandbox-tab-btn">PDF Blueprints [15]</button>
           </div>
 
           <!-- Slider Arrow Buttons -->
@@ -1642,7 +1643,7 @@
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>09</span>Ex. 1-6: Clamping Plate</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS 2D Sketching</span>
             </div>
-          </div><div onclick="openProjectModal('miterflange')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="youtube">
+          </div><div onclick="openProjectModal('miterflange')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="sheetmetal">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_miter_folded.png" alt="Miter Flange" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
@@ -1654,7 +1655,7 @@
               <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-blue-400 transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>10</span>Miter Flange Tray</h4>
               <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS Sheet Metal</span>
             </div>
-          </div><div onclick="openProjectModal('solidsheet')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="youtube">
+          </div><div onclick="openProjectModal('solidsheet')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="sheetmetal">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_sheetmetal_folded.png" alt="Solid to Sheet Metal" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">YOUTUBE</span>
@@ -1706,7 +1707,7 @@
           </div>
 
           <!-- Sandbox Tile: Sheet Metal Utility Enclosure (SOLIDWORKS) -->
-          <div onclick="openProjectModal('sheetmetal')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
+          <div onclick="openProjectModal('sheetmetal')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="sheetmetal">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_sheetmetal_model.png" alt="Sheet Metal Enclosure" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
@@ -1721,7 +1722,7 @@
           </div>
 
           <!-- Sandbox Tile: Sheet Metal Connector Bracket (SOLIDWORKS) -->
-          <div onclick="openProjectModal('bracket')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
+          <div onclick="openProjectModal('bracket')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="sheetmetal">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_bracket_model.png" alt="Sheet Metal Bracket" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
@@ -1736,7 +1737,7 @@
           </div>
 
           <!-- Sandbox Tile: Slotted Perforated Cylinder (SOLIDWORKS) -->
-          <div onclick="openProjectModal('cylinder')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="solidworks">
+          <div onclick="openProjectModal('cylinder')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 sandbox-item cursor-pointer hover:border-blue-500/80 hover:-translate-y-1 transition-all duration-300 group" data-category="sheetmetal">
             <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
               <img src="practice_cylinder_model.png" alt="Slotted Perforated Cylinder" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
               <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-blue-400 bg-slate-950/90 border border-blue-500/30 px-1 py-0.5 rounded font-bold">SOLIDWORKS</span>
@@ -3173,8 +3174,9 @@
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap gap-2 font-mono text-[10px]">
           <button onclick="filterCadArchiveCategory('all')" id="archive-tab-all" class="px-3 py-1 rounded bg-blue-600 text-white font-bold uppercase transition-all archive-tab-btn">ALL REPOSITORY [33]</button>
-          <button onclick="filterCadArchiveCategory('youtube')" id="archive-tab-youtube" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">YOUTUBE TUTORIALS [9]</button>
-          <button onclick="filterCadArchiveCategory('solidworks')" id="archive-tab-solidworks" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">SOLIDWORKS [6]</button>
+          <button onclick="filterCadArchiveCategory('youtube')" id="archive-tab-youtube" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">YOUTUBE TUTORIALS [7]</button>
+          <button onclick="filterCadArchiveCategory('solidworks')" id="archive-tab-solidworks" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">SOLIDWORKS [3]</button>
+          <button onclick="filterCadArchiveCategory('sheetmetal')" id="archive-tab-sheetmetal" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn font-bold text-cyanAccent">SHEET METAL [5]</button>
           <button onclick="filterCadArchiveCategory('fusion')" id="archive-tab-fusion" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">FUSION 360 [3]</button>
           <button onclick="filterCadArchiveCategory('pdf')" id="archive-tab-pdf" class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 uppercase transition-all archive-tab-btn">PDF BLUEPRINTS [15]</button>
         </div>
@@ -3335,7 +3337,7 @@
             </div>
 
           <!-- Row 8: Miter Flange Sheet Metal Tray -->
-            <div onclick="openProjectModal('miterflange')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="youtube" data-search="miter flange base flange sheet metal folded tray flat pattern section view solidworks tutorial youtube video">
+            <div onclick="openProjectModal('miterflange')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="sheetmetal" data-search="miter flange base flange sheet metal folded tray flat pattern section view solidworks tutorial youtube video">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
                   <img src="practice_miter_folded.png" alt="Miter Flange" class="max-h-full max-w-full object-contain">
@@ -3352,7 +3354,7 @@
             </div>
 
           <!-- Row 8: Solid to Sheet Metal Conversion -->
-            <div onclick="openProjectModal('solidsheet')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="youtube" data-search="solid to sheet metal conversion solidworks bend rip parameters flat pattern template youtube video tutorial">
+            <div onclick="openProjectModal('solidsheet')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="sheetmetal" data-search="solid to sheet metal conversion solidworks bend rip parameters flat pattern template youtube video tutorial">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
                   <img src="practice_sheetmetal_folded.png" alt="Solid to Sheet Metal" class="max-h-full max-w-full object-contain">
@@ -3369,7 +3371,7 @@
             </div>
 
           <!-- Row: Sheet Metal Enclosure -->
-            <div onclick="openProjectModal('sheetmetal')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="solidworks" data-search="sheet metal utility enclosure solidworks flat pattern louvers forming tool base flange youtube">
+            <div onclick="openProjectModal('sheetmetal')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="sheetmetal" data-search="sheet metal utility enclosure solidworks flat pattern louvers forming tool base flange youtube">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
                   <img src="practice_sheetmetal_model.png" alt="Sheet Metal Enclosure" class="max-h-full max-w-full object-contain">
@@ -3386,7 +3388,7 @@
             </div>
 
           <!-- Row: Sheet Metal Bracket -->
-            <div onclick="openProjectModal('bracket')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="solidworks" data-search="sheet metal connector bracket solidworks flat pattern edge flange bend gusset forming tool hole wizard youtube">
+            <div onclick="openProjectModal('bracket')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="sheetmetal" data-search="sheet metal connector bracket solidworks flat pattern edge flange bend gusset forming tool hole wizard youtube">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
                   <img src="practice_bracket_model.png" alt="Sheet Metal Bracket" class="max-h-full max-w-full object-contain">
@@ -3403,7 +3405,7 @@
             </div>
 
           <!-- Row: Slotted Perforated Cylinder -->
-            <div onclick="openProjectModal('cylinder')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="solidworks" data-search="slotted perforated sheet metal cylinder solidworks flat pattern roll bend loft bend linear pattern cutouts youtube">
+            <div onclick="openProjectModal('cylinder')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-blue-500/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="sheetmetal" data-search="slotted perforated sheet metal cylinder solidworks flat pattern roll bend loft bend linear pattern cutouts youtube">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
                   <img src="practice_cylinder_model.png" alt="Slotted Perforated Cylinder" class="max-h-full max-w-full object-contain">
