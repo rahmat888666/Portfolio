@@ -2186,6 +2186,14 @@
   <!-- Modal Overlay Wrapper for Case Studies -->
   <div id="project-modal" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md overflow-y-auto p-4 md:p-8 flex items-center justify-center">
     
+    <!-- Floating Prev/Next Navigation Buttons (Desktop only, hidden on mobile) -->
+    <button id="modal-nav-prev" onclick="navigateModal('prev')" class="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-slate-900/80 hover:bg-slate-950 border border-slate-800 hover:border-cyanAccent text-slate-400 hover:text-cyanAccent items-center justify-center transition-all shadow-xl shadow-black/40 group" title="Previous Project (Left Arrow)">
+      <i data-lucide="chevron-left" class="w-6 h-6 group-hover:-translate-x-0.5 transition-transform"></i>
+    </button>
+    <button id="modal-nav-next" onclick="navigateModal('next')" class="hidden md:flex fixed right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-slate-900/80 hover:bg-slate-950 border border-slate-800 hover:border-cyanAccent text-slate-400 hover:text-cyanAccent items-center justify-center transition-all shadow-xl shadow-black/40 group" title="Next Project (Right Arrow)">
+      <i data-lucide="chevron-right" class="w-6 h-6 group-hover:translate-x-0.5 transition-transform"></i>
+    </button>
+
     <!-- Modal Inner Frame -->
     <div class="relative w-full max-w-6xl bento-card rounded-lg bg-slate-900/95 border border-blue-500/20 shadow-2xl p-6 md:p-8 flex flex-col gap-6 max-h-[90vh] overflow-y-auto">
       
@@ -5792,8 +5800,24 @@
     // Modal Overlay Control Logic
     const projectModal = document.getElementById('project-modal');
     let openedFromArchive = false;
+    let currentModalProjectId = null;
     
     function openProjectModal(projectId) {
+      currentModalProjectId = projectId;
+
+      // Hide or show navigation buttons based on whether the project is in the carousel
+      const prevBtn = document.getElementById('modal-nav-prev');
+      const nextBtn = document.getElementById('modal-nav-next');
+      if (prevBtn && nextBtn) {
+        if (projectId === 'iocl' || projectId === 'cad-archive') {
+          prevBtn.style.display = 'none';
+          nextBtn.style.display = 'none';
+        } else {
+          prevBtn.style.display = '';
+          nextBtn.style.display = '';
+        }
+      }
+
       const archiveModal = document.getElementById('modal-project-cad-archive');
       const isArchiveOpen = archiveModal && !archiveModal.classList.contains('hidden');
       
@@ -6655,6 +6679,86 @@
         }
       });
     }
+
+    // Modal Horizontal Swiper & Arrow Key Navigation
+    function navigateModal(direction) {
+      if (!currentModalProjectId) return;
+      
+      const projectOrder = [
+        // Flagship Projects
+        'scooter', 'kick-scooter', 'iris', 'fsae', 'motoframe', 'tibia',
+        // Sandbox Projects
+        'engine', 'rover', 'drone', 'wheelrim', 'wirebowl', 'propeller', 'tjoint', 'clevishanger', 'ex6', 'miterflange', 'solidsheet', 'pitcher', 'vase', 'duster', 'sheetmetal', 'bracket', 'cylinder', 'legobrick', 'glassbottle', 'paperclip', 'sleeve', 'clevis', 'offsetbracket', 'ex3', 'ex2', 'roller', 'lbracket', 'ex1', 'ex11', 'ex10', 'ex8', 'guideblock', 'pipecradle'
+      ];
+      
+      let currentIndex = projectOrder.indexOf(currentModalProjectId);
+      if (currentIndex === -1) return; // Ignore for iocl or cad-archive
+      
+      let nextIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+      if (nextIndex >= projectOrder.length) nextIndex = 0;
+      if (nextIndex < 0) nextIndex = projectOrder.length - 1;
+      
+      const nextProjectId = projectOrder[nextIndex];
+      const modalInner = document.querySelector('#project-modal > div.relative');
+      
+      if (modalInner) {
+        gsap.to(modalInner, {
+          opacity: 0,
+          y: -15,
+          duration: 0.2,
+          ease: "power2.in",
+          onComplete: () => {
+            openProjectModal(nextProjectId);
+            gsap.fromTo(modalInner, 
+              { opacity: 0, y: 15 },
+              { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
+            );
+          }
+        });
+      } else {
+        openProjectModal(nextProjectId);
+      }
+    }
+
+    // Touch Swipe Gesture Detection
+    let touchStartX = 0;
+    let touchStartY = 0;
+    
+    document.getElementById('project-modal').addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    
+    document.getElementById('project-modal').addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const touchEndY = e.changedTouches[0].screenY;
+      
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+      
+      // Check horizontal swipe meeting a minimum threshold of 75px
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 75) {
+        if (diffX > 0) {
+          navigateModal('prev'); // Swipe Right -> Prev
+        } else {
+          navigateModal('next'); // Swipe Left -> Next
+        }
+      }
+    }, { passive: true });
+
+    // Keyboard Navigation support
+    window.addEventListener('keydown', (e) => {
+      const modalWrapper = document.getElementById('project-modal');
+      if (modalWrapper && !modalWrapper.classList.contains('hidden')) {
+        if (e.key === 'ArrowRight') {
+          navigateModal('next');
+        } else if (e.key === 'ArrowLeft') {
+          navigateModal('prev');
+        } else if (e.key === 'Escape') {
+          closeProjectModal();
+        }
+      }
+    });
 
     // Switch between Interactive CAD and Video player inside Iris modal
     function switchIrisModalView(viewType) {
