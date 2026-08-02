@@ -6045,7 +6045,7 @@
       const prevBtn = document.getElementById('modal-nav-prev');
       const nextBtn = document.getElementById('modal-nav-next');
       if (prevBtn && nextBtn) {
-        if (projectId === 'iocl' || projectId === 'cad-archive' || projectId === 'theory-archive' || projectId === 'theory-kfactor' || projectId === 'theory-bendradius') {
+        if (projectId === 'iocl' || projectId === 'cad-archive' || projectId === 'theory-archive') {
           prevBtn.style.display = 'none';
           nextBtn.style.display = 'none';
         } else {
@@ -6925,15 +6925,20 @@
     function navigateModal(direction) {
       if (!currentModalProjectId) return;
       
-      const projectOrder = [
-        // Flagship Projects
-        'scooter', 'kick-scooter', 'iris', 'fsae', 'motoframe', 'tibia',
-        // Sandbox Projects
-        'engine', 'rover', 'drone', 'wheelrim', 'wirebowl', 'propeller', 'tjoint', 'clevishanger', 'ex6', 'miterflange', 'solidsheet', 'pitcher', 'vase', 'duster', 'sheetmetal', 'bracket', 'cylinder', 'legobrick', 'glassbottle', 'paperclip', 'sleeve', 'clevis', 'offsetbracket', 'ex3', 'ex2', 'roller', 'lbracket', 'ex1', 'ex11', 'ex10', 'ex8', 'guideblock', 'pipecradle'
-      ];
+      let projectOrder = [];
+      if (currentModalProjectId === 'theory-kfactor' || currentModalProjectId === 'theory-bendradius') {
+        projectOrder = ['theory-kfactor', 'theory-bendradius'];
+      } else {
+        projectOrder = [
+          // Flagship Projects
+          'scooter', 'kick-scooter', 'iris', 'fsae', 'motoframe', 'tibia',
+          // Sandbox Projects
+          'engine', 'rover', 'drone', 'wheelrim', 'wirebowl', 'propeller', 'tjoint', 'clevishanger', 'ex6', 'miterflange', 'solidsheet', 'pitcher', 'vase', 'duster', 'sheetmetal', 'bracket', 'cylinder', 'legobrick', 'glassbottle', 'paperclip', 'sleeve', 'clevis', 'offsetbracket', 'ex3', 'ex2', 'roller', 'lbracket', 'ex1', 'ex11', 'ex10', 'ex8', 'guideblock', 'pipecradle'
+        ];
+      }
       
       let currentIndex = projectOrder.indexOf(currentModalProjectId);
-      if (currentIndex === -1) return; // Ignore for iocl or cad-archive
+      if (currentIndex === -1) return; // Ignore for iocl or archives
       
       let nextIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
       if (nextIndex >= projectOrder.length) nextIndex = 0;
