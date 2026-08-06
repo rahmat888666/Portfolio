@@ -1876,6 +1876,21 @@
             </div>
           </div>
 
+          <!-- Row 30: Ex. 2 Bearing Cradle Block -->
+          <div onclick="openProjectModal('ex2cradle')" class="w-52 flex-shrink-0 snap-start bento-card p-3 rounded-lg flex flex-col gap-2.5 cursor-pointer hover:border-cyanAccent/80 hover:-translate-y-1 transition-all duration-300 group sandbox-item" data-category="pdf">
+            <div class="aspect-square w-full border border-slate-800 rounded bg-slate-950 relative overflow-hidden select-none flex items-center justify-center">
+              <img src="practice_ex2cradle_model.png" alt="Bearing Cradle Block" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold">PDF BLUEPRINT</span>
+              <span class="absolute bottom-1.5 right-1.5 font-mono text-[7px] text-cyanAccent bg-slate-950/90 border border-cyanAccent/30 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
+                <i data-lucide="image" class="w-2.5 h-2.5"></i> BLUEPRINT
+              </span>
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <h4 class="font-technical font-bold text-slate-100 text-xs truncate group-hover:text-cyanAccent transition-colors"><span class='text-[10px] text-slate-400 font-mono mr-1'>30</span>Ex. 2: Bearing Cradle Block</h4>
+              <span class="text-[8px] font-mono text-slate-400 truncate">SOLIDWORKS 3D Extrusion</span>
+            </div>
+          </div>
+
           <!-- YouTube Placeholder 1 (Sandbox Slot 18) -->
           <div class="w-52 flex-shrink-0 snap-start border border-dashed border-slate-800 bg-slate-950/20 p-3 rounded-lg flex flex-col gap-2.5 opacity-45 select-none sandbox-item" data-category="youtube">
             <div class="aspect-square w-full border border-dashed border-slate-800/80 rounded bg-slate-950/40 flex items-center justify-center">
@@ -2671,6 +2686,74 @@
         </div>
       </div>
 
+      <!-- Ex. 2: Bearing Cradle Block Modal -->
+      <div id="modal-project-ex2cradle" class="hidden flex flex-col lg:flex-row gap-8 items-stretch text-left">
+        <!-- Left: Image Viewer with swapper -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-3">
+          <div class="relative aspect-[4/3] w-full border border-slate-800 rounded bg-slate-950 flex items-center justify-center overflow-hidden">
+            <img id="modal-ex2cradle-main" src="practice_ex2cradle_model.png" alt="Bearing Cradle Block" class="max-h-full max-w-full object-contain p-2 transition-all duration-300">
+            <div class="absolute bottom-2 left-2 font-mono text-[9px] text-cyanAccent bg-slate-950/80 px-2 py-0.5 border border-cyanAccent/20 rounded uppercase">
+              VIEW: <span id="modal-ex2cradle-view-label">3D MODEL</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail Viewer Switcher -->
+          <div class="grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <button onclick="switchModalEx2CradleView('practice_ex2cradle_model.png', '3D MODEL', this)" class="border-2 border-cyanAccent bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-200 modal-ex2cradle-thumb-btn font-bold">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              3D MODEL
+            </button>
+            <button onclick="switchModalEx2CradleView('practice_ex2cradle_blueprint.png', 'BLUEPRINT DRAWING', this)" class="border border-slate-800 bg-slate-900 py-2 rounded flex items-center justify-center gap-1.5 hover:border-cyanAccent transition-all text-slate-400 modal-ex2cradle-thumb-btn">
+              <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyanAccent"></i>
+              BLUEPRINT
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Technical Details -->
+        <div class="lg:w-1/2 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-blue-400 font-mono text-[10px] uppercase font-bold tracking-widest">SOLIDWORKS // PDF BLUEPRINT PRACTICE</span>
+              <h2 class="text-2xl font-bold font-technical text-slate-100 uppercase mt-1">30. Ex. 2: Bearing Cradle Block</h2>
+            </div>
+            
+            <div class="text-slate-300 text-xs leading-relaxed flex flex-col gap-3 font-sans text-left">
+              <p>
+                <strong>Practice Overview:</strong> Modeled a complex bearing cradle block based on detailed 2D isometric blueprint specifications, featuring a central R20 cylindrical groove, multiple stepped shoulders, and bottom channel cutouts.
+              </p>
+              <p>
+                <strong>Modeling Technique:</strong> Utilized precise 3D modeling workflows in SOLIDWORKS. Extruded the primary block dimensions (90x64x33 mm), followed by the top supports and central R20 cutout. Applied geometric constraints for the 34x14 mm bottom slot and 28x9 mm side channels to ensure total alignment.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mt-2 font-mono text-[10px] bg-slate-950/40 p-4 rounded border border-slate-950">
+              <div>
+                <span class="text-slate-500 block uppercase">CAD Tool:</span>
+                <span class="text-blue-400 font-bold">SOLIDWORKS</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Key Features:</span>
+                <span class="text-cyanAccent font-bold">Extruded Cuts, R20 Slot & Multi-Level Shoulders</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Material Target:</span>
+                <span class="text-slate-300">Cast Carbon Steel</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block uppercase">Dimension Spec:</span>
+                <span class="text-slate-300">Metric (mm) Blueprint Ex. 2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-800 pt-4 text-slate-500">
+            <span>MODEL: BEARING CRADLE BLOCK</span>
+            <span>TYPE: BLUEPRINT PRACTICE</span>
+          </div>
+        </div>
+      </div>
+
       <!-- 6. HOLLOW STEPPED CYLINDER DETAIL (Sandbox) -->
       
 
@@ -3119,7 +3202,7 @@
             </div>
             <div class="flex flex-col gap-1">
               <div class="flex items-center justify-between">
-                <h4 class="font-technical text-xs font-bold text-slate-200 uppercase group-hover:text-cyanAccent transition-colors">29. K-Factor Theory & Mechanics</h4>
+                <h4 class="font-technical text-xs font-bold text-slate-200 uppercase group-hover:text-cyanAccent transition-colors">30. K-Factor Theory & Mechanics</h4>
                 <span class="px-1.5 py-0.5 rounded bg-cyanAccent/10 border border-cyanAccent/20 text-[8px] text-cyanAccent uppercase font-bold">Active</span>
               </div>
               <p class="text-slate-400 text-[10px] leading-relaxed font-sans">Understanding neutral axis shift, formulas, standard defaults, and common press brake bending questions.</p>
@@ -3860,6 +3943,26 @@
               <div class="flex items-center gap-2">
                 <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950/80 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyanAccent group-hover:translate-x-1 transition-all"></i>
+              </div>
+            </div>
+
+            <!-- Row 30: Exercise 2 Bearing Cradle Block -->
+            <div onclick="openProjectModal('ex2cradle')" class="cad-archive-row flex items-center justify-between p-3 bg-slate-900/60 border border-slate-800/80 rounded-lg hover:border-cyanAccent/80 hover:bg-slate-900 transition-all cursor-pointer group" data-category="pdf" data-search="exercise 2 bearing cradle block u-shape slot solidworks metric dimensions blueprint pdf">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded border border-slate-800 bg-slate-950 p-1 flex items-center justify-center flex-shrink-0">
+                  <img src="practice_ex2cradle_model.png" alt="Bearing Cradle Block" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-technical font-bold text-slate-200 text-xs group-hover:text-cyanAccent transition-colors">30. Ex. 2: Bearing Cradle Block</h4>
+                  <div class="flex items-center gap-2">
+                    <span class="text-[9px] font-mono text-slate-400">PDF BLUEPRINT PRACTICE</span>
+                    <span class="w-1 h-1 rounded-full bg-slate-700"></span>
+                    <span class="text-[9px] font-mono text-slate-500 truncate max-w-[120px] sm:max-w-none">SOLIDWORKS</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded font-mono text-[8px] font-bold text-cyanAccent bg-slate-950/80 border border-cyanAccent/30 uppercase">PDF BLUEPRINT</span>
               </div>
             </div>
         </div>
@@ -5699,6 +5802,20 @@
       }
 
             // Reset guideblock modal preview default state
+      if (projectId === 'ex2cradle') {
+        document.getElementById('modal-ex2cradle-main').src = 'practice_ex2cradle_model.png';
+        document.getElementById('modal-ex2cradle-view-label').innerText = '3D MODEL';
+        document.querySelectorAll('.modal-ex2cradle-thumb-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.classList.add('border-2', 'border-cyanAccent', 'text-slate-200', 'font-bold');
+            btn.classList.remove('border', 'border-slate-800', 'text-slate-400');
+          } else {
+            btn.classList.remove('border-2', 'border-cyanAccent', 'text-slate-200', 'font-bold');
+            btn.classList.add('border', 'border-slate-800', 'text-slate-400');
+          }
+        });
+      }
+
       if (projectId === 'guideblock') {
         document.getElementById('modal-guideblock-main').src = 'practice_guideblock_model.png';
         document.getElementById('modal-guideblock-view-label').innerText = '3D MODEL';
@@ -6512,7 +6629,7 @@
           // Flagship Projects
           'scooter', 'kick-scooter', 'iris', 'fsae', 'motoframe', 'tibia',
           // Sandbox Projects
-          'engine', 'rover', 'drone', 'propeller', 'wheelrim', 'wirebowl', 'tjoint', 'clevishanger', 'ex6', 'miterflange', 'solidsheet', 'sheetmetal', 'bracket', 'cylinder', 'pitcher', 'vase', 'duster', 'legobrick', 'glassbottle', 'ex1', 'ex11', 'offsetbracket', 'paperclip', 'ex3', 'ex2', 'roller', 'pipecradle', 'sleeve', 'guideblock'
+          'engine', 'rover', 'drone', 'propeller', 'wheelrim', 'wirebowl', 'tjoint', 'clevishanger', 'ex6', 'miterflange', 'solidsheet', 'sheetmetal', 'bracket', 'cylinder', 'pitcher', 'vase', 'duster', 'legobrick', 'glassbottle', 'ex1', 'ex11', 'offsetbracket', 'paperclip', 'ex3', 'ex2', 'roller', 'pipecradle', 'sleeve', 'guideblock', 'ex2cradle'
         ];
       }
       
@@ -6878,6 +6995,19 @@
       });
     });
 
+    function switchModalEx2CradleView(imgSrc, labelText, clickedBtn) {
+      document.getElementById('modal-ex2cradle-main').src = imgSrc;
+      document.getElementById('modal-ex2cradle-view-label').innerText = labelText;
+      
+      const btns = document.querySelectorAll('.modal-ex2cradle-thumb-btn');
+      btns.forEach(btn => {
+        btn.classList.remove('border-2', 'border-cyanAccent', 'text-slate-200', 'font-bold');
+        btn.classList.add('border', 'border-slate-800', 'text-slate-400');
+      });
+      
+      clickedBtn.classList.remove('border', 'border-slate-800', 'text-slate-400');
+      clickedBtn.classList.add('border-2', 'border-cyanAccent', 'text-slate-200', 'font-bold');
+    }
   </script>
 </body>
 </html>
