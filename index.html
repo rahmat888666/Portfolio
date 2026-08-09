@@ -145,27 +145,12 @@
       </div>
 
       <!-- Rotating Gear HUD (Right) -->
-      <div class="lg:col-span-5 flex justify-center relative mt-8 lg:mt-0">
-        <div class="relative w-72 h-72 md:w-96 md:h-96 bento-card rounded-full flex items-center justify-center p-6 border-cyanAccent/10">
-          <svg class="absolute inset-0 w-full h-full rotate-45 select-none" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(59, 130, 246, 0.08)" stroke-width="0.5" />
-            <circle cx="50" cy="50" r="43" fill="none" stroke="rgba(6, 182, 212, 0.12)" stroke-width="0.5" stroke-dasharray="5 15" class="rotating-gear-reverse" />
-            <circle cx="50" cy="50" r="39" fill="none" stroke="rgba(59, 130, 246, 0.15)" stroke-width="0.5" stroke-dasharray="40 10" class="rotating-gear" />
-          </svg>
-          
-          <svg class="w-48 h-48 md:w-64 md:h-64 text-blue-500/80 drop-shadow-[0_0_15px_rgba(59,130,246,0.15)]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="50" cy="50" r="10" stroke-dasharray="2 2" />
-            <circle cx="50" cy="50" r="4" fill="currentColor" />
-            <circle cx="50" cy="50" r="23" />
-            <path d="M50 5 L53 14 L58 14 L62 7 L68 11 L67 19 L71 21 L77 17 L81 22 L77 29 L80 32 L88 31 L89 37 L82 41 L83 45 L91 47 L90 53 L83 55 L82 59 L89 63 L88 69 L80 68 L77 71 L81 78 L77 83 L70 79 L67 81 L68 89 L62 93 L58 86 L53 86 L50 95 L44 86 L39 86 L35 93 L29 89 L30 81 L27 79 L20 83 L16 78 L20 71 L17 68 L9 69 L8 63 L15 59 L14 55 L6 53 L7 47 L14 45 L15 41 L8 37 L9 31 L17 32 L20 29 L16 22 L20 17 L27 21 L30 19 L29 11 L35 7 L39 14 L44 14 Z" stroke-linejoin="round" class="rotating-gear" />
-            <line x1="50" y1="2" x2="50" y2="98" stroke="rgba(6, 182, 212, 0.25)" stroke-width="0.5" stroke-dasharray="4 4" />
-            <line x1="2" y1="50" x2="98" y2="50" stroke="rgba(6, 182, 212, 0.25)" stroke-width="0.5" stroke-dasharray="4 4" />
-            <rect x="15" y="15" width="70" height="70" stroke="rgba(255, 255, 255, 0.03)" stroke-width="0.5" />
-          </svg>
-
-          <div class="absolute top-8 right-8 font-mono text-[9px] text-cyanAccent bg-[#ffeedd]/80 px-2 py-0.5 border border-cyanAccent/20 rounded">ROT_AXIS: Z</div>
-          <div class="absolute bottom-8 left-8 font-mono text-[9px] text-blue-400 bg-[#ffeedd]/80 px-2 py-0.5 border border-blue-500/20 rounded">MOD: 2.5</div>
-          <div class="absolute bottom-24 right-12 font-mono text-[9px] text-slate-500">TEETH: 24</div>
+      <div class="lg:col-span-5 flex flex-col items-center justify-center relative mt-8 lg:mt-0 gap-6">
+        <div class="relative w-72 h-72 md:w-96 md:h-96 bento-card rounded-full flex items-center justify-center p-6 border-cyanAccent/10 overflow-hidden group">
+          <video id="hero-animation-player" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80" autoplay muted playsinline></video>
+        </div>
+        <div id="hero-animation-label" class="font-mono text-sm text-slate-800 font-bold tracking-widest uppercase text-center bg-white/40 px-4 py-1.5 rounded backdrop-blur border border-white/30 shadow-sm transition-all duration-300">
+          Manufacturing
         </div>
       </div>
 
@@ -269,8 +254,9 @@
         <!-- Skill 1: 3D CAD Modeling -->
         <div class="bento-card p-5 rounded flex flex-col justify-between relative min-h-[145px]">
           <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
-          <div>
-            <span class="font-mono text-[9px] text-cyanAccent uppercase tracking-widest font-bold block mb-1">SKILL 01 // DESIGN</span>
+          
+          <div class="relative z-10 pr-12">
+            <span class="font-mono text-[9px] text-slate-700 uppercase tracking-widest font-bold block mb-1">SKILL 01 // DESIGN</span>
             <h3 class="font-technical font-bold text-sm text-slate-900 uppercase tracking-tight">3D CAD Modeling</h3>
           </div>
           
@@ -289,8 +275,9 @@
         <!-- Skill 2: Strength of Materials & FEA -->
         <div class="bento-card p-5 rounded flex flex-col justify-between relative min-h-[145px]">
           <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
-          <div>
-            <span class="font-mono text-[9px] text-cyanAccent uppercase tracking-widest font-bold block mb-1">SKILL 02 // SIMULATION</span>
+          
+          <div class="relative z-10 pr-12">
+            <span class="font-mono text-[9px] text-slate-700 uppercase tracking-widest font-bold block mb-1">SKILL 02 // SIMULATION</span>
             <h3 class="font-technical font-bold text-sm text-slate-900 uppercase tracking-tight">Strength of Materials & FEA</h3>
           </div>
           
@@ -309,8 +296,9 @@
         <!-- Skill 3: Thermodynamics & Fluids -->
         <div class="bento-card p-5 rounded flex flex-col justify-between relative min-h-[145px]">
           <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
-          <div>
-            <span class="font-mono text-[9px] text-cyanAccent uppercase tracking-widest font-bold block mb-1">SKILL 03 // THERMAL-FLUIDS</span>
+          
+          <div class="relative z-10 pr-12">
+            <span class="font-mono text-[9px] text-slate-700 uppercase tracking-widest font-bold block mb-1">SKILL 03 // THERMAL-FLUIDS</span>
             <h3 class="font-technical font-bold text-sm text-slate-900 uppercase tracking-tight">Thermodynamics & Fluids</h3>
           </div>
           
@@ -329,8 +317,9 @@
         <!-- Skill 4: Manufacturing & DFM -->
         <div class="bento-card p-5 rounded flex flex-col justify-between relative min-h-[145px]">
           <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
-          <div>
-            <span class="font-mono text-[9px] text-cyanAccent uppercase tracking-widest font-bold block mb-1">SKILL 04 // PRODUCTION</span>
+          
+          <div class="relative z-10 pr-12">
+            <span class="font-mono text-[9px] text-slate-700 uppercase tracking-widest font-bold block mb-1">SKILL 04 // PRODUCTION</span>
             <h3 class="font-technical font-bold text-sm text-slate-900 uppercase tracking-tight">Manufacturing & DFM</h3>
           </div>
           
@@ -349,8 +338,9 @@
         <!-- Skill 5: Numerical Data & Analytics -->
         <div class="bento-card p-5 rounded flex flex-col justify-between relative min-h-[145px]">
           <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
-          <div>
-            <span class="font-mono text-[9px] text-cyanAccent uppercase tracking-widest font-bold block mb-1">SKILL 05 // COMPUTING</span>
+          
+          <div class="relative z-10 pr-12">
+            <span class="font-mono text-[9px] text-slate-700 uppercase tracking-widest font-bold block mb-1">SKILL 05 // COMPUTING</span>
             <h3 class="font-technical font-bold text-sm text-slate-900 uppercase tracking-tight">Data Analytics</h3>
           </div>
           
@@ -369,8 +359,9 @@
         <!-- Skill 6: Industrial Safety & QC -->
         <div class="bento-card p-5 rounded flex flex-col justify-between relative min-h-[145px]">
           <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
-          <div>
-            <span class="font-mono text-[9px] text-cyanAccent uppercase tracking-widest font-bold block mb-1">SKILL 06 // QUALITY & HSE</span>
+          
+          <div class="relative z-10 pr-12">
+            <span class="font-mono text-[9px] text-slate-700 uppercase tracking-widest font-bold block mb-1">SKILL 06 // QUALITY & HSE</span>
             <h3 class="font-technical font-bold text-sm text-slate-900 uppercase tracking-tight">Industrial Safety & QC</h3>
           </div>
           
@@ -399,12 +390,13 @@
 
       <div class="max-w-3xl mx-auto w-full">
         <!-- Software Tools Card -->
-        <div class="bento-card p-6 rounded flex flex-col gap-4 relative">
+        <div class="bento-card p-6 rounded flex flex-col gap-4 relative overflow-hidden">
           <div class="hud-corner-tl"></div><div class="hud-corner-tr"></div>
-          <div class="flex items-center gap-2 text-cyanAccent font-mono text-[9px] uppercase tracking-wider font-bold border-b border-slate-850 pb-2">
-            <i data-lucide="cpu" class="w-4 h-4 text-cyanAccent"></i> Software Tool Stack
+          
+          <div class="flex items-center gap-2 text-slate-700 font-mono text-[9px] uppercase tracking-wider font-bold border-b border-slate-900 pb-2 relative z-10">
+            <i data-lucide="cpu" class="w-4 h-4 text-slate-700"></i> Software Tool Stack
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-sans text-xs text-slate-800 mt-2 text-left">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-sans text-xs text-slate-800 mt-2 text-left relative z-10">
             <div class="flex flex-col gap-1 border-b md:border-b-0 md:border-r border-slate-900 pb-4 md:pb-0 md:pr-6">
               <span class="font-technical font-bold text-slate-900 uppercase tracking-wider">3D CAD & Modeling</span>
               <span class="text-slate-700 font-mono text-[11px] font-bold mt-1">SOLIDWORKS, AutoCAD, Fusion 360</span>
@@ -7007,6 +6999,39 @@
       
       clickedBtn.classList.remove('border', 'border-slate-800', 'text-slate-700');
       clickedBtn.classList.add('border-2', 'border-cyanAccent', 'text-slate-900', 'font-bold');
+    }
+
+    // Hero Section Lottie Video Cycler
+    const heroAnimations = [
+      { url: "https://cdnl.iconscout.com/lottie/premium/thumb/manufacturing-animation-gif-download-13690927.mp4", label: "Manufacturing" },
+      { url: "https://cdnl.iconscout.com/lottie/premium/thumb/mechanical-animation-gif-download-13690928.mp4", label: "Mechanical Systems" },
+      { url: "https://cdnl.iconscout.com/lottie/premium/thumb/problem-solving-animation-gif-download-13690930.mp4", label: "Problem Solving" },
+      { url: "https://cdnl.iconscout.com/lottie/premium/thumb/mechanical-animation-gif-download-13690952.mp4", label: "Gear Mechanics" },
+      { url: "https://cdnl.iconscout.com/lottie/premium/thumb/engine-animation-gif-download-13690944.mp4", label: "Thermodynamics & Engines" },
+      { url: "https://cdnl.iconscout.com/lottie/premium/thumb/prototyping-animation-gif-download-13690945.mp4", label: "Rapid Prototyping" },
+      { url: "https://cdnl.iconscout.com/lottie/premium/thumb/engineering-animation-gif-download-13690946.mp4", label: "Engineering Analysis" }
+    ];
+    let currentHeroAnimIndex = 0;
+    const heroPlayer = document.getElementById('hero-animation-player');
+    const heroLabel = document.getElementById('hero-animation-label');
+    
+    if (heroPlayer) {
+      heroPlayer.loop = false; // Disable default loop to catch ended event
+      heroPlayer.src = heroAnimations[currentHeroAnimIndex].url;
+      if(heroLabel) heroLabel.innerText = heroAnimations[currentHeroAnimIndex].label;
+      
+      heroPlayer.addEventListener('ended', () => {
+        currentHeroAnimIndex = (currentHeroAnimIndex + 1) % heroAnimations.length;
+        heroPlayer.src = heroAnimations[currentHeroAnimIndex].url;
+        if(heroLabel) {
+          heroLabel.style.opacity = '0';
+          setTimeout(() => {
+            heroLabel.innerText = heroAnimations[currentHeroAnimIndex].label;
+            heroLabel.style.opacity = '1';
+          }, 150);
+        }
+        heroPlayer.play();
+      });
     }
   </script>
 </body>
