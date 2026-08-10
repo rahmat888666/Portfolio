@@ -4,15 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 :root {
-  --color-bg: #E19B4C; /* Butterscotch background */
-  --color-panel: #d18d45;
+  --color-bg: #5f6a78; /* Lighter Charcoal Grey */
+  --color-panel: #4a5568;
   --color-panel-border: rgba(255, 255, 255, 0.2);
   --color-blueprint: rgba(255, 255, 255, 0.08);
   --color-blueprint-major: rgba(255, 255, 255, 0.15);
-  --color-accent: #b25d19;
+  --color-accent: #2d3748;
   --color-accent-cyan: #ffffff;
-  --color-text-primary: #1e1e1e;
-  --color-text-secondary: #4a4a4a;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #e2e8f0;
   --color-cad-grid: rgba(255, 255, 255, 0.15);
 }
 
