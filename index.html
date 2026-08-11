@@ -2082,23 +2082,23 @@
             <h3 class="font-technical text-xl font-bold text-slate-900 uppercase">Send a Message</h3>
           </div>
           
-          <form id="contact-form" onsubmit="sendEmail(event)" class="flex flex-col gap-4 font-mono text-xs">
+          <form id="contact-form" class="flex flex-col gap-4 font-mono text-xs">
             <div class="flex flex-col gap-1.5">
               <label for="name" class="text-slate-800 font-bold uppercase tracking-wider text-[10px]">Name / Company</label>
-              <input type="text" id="name" name="name" required class="p-3 bg-white/50 border border-slate-400 rounded text-slate-900 focus:outline-none focus:border-themeAccent focus:ring-1 focus:ring-themeAccent transition-all placeholder:text-slate-500" placeholder="John Doe (XYZ Corp)">
+              <input type="text" id="name" name="name" class="p-3 bg-white/50 border border-slate-400 rounded text-slate-900 focus:outline-none focus:border-themeAccent focus:ring-1 focus:ring-themeAccent transition-all placeholder:text-slate-500" placeholder="John Doe (XYZ Corp)">
             </div>
             
             <div class="flex flex-col gap-1.5">
               <label for="email" class="text-slate-800 font-bold uppercase tracking-wider text-[10px]">Email Address</label>
-              <input type="email" id="email" name="email" required class="p-3 bg-white/50 border border-slate-400 rounded text-slate-900 focus:outline-none focus:border-themeAccent focus:ring-1 focus:ring-themeAccent transition-all placeholder:text-slate-500" placeholder="john@example.com">
+              <input type="email" id="email" name="email" class="p-3 bg-white/50 border border-slate-400 rounded text-slate-900 focus:outline-none focus:border-themeAccent focus:ring-1 focus:ring-themeAccent transition-all placeholder:text-slate-500" placeholder="john@example.com">
             </div>
             
             <div class="flex flex-col gap-1.5">
               <label for="message" class="text-slate-800 font-bold uppercase tracking-wider text-[10px]">Message</label>
-              <textarea id="message" name="message" rows="4" required class="p-3 bg-white/50 border border-slate-400 rounded text-slate-900 focus:outline-none focus:border-themeAccent focus:ring-1 focus:ring-themeAccent transition-all resize-none placeholder:text-slate-500" placeholder="Hi Rahmat, we are looking for a CAD designer..."></textarea>
+              <textarea id="message" name="message" rows="4" class="p-3 bg-white/50 border border-slate-400 rounded text-slate-900 focus:outline-none focus:border-themeAccent focus:ring-1 focus:ring-themeAccent transition-all resize-none placeholder:text-slate-500" placeholder="Hi Rahmat, we are looking for a CAD designer..."></textarea>
             </div>
             
-            <button type="submit" class="mt-2 py-3 bg-slate-800 text-white font-technical text-sm font-bold uppercase tracking-wider rounded shadow-lg hover:bg-slate-700 transition-all duration-300 flex items-center justify-center gap-2 group">
+            <button type="button" onclick="sendEmail(event)" class="mt-2 py-3 bg-slate-800 text-white font-technical text-sm font-bold uppercase tracking-wider rounded shadow-lg hover:bg-slate-700 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer z-10 relative">
               <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
               Open Email App
             </button>
@@ -2108,14 +2108,14 @@
           <script>
             function sendEmail(e) {
               e.preventDefault();
-              const name = document.getElementById('name').value;
-              const email = document.getElementById('email').value;
-              const message = document.getElementById('message').value;
+              const name = document.getElementById('name').value || '';
+              const email = document.getElementById('email').value || '';
+              const message = document.getElementById('message').value || '';
               
-              const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+              const subject = encodeURIComponent(`Portfolio Contact from ${name || 'Website Visitor'}`);
               const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
               
-              window.location.href = `mailto:rahmat888666@gmail.com?subject=${subject}&body=${body}`;
+              window.open(`mailto:rahmat888666@gmail.com?subject=${subject}&body=${body}`, '_blank');
             }
           </script>
         </div>
