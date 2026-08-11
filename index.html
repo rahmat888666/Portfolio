@@ -2082,7 +2082,7 @@
             <h3 class="font-technical text-xl font-bold text-slate-900 uppercase">Send a Message</h3>
           </div>
           
-          <form action="https://formspree.io/f/your_form_id_here" method="POST" class="flex flex-col gap-4 font-mono text-xs">
+          <form id="contact-form" onsubmit="sendEmail(event)" class="flex flex-col gap-4 font-mono text-xs">
             <div class="flex flex-col gap-1.5">
               <label for="name" class="text-slate-800 font-bold uppercase tracking-wider text-[10px]">Name / Company</label>
               <input type="text" id="name" name="name" required class="p-3 bg-white/50 border border-slate-400 rounded text-slate-900 focus:outline-none focus:border-themeAccent focus:ring-1 focus:ring-themeAccent transition-all placeholder:text-slate-500" placeholder="John Doe (XYZ Corp)">
@@ -2100,10 +2100,24 @@
             
             <button type="submit" class="mt-2 py-3 bg-slate-800 text-white font-technical text-sm font-bold uppercase tracking-wider rounded shadow-lg hover:bg-slate-700 transition-all duration-300 flex items-center justify-center gap-2 group">
               <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-              Send Message
+              Open Email App
             </button>
-            <p class="text-[9px] text-slate-600 text-center mt-1">Powered by Formspree (Requires Setup)</p>
+            <p class="text-[9px] text-slate-600 text-center mt-1">This will open your default email application.</p>
           </form>
+
+          <script>
+            function sendEmail(e) {
+              e.preventDefault();
+              const name = document.getElementById('name').value;
+              const email = document.getElementById('email').value;
+              const message = document.getElementById('message').value;
+              
+              const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+              const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+              
+              window.location.href = `mailto:rahmat888666@gmail.com?subject=${subject}&body=${body}`;
+            }
+          </script>
         </div>
 
       </div>
