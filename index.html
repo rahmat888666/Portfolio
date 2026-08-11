@@ -2100,9 +2100,9 @@
             
             <button type="button" onclick="sendEmail(event)" class="mt-2 py-3 bg-slate-800 text-white font-technical text-sm font-bold uppercase tracking-wider rounded shadow-lg hover:bg-slate-700 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer z-10 relative">
               <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-              Open Email App
+              Send via Gmail
             </button>
-            <p class="text-[9px] text-slate-600 text-center mt-1">This will open your default email application.</p>
+            <p class="text-[9px] text-slate-600 text-center mt-1">This will open Gmail in a new tab.</p>
           </form>
 
           <script>
@@ -2115,7 +2115,9 @@
               const subject = encodeURIComponent(`Portfolio Contact from ${name || 'Website Visitor'}`);
               const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
               
-              window.location.href = \`mailto:rahmat888666@gmail.com?subject=${subject}&body=${body}\`;
+              // Open Gmail Web Compose in a new tab
+              const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=rahmat888666@gmail.com&su=${subject}&body=${body}`;
+              window.open(gmailUrl, '_blank');
             }
           </script>
         </div>
