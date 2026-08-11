@@ -161,8 +161,8 @@
       </div>
 
       <!-- Rotating Gear HUD (Right) -->
-      <div id="hero-parallax-container" class="lg:col-span-5 flex flex-col items-center justify-center relative mt-8 lg:mt-0 gap-6">
-        <div id="hero-parallax-element" class="relative w-56 h-56 md:w-96 md:h-96 md:w-96 md:h-96 bento-card rounded-full flex items-center justify-center p-6 border-themeAccent/10 overflow-hidden group">
+      <div class="lg:col-span-5 flex flex-col items-center justify-center relative mt-8 lg:mt-0 gap-6">
+        <div class="relative w-56 h-56 md:w-96 md:h-96 md:w-96 md:h-96 bento-card rounded-full flex items-center justify-center p-6 border-themeAccent/10 overflow-hidden group">
           <video id="hero-animation-player" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80" autoplay muted playsinline></video>
         </div>
         <div id="hero-animation-label" class="font-mono text-sm text-slate-800 font-bold tracking-widest uppercase text-center bg-white/40 px-4 py-1.5 rounded backdrop-blur border border-white/30 shadow-sm transition-all duration-300">
@@ -7019,76 +7019,23 @@
     }
     animateParticles();
 
-    // GSAP ScrollTrigger Scroll Reveal (Enhanced with Staggering)
+    // GSAP ScrollTrigger Scroll Reveal
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.utils.toArray('section').forEach(section => {
       if (section.id === 'hero') return;
       
-      const cards = section.querySelectorAll('.bento-card, .timeline-item');
-      
-      if (cards.length > 0) {
-        gsap.from(cards, {
-          opacity: 0,
-          y: 40,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            toggleActions: "play none none none"
-          }
-        });
-      } else {
-        gsap.from(section, {
-          opacity: 0,
-          y: 30,
-          duration: 0.8,
-          scrollTrigger: {
-            trigger: section,
-            start: "top 85%",
-            toggleActions: "play none none none"
-          }
-        });
-      }
+      gsap.from(section, {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      });
     });
-
-    // Hero Mouse Parallax Effect
-    const parallaxContainer = document.getElementById('hero-parallax-container');
-    const parallaxElement = document.getElementById('hero-parallax-element');
-    
-    if (parallaxContainer && parallaxElement) {
-      parallaxContainer.addEventListener('mousemove', (e) => {
-        const rect = parallaxContainer.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        
-        // Calculate distance from center (normalized -1 to 1)
-        const moveX = (e.clientX - centerX) / (rect.width / 2);
-        const moveY = (e.clientY - centerY) / (rect.height / 2);
-        
-        gsap.to(parallaxElement, {
-          x: moveX * 25, // Move up to 25px
-          y: moveY * 25,
-          rotationY: moveX * 10, // Slight 3D rotation
-          rotationX: -moveY * 10,
-          duration: 0.5,
-          ease: "power2.out"
-        });
-      });
-      
-      parallaxContainer.addEventListener('mouseleave', () => {
-        gsap.to(parallaxElement, {
-          x: 0,
-          y: 0,
-          rotationY: 0,
-          rotationX: 0,
-          duration: 1,
-          ease: "elastic.out(1, 0.3)"
-        });
-      });
-    }
 
     function switchModalEx2CradleView(imgSrc, labelText, clickedBtn) {
       document.getElementById('modal-ex2cradle-main').src = imgSrc;
