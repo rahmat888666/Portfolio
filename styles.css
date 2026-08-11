@@ -10,6 +10,9 @@
   --theme-panel-darker: #2d3748;
   --theme-border: #64748b;
   --theme-accent: #ffffff;
+  --theme-text-main: #f8fafc;
+  --theme-text-muted: #e2e8f0;
+  --theme-text-dim: #cbd5e1;
 
   --color-bg: #5f6a78; /* Lighter Charcoal Grey */
   --color-panel: #4a5568;
@@ -276,6 +279,9 @@ h1, h2, h3, h4, .font-technical {
   --theme-panel-darker: #f1f5f9;
   --theme-border: #e2e8f0;
   --theme-accent: #0ea5e9;
+  --theme-text-main: #0f172a;
+  --theme-text-muted: #334155;
+  --theme-text-dim: #64748b;
   --color-blueprint: rgba(15, 23, 42, 0.04);
   --color-blueprint-major: rgba(15, 23, 42, 0.08);
 }
